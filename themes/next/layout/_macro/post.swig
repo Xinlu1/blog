@@ -141,6 +141,7 @@
         </div>
       {% endif %}
 
+	{#
       {% if is_index %}
         {% if post.description %}
           {{ post.description }}
@@ -176,6 +177,7 @@
       {% else %}
         {{ post.content }}
       {% endif  %}
+	#}
     </div>
     
     <div>
