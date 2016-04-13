@@ -141,8 +141,8 @@
         </div>
       {% endif %}
 
-	{#
       {% if is_index %}
+		{#
         {% if post.description %}
           {{ post.description }}
           <div class="post-more-link text-center">
@@ -174,10 +174,10 @@
             {{ post.content }}
           {% endif %}
         {% endif %}
+		#}
       {% else %}
         {{ post.content }}
       {% endif  %}
-	#}
     </div>
     
     <div>
