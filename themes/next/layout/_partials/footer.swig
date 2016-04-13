@@ -4,6 +4,11 @@
   <span itemprop="copyrightYear">{{ current }}</span>,
   <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
 </div>
+  <span id="busuanzi_container_site_pv">
+      Pageviews: <span id="busuanzi_value_site_pv"></span>
+  </span>
 
 
 {% block footer %}{% endblock %}
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
