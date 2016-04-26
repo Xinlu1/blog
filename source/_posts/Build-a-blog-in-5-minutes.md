@@ -11,6 +11,7 @@ tags:
 博客很阳春，使用了 Github 和 Hexo，都是一谷歌就能找许多答案的技术。
 
 # 搭建流程
+---
 
 1. 安装 node.js 和 npm，推荐直接从[官网](https://nodejs.org/en/download/)下载源码编译；
 2. 安装 hexo：
@@ -23,7 +24,7 @@ cd blog
 ```sh
 git clone https://github.com/iissnan/hexo-theme-next themes/next
 ```
-4. 启用主题，在根目录下将 _config.yml 文件中的 “theme:”改为你所需的主题名；
+4. 启用主题，在根目录下将`_config.yml`文件中的`theme:`改为你所需的主题名；
 5. 验证主题：
 ```sh
 hexo s --dedbug
@@ -37,16 +38,17 @@ git commit -m "first commit"
 git remote add origin git@github.com:Joouis/blog.git
 git push -u origin master
 ```
-7. 使用 hexo 部署功能，补充根目录 _config.yml 文件中的 “deploy” ，然后：
+7. 使用 hexo 部署功能，补充根目录`_config.yml`文件中的`deploy`，然后：
 ```sh
 npm install hexo-deployer-git --save
 hexo d -g
 ```
-8. 在 source 目录下加入 CNAME 文件，在登陆 DNS 服务商增添 CNAME 记录即可；
+8. 在 source 目录下加入`CNAME`文件，在登陆 DNS 服务商增添 CNAME 记录即可；
 9. 參考[主題配置](http://theme-next.iissnan.com/theme-settings.html)、[第三方服务](http://theme-next.iissnan.com/third-party-services.html)一步步客制化自己的博客。
 
 # 心得
+---
 
-五分钟是完全足够搭建起博客的，不过真正费时的，就是一点点把它修改成自己想要的样子吧。 头一次使用 Hexo ，比 Jekyll 更方便，并且使用的 NexT 主题基于 Hexo 增添了很多功能接口，像搜索、评论平台等，只需要设置 _config.yml 一个文档基本上就能解决问题，确实很好用！
+五分钟是完全足够搭建起博客的，不过真正费时的，就是一点点把它修改成自己想要的样子吧。 头一次使用 Hexo ，比 Jekyll 更方便，并且使用的 NexT 主题基于 Hexo 增添了很多功能接口，像搜索、评论平台等，只需要设置`_config.yml`一个文档基本上就能解决问题，确实很好用！
 
 博客的用途是用来记录，Markdown 语言的特质就是帮助你专注在记录上，而今天使用的 Hexo 和 NexT 亦是如此。
