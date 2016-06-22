@@ -17,20 +17,6 @@ tags:
 - State：12 / 12
 - [Note](https://hackpad.com/Operating-Systems-QPGckPU3RdZ)
 
-## Computer Architecture
-- From: [NTHU, OCW](http://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=76&)
-- Instructor：TingTing Hwang
-- Lang：Traditional Chinese
-- State：1 / 26
-- [Note](https://hackpad.com/Computer-ArchitectureBy-I94EJO5Jq1e)
-
-## Coding the Matrix: Linear Algebra through Computer Science Applications
-- From: [Coursera](https://class.coursera.org/matrix-002)
-- Instructor：Philip Klein
-- Lang：English
-- State：0 / 8
-- [Note](https://hackpad.com/Coding-the-Matrix-Linear-Algebra-through-Computer-Science-Applications-iSnyhIGw9VU)
-
 # Jserv 指导的嵌入式课程
 ---
 ## Embedded Graphics
