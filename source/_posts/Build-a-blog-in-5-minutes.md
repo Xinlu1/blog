@@ -40,7 +40,6 @@ git push -u origin master
 ```
 7. 使用 hexo 部署功能，补充根目录`_config.yml`文件中的`deploy`，然后：
 ```sh
-npm install hexo-deployer-git --save
 hexo d -g
 ```
 8. 在 source 目录下加入`CNAME`文件，在登陆 DNS 服务商增添 CNAME 记录即可；
