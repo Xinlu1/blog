@@ -254,6 +254,33 @@ let uniq = a => [...new Set(a)];
 
 无论如何，如果你需要一个唯一化的数组，为何不从正确地使用 `set` 开始呢？
 
+#  后话
+
+文章发在公司内网的技术论坛后，有一些很有价值的反馈。
+
+有同学按照上述方法进行了测试，发现 demo 的第一种和第二种并不存在“数量级”的差异，另外 Set 的效率也并不高，比前两者都慢。
+
+我随即也进行了测试，发现确实如此。
+
+```
+MacBook Air (13-inch, Early 2015) 8G Ram
+Chrome (版本 56.0.2924.87)
+
+uniq, ms/loop: 0.362
+uniq_fast, ms/loop: 0.171
+uniq_set, ms/loop: 1.728
+```
+
+其次一位资深同学提出以下观点，很有启发：
+
+> 数组去重的关键点是：如何判断“重复”，是否完备可靠。
+>
+> 1. 数组类型的 `indexOf()` 方法不能处理 `NaN` 的情况
+> 2. `Set` 类型的key不支持Object类型，而且会区别对待 `1` 和 `'1'`
+> 3. 关于性能测试。建议到jsperf上去写个case跑一跑，比如：[https://jsperf.com/js-unique-array](https://jsperf.com/js-unique-array) ；而且要在多个浏览器下测试。因为不同内核对es语法的实现不一样，表现出来的性能也不一样
+>
+> 这篇文章也讨论了数组去重问题：[https://www.toobug.net/article/array_unique_in_javascript.html](https://www.toobug.net/article/array_unique_in_javascript.html)
+
 ---
 原文链接:
 [Remove Duplicates from JavaScript Array](http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array)
