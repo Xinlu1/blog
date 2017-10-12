@@ -431,3 +431,8 @@ Hidden Columns 最大的问题在于隐藏了内容，如果这些被隐藏的�
 ### Minor Breakpoints
 
 除了选择令布局显著改变的主断点（Major Breakpoints）外，增加副断点来实现一些小的改变是很有帮助的。例如，在主断点之外调整元素的外边距，或者给一些内容增大字号使其更容易阅读（布局上也会更加自然一点）。
+
+## References
+
+- Udacity - [Responsive Web Design Fundamentals](https://classroom.udacity.com/courses/ud893)
+- PageSpeed Insights - [Configure the Viewport](https://developers.google.com/speed/docs/insights/ConfigureViewport)
