@@ -33,6 +33,31 @@ DATE_FORMAT(time, '%Y-%m') months, COUNT(DISTINCT(uid)) AS user_count
 FROM TABLE_SAMPLE GROUP BY months, platforms
 ```
 
+#### 查询时间单位的数据总和
+
+```mysql
+# 每分钟
+SELECT
+SUM(data) AS sum
+FROM TABLE_SAMPLE GROUP BY YEAR(time), MONTH(time), DAY(time), HOUR(time), MINUTE(time)
+
+# 每10分钟
+SELECT
+SUM(data) AS sum
+FROM TABLE_SAMPLE GROUP BY YEAR(time), MONTH(time), DAY(time), HOUR(time), FLOOR(MINUTE(time)/10)
+
+# 每小时
+SELECT
+SUM(data) AS sum
+FROM TABLE_SAMPLE GROUP BY YEAR(time), MONTH(time), DAY(time), HOUR(time)
+
+# 后面依此类推...
+```
+
+#### 查询每小时的数据总和
+
+
+
 #### 一次查询里查询多样数据
 
 ```sql
