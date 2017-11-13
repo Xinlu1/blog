@@ -8,7 +8,7 @@ tags:
 - isomorphic
 ---
 
-服务器端渲染（Server-Side Rendering，以下简称 SSR）并非是一门新技术，早期就有 Java, PHP 等后端语言进行页面渲染，后来 JavaScript 兴起、 Jquery, Backbone, React, Vue 等视图框架流行，前端逐渐夺回了渲染的地盘。随着如 Express, Koa 等 Node Web 应用程序框架的出现，SSR 以同构渲染（isomorphic rendering）的方式再次强势归来。
+服务器端渲染（Server-Side Rendering，以下简称 SSR）并非是一门新技术，早期就有 Java, PHP 等后端语言进行页面渲染，后来 JavaScript 兴起、 Jquery, Backbone, React, Vue 等视图框架流行，前端逐渐夺回了渲染的地盘。随着如 Express, Koa 等 Node Web 应用程序框架的出现，SSR 以同构渲染（isomorphic rendering）的方式再次强势归来。
 
 ![](https://cloud.githubusercontent.com/assets/948896/25062958/ca1b6618-2209-11e7-99ae-c2a75ad3dabb.png)
 
@@ -39,7 +39,7 @@ Midway 内置了一款名为 XTemplate 的模板引擎（类似 Nunjucks 的轮�
 
 
 
-意识到这个姿势有问题时笔者已经换了一个团队，完全没有前端工程基础，打造一套服务于当前业务的高效前端开发体系是首要目标。在回顾之前使用的技术栈时，针对 SSR 笔者一下子就想到了两个问题（OS：“你个傻X当初你想什么去了…”）：
+意识到这个姿势有问题时笔者已经换了一个团队，完全没有前端工程基础，打造一套服务于当前业务的高效前端开发体系是首要目标。在回顾之前使用的技术栈时，针对 SSR 笔者一下子就想到了两个问题（OS：“你个傻X当初想什么去了…”）：
 
 1. 既然客户端要异步请求表格数据，为何一开始不直接存在 DOM 中发过去？
 2. 需要 Vue 渲染的内容，能不能用模板引擎（如 XTemplate）渲染？如果能为什么要留到客户端渲染？
@@ -149,7 +149,7 @@ Module.render(window.INITIAL_DATA);
 delete window.INITIAL_DATA;
 ```
 
-不过笔者对于性能方面的担忧是多余的（DOM 操作昂贵没错，只是不是贵在这里！），这两段代码的执行效率几乎没有差别：在数据（字符串形式）量达到 36.7 KB 时，第一份代码对 DOM 的读取操作和 `JSON.parse()` 方法都是在 5ms 以内完成的。
+不过笔者对于性能方面的担忧是多余的（**DOM 操作昂贵没错，但不是贵在这里！可从浏览器的工作原理角度出发思考这一问题**），这两段代码的执行效率几乎没有差别：在数据（字符串形式）量达到 36.7 KB 时，第一份代码对 DOM 的读取操作和 `JSON.parse()` 方法都是在 5ms 以内完成的。
 
 反倒是页面体积有了明显的变化：
 
