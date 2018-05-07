@@ -1,5 +1,5 @@
 ---
-title: Weex Android 发车指南（持续更新中...）
+title: Weex Android 发车指南（已弃车）
 date: 2017-08-06 03:42:26
 tags:
 - weex
@@ -44,7 +44,11 @@ Weex 是集团去年推出的移动开发框架，Apache 顶级开源项目，�
 
 同时，现实总是残酷的。想在 Android 上运行 Weex 应用，还是需要懂得配置 Android 应用、编写一些 Java 代码，这对前端工程师来说，又是一次 ~~雪上加霜~~ 成长的机会=。=
 
-在这里推荐一篇文章帮助大家快速上车：《[Weex Android 初体验](http://blog.csdn.net/mengzuixilou/article/details/52690960)》。这篇文章覆盖了实践细节上的问题，并且提供了一个类似最小例程的 github repo，可以 **参考其 Java 源码编写自己的代码** 。
+在这里推荐两篇文章帮助大家快速上车，正是通过它们笔者成功实现了最小例程的编译及运行：
+
+第一篇是来自 ATA 的《[weex新手指南](https://www.atatech.org/articles/57091)》，其中包含一个 “知乎日报” 应用源码的详细分析，从中可以知道 **为什么要编写那些 Java 代码** 。
+
+第二篇文章名为《[Weex Android 初体验](http://blog.csdn.net/mengzuixilou/article/details/52690960)》，其更多地覆盖了实践细节上的问题，并且提供了一个类似最小例程的 github repo，可以 **参考其 Java 源码编写自己的代码** 。
 
 
 
@@ -55,9 +59,23 @@ Weex 是集团去年推出的移动开发框架，Apache 顶级开源项目，�
 3. 开发时一定要使用手机版的 Playground 进行预览，而不是观察本地浏览器中的画面！
 
 
+## 更多阅读
 
-## Sample List
+- 《[WEEX系列文章汇总](https://www.atatech.org/articles/65406)》：Weex 官方的 ATA 文章，入口帖
+- 《[关于Weex，你想了解的一切都在这里](https://www.atatech.org/articles/58474)》：又一 Weex 官方的 ATA 文章，入口帖
+- 《[weex vs react-native](https://yq.aliyun.com/articles/57996)》：同为前端无线技术，不对比就难以了解 Weex 的诉求是什么，对吧
+- 《[Weex总结之Android Weex工程搭建趟坑](https://www.atatech.org/articles/58910)》：通俗易懂的实践文
+- 《[weex新手指南](https://www.atatech.org/articles/57091)》：针对最简单的 Android Weex 代码做了详细说明，并提供了一个详细案例（知乎日报）的分析和 github 源码
+
+
+
+## 姿势观摩
 
 - [Weex Vue Examples](https://github.com/Hanks10100/weex-vue-examples)：包含很多基本组件使用的范例
 - [weex-hackernews](https://github.com/weexteam/weex-hackernews)：很牛逼的 weex 版 hackernews app，包含 Android 工程在内所有的代码，亲测编译 APK 到 7.0 系统中运行
 - [vue-hakcernews-2.0](https://github.com/vuejs/vue-hackernews-2.0)：想了解更多 Vue 开发可以关注此 repo，web 版 hackernews，Vue 作者亲自开发
+
+## 后话
+
+### 没有详细的文档讲解如何产出最终 APK 文件，蛋疼的 CSS 写法，以及种种...
+### 已弃坑（微笑脸
