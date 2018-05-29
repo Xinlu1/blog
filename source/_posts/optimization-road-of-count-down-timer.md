@@ -8,6 +8,10 @@ tags:
 - javascript
 ---
 
+
+
+## 引子
+
 回顾这半年，扛需求能力越来越强，业务代码也是越写越多。但稍一认真看看这些当时为了满足快速上线所码的东西，问题其实还是不少。这次就从一个简单的计时器说起。
 
 ## 现状
@@ -33,10 +37,10 @@ tags:
 componentWillMount() {
   if (!this.timer) {
     this.timer = setInterval(() => {
-      const toUpdate = Object.assign({}, this.state.list);
+      const toUpdate = this.state.list.slice();
       if (toUpdate.length) {
         update.forEach(i => {
-          i.registerLeftTime = Tools.getLastTime(i.registerEndTime);
+          i.leftTime = Tools.getLastTime(i.endTime);
         });
         this.setState({ list: toUpdate });
       }
@@ -71,10 +75,10 @@ componentDidMount() {
   if (!this.timer) {
     this.timer = setInterval(() => {
       const startT = performance.now();
-      const toUpdate = Object.assign({}, this.state.list);
+      const toUpdate = this.state.list.slice();
       if (toUpdate.length) {
         toUpdate.forEach(i => {
-          i.registerLeftTime = Tools.getLastTime(i.registerEndTime);
+          i.leftTime = Tools.getLastTime(i.endTime);
         });
         this.setState({ list: toUpdate }, ()=>{
 		  const endT = performance.now();
@@ -114,11 +118,11 @@ componentDidMount() {
   if (!this.timer) {
     this.timer = setInterval(() => {
       const startT = performance.now();
-      const toUpdate = Object.assign({}, this.state.list);
+      const toUpdate = this.state.list.slice();
       if (toUpdate.length) {
-        const nodes = document.querySelectorAll('.scene-end-time>span');
+        const nodes = document.querySelectorAll('.count-down-timer');
         toUpdate.forEach(i => {
-          i.registerLeftTime = Tools.getLastTime(i.registerEndTime);
+          i.leftTime = Tools.getLastTime(i.endTime);
           nodes[index].innerHTML = item.registerLeftTime;
         });
         const endT = performance.now();
@@ -162,15 +166,15 @@ componentDidMount() {
 componentDidMount() {
   let lastTime = null;
   function __updateCountDownTimer(timestamp) {
-    if (!lastTime) lastTime = timestamp;
+    lastTime = lastTime || timestamp;
     const tickInterval = timestamp - lastTime;
     if (tickInterval >= 1000) {
-      const toUpdate = Object.assign({}, this.state.list);
+      const toUpdate = this.state.list.slice();
       if (toUpdate.length) {
-        const nodes = document.querySelectorAll('.scene-end-time>span');
+        const nodes = document.querySelectorAll('.count-down-timer');
         toUpdate.forEach((item, index) => {
-          item.registerLeftTime = Tools.getLastTime(item.registerEndTime);
-          nodes[index].innerHTML = item.registerLeftTime;
+          item.leftTime = Tools.getLastTime(item.endTime);
+          nodes[index].innerHTML = item.leftTime;
         }
       }
       lastTime = timestamp;
@@ -202,19 +206,20 @@ componentDidMount() {
 /* Fourth version, use rAF instead of setInterval */
 componentDidMount() {
   let lastTime = null;
+  const DELAY_INTERVAL = 1000;
   function __updateCountDownTimer(timestamp) {
-    if (!lastTime) lastTime = timestamp;
+    lastTime = lastTime || timestamp;
     const tickInterval = timestamp - lastTime;
-    if (tickInterval >= 1000) {
-      const toUpdate = Object.assign({}, this.state.list);
+    if (tickInterval >= DELAY_INTERVAL) {
+      const toUpdate = this.state.list.slice();
       if (toUpdate.length) {
-        const nodes = document.querySelectorAll('.scene-end-time>span');
+        const nodes = document.querySelectorAll('.count-down-timer');
         toUpdate.forEach((item, index) => {
-          item.registerLeftTime = Tools.getLastTime(item.registerEndTime);
-          nodes[index].innerHTML = item.registerLeftTime;
+          item.leftTime = Tools.getLastTime(item.endTime);
+          nodes[index].innerHTML = item.leftTime;
         }
       }
-      lastTime = timestamp + (tickInterval - 1000);
+      lastTime = timestamp + (tickInterval - DELAY_INTERVAL);
     }
     requestAnimationFrame(_updateCountDownTimer.bind(this));
   }
