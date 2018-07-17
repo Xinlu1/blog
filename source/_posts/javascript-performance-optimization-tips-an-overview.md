@@ -1,5 +1,5 @@
 ---
-title: [译] JavaScript 性能优化概观
+title: JavaScript 性能优化概观
 date: 2018-07-17 11:28:57
 tags:
 - javascript
