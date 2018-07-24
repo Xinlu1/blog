@@ -1,5 +1,5 @@
 ---
-title: first-flutter-app-review.md
+title: 简易计数器——年轻人的第一个Flutter应用
 date: 2018-07-25 02:17:05
 tags:
 - flutter
@@ -9,7 +9,7 @@ tags:
 
 
 
-> 欢迎转载，转载是请注明原文链接：
+> 欢迎转载，转载是请注明原文链接：http://blog.joouis.com/2018/07/25/first-flutter-app-review/
 
 ## TL;DR
 
