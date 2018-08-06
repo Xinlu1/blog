@@ -1,5 +1,5 @@
 ---
-title: Javascript 简洁之道：如何使用类重构.md
+title: Javascript 简洁之道：如何使用类重构
 date: 2018-08-06 10:29:06
 tags:
 - javascript
@@ -9,7 +9,7 @@ tags:
 
 > 源文链接：[JavaScript code cleanup: how you can refactor to use Classes](https://medium.freecodecamp.org/javascript-code-cleanup-how-you-can-refactor-to-use-classes-3948118e4468)
 >
-> 原文链接：
+> 原文链接：[Javascript 简洁之道：如何使用类重构](http://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/)
 
 
 
@@ -23,7 +23,7 @@ tags:
 
 从：
 
-```react
+```javascript
 const MyComponent = () => {
   const someFunction = () => 'Hey, I am text'
   return (
@@ -36,7 +36,7 @@ const MyComponent = () => {
 
 到：
 
-```react
+```javascript
 import { someFunction } from 'functionHelper.js'
 const MyComponent = () => {
   return (
@@ -49,7 +49,7 @@ const MyComponent = () => {
 
 和
 
-```react
+```javascript
 export const someFunction = () => 'Hey, I am text'
 ```
 
@@ -76,7 +76,7 @@ export const someFunction = () => 'Hey, I am text'
 
 举个例子，这是我们改变宽高的方法：
 
-```react
+```javascript
 changeSide = side => {
   const obj = {...this.state.obj, side};
   this.fetchObject(obj);
@@ -88,7 +88,7 @@ changeSide = side => {
 
 取而代之，我们可以使用类的构造函数方法来实现：
 
-```react
+```javascript
 export default class ObjectManipulator {
   constructor( { object, fetchObject, markResettable, updateMessage, updateStateValue } ) {
     this.fetchObject = fetchObject;
@@ -109,7 +109,7 @@ export default class ObjectManipulator {
 
 这允许我们创建一个能在主组件中调用其函数的对象：
 
-```react
+```javascript
 const manipulator = new ObjectManipulator({
   object,
   fetchObject: this.fetchObject,
@@ -127,7 +127,7 @@ const manipulator = new ObjectManipulator({
 
 这种组织方法还可以促进代码互不越界。例如在前文的范例里，按钮的颜色维护在一个对应的数组之中，将此常量放到 `ObjectManipulator` 可以确保其不会与应用中的其他 `colors` 冲突：
 
-```react
+```javascript
 export default class ObjectManipulator {
   [...]
 
