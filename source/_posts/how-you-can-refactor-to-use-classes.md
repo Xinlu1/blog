@@ -8,7 +8,6 @@ tags:
 ---
 
 > 源文链接：[JavaScript code cleanup: how you can refactor to use Classes](https://medium.freecodecamp.org/javascript-code-cleanup-how-you-can-refactor-to-use-classes-3948118e4468)
->
 > 原文链接：[Javascript 简洁之道：如何使用类重构](http://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/)
 
 
@@ -140,3 +139,11 @@ export default class ObjectManipulator {
 ## 引用
 
 [Good old Mozilla Class docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+
+
+## **Epilog**
+
+❤️ Lazada 深圳团队招人，欢迎推荐 ❤️
+
+联系方式请用 Base64 解码：bHVja3lqb291QGdtYWlsLmNvbQ==

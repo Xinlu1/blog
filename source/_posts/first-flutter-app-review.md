@@ -254,18 +254,10 @@ void _incrementCounter() {
 
 相信你能从上述两个方向发现更多一手、可靠、丰富的信息！
 
-## Epilog
 
-招人
 
-诚心招人
+## **Epilog**
 
-阿里国际化
-
-深圳湾 Lazada
-
-前端后端设计师都要
-
-彭蕾逍遥子等合伙人坐镇
+❤️ Lazada 深圳团队招人，欢迎推荐 ❤️
 
 联系方式请用 Base64 解码：bHVja3lqb291QGdtYWlsLmNvbQ==
