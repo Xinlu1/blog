@@ -8,7 +8,7 @@ tags:
 ---
 
 > 源文链接：[JavaScript code cleanup: how you can refactor to use Classes](https://medium.freecodecamp.org/javascript-code-cleanup-how-you-can-refactor-to-use-classes-3948118e4468)
-> 原文链接：[Javascript 简洁之道：如何使用类重构](http://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/)
+> 原文链接：[Javascript 简洁之道：如何使用类重构](https://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/)
 
 
 
