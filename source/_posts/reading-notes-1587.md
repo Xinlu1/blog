@@ -12,7 +12,7 @@ tags:
 
 这本书的内容用一句话概述即讲述了中国从古至今的政治学问。虽然书中分析得是明朝万历皇帝执政时期的政治、经济、军事等情况，但身为读者，你丝毫不会觉得内容过时，反而有种今日不也是如此的既视感。可以说中华五千年的历史，有些本质并没有发生巨大的改变，有些文化也是周而复始。因此通过这本书，可以体会到什么是 “以铜为镜，可以正衣冠；以古为镜，可以知兴替”。
 
-作为一本历史书籍，作者黄仁宇以纪录片旁白的口吻讲述明朝历史，非常生动，好比在听评书一般。剧情上由人及事，又因事提人，大量穿插，显得内容非常连贯紧凑而节奏适中。虽说书名是万历十五年这一具体年份，但实际全书覆盖了万历皇帝执政的整个时期，从登基直至作古，在此之中还介绍、分析了一些从明朝创始以来就有而到万历年间的情况。这是黄仁宇闻名于世的“大世界观”的分析手法，强度不要单纯去分析一时的问题，而是向前推演，从长远的时间维度解读社会症结。
+作为一本历史书籍，作者黄仁宇以纪录片旁白的口吻讲述明朝历史，非常生动，好比在听评书一般。剧情上由人及事，又因事提人，大量穿插，显得内容非常连贯紧凑而节奏适中。虽说书名是万历十五年这一具体年份，但实际全书覆盖了万历皇帝执政的整个时期，从登基直至作古，在此之中还介绍、分析了一些从明朝创始以来就有而到万历年间的情况。这是黄仁宇闻名于世的“大世界观”的分析手法，强调不要单纯去分析一时的问题，而是向前推演，从长久的时间维度解读社会症结。
 
 书中一针见血地阐述了偌大一个帝国国家机构的运作机制，更为巧妙的是，能站在不同角色如皇帝万历、类似丞相的首辅张居正、将领黄继光、文学家李贽等人的立场来分析他们是如何在这样一个帝国中做出自己的人生选择，同时通过他们介绍明代的政治、经济、军事、哲学等方面文化。
 
@@ -22,7 +22,7 @@ tags:
 
 最后，虽然书中批判了封建时期中国的许多问题，不过黄仁宇也在附录中通过他人之言表达了对新中国的期盼之情。他特意提及《万历十五年》英文本《富序》中有下面一段：
 
-> Historians may re-examine the mistakes of the past in the hope of providing warnings for the future, but at the same time caution their readers to preserve what is of value. Presumably, for China the experince of both East and West must be drawn upon. It is essential that the historian lay everything on the table.
+> Historians may re-examine the mistakes of the past in the hope of providing warnings for the future, but at the same time caution their readers to preserve what is of value. Presumably, for China the experiences of both East and West must be drawn upon. It is essential that the historian lay everything on the table.
 
 不要因为目前的堰塞，忽视中国伟大的地方。
 
