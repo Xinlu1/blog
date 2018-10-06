@@ -1,5 +1,5 @@
 ---
-title: Joou's 读书笔记：《极限控制》
+title: Joou's 读书简记：《极限控制》
 date: 2018-06-11 16:16:08
 tags:
 - management
