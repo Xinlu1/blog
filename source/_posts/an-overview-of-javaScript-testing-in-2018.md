@@ -14,7 +14,7 @@ tags:
 
 *（注：图片均来自原文，如无法正常查看请进行“网络加速”）*
 
-### **TL;DR; Use Jest for unit and integration tests and TestCafe for UI tests.**
+**摘要：使用 Jest 进行单元和集成测试，使用 TestCafe 进行 UI 测试。**
 
 
 
@@ -245,5 +245,92 @@ UI 测试总是运行在**一个浏览器或近似浏览器环境 (7)** 中，�
 
 需要记得这类测试是最难准备的。设想你自己创建一个环境在不同的机器、设备、浏览器类型和版本上运行一个测试... 这就是为什么有[很多服务商](https://www.keycdn.com/blog/browser-compatibility-testing-tools)为你提供这项服务。[你还可以在这里发现更多](https://www.guru99.com/top-10-cross-browser-testing-tools.html)。
 
-## 常见的知名测试工具
+### 常见的知名测试工具
 
+#### [Jsdom](https://github.com/jsdom/jsdom)
+
+jsdom 是 WHATWG DOM 和 HTML 标准的一个 JavaScript 实现。换言之 jsdom 仅用纯 JS 模拟了一个浏览器环境。之前提过，在这样的模拟浏览器环境中，测试运行的速度十分快。缺点则是在一个真实浏览器之外 jsdom 无法模拟所有，因此这会限制你的测试范围。
+
+值得一提的是 JS 社区很快改进了它，目前的版本已经非常接近真实浏览器。
+
+#### [Istanbul](https://istanbul.js.org/)
+
+Istanbul 会告诉你代码中有多少被单元测试所覆盖。它从状态、行数、函数和分支覆盖维度报告百分比情况以便你更好地理解哪些部分代码没有被覆盖到。
+
+#### [Karma](https://karma-runner.github.io/2.0/index.html)
+
+Karma 允许你在浏览器和近似浏览器环境甚至 jsdom 中进行测试。它运行的测试服务器有一个特殊网页可以让你的测试运行在页面环境中，而这个页面还可以跨浏览器运行。这也意味着测试可以通过 [BrowserStack](https://www.browserstack.com/) 之类的服务远程执行。
+
+#### [Chai](https://github.com/chaijs/chai)
+
+Chai 是最流行的断言库。*（译者注：人狠话不多啊...）*
+
+#### [Unexpected](https://github.com/unexpectedjs/unexpected)
+
+Unexpected 是一个与 Chai 的语法稍有不同的断言库。其可扩展性衍生出了一些使断言功能更高级的库例如 [unexpected-react](https://github.com/bruderstein/unexpected-react) ，你可以从[这里](https://medium.com/@bruderstein/enzyme-vs-unexpected-react-ee9cb099d12b)了解更多。
+
+#### [Sinon.js](http://sinonjs.org/)
+
+Sinon 是一个强大的 spies, stubs 和 mocks 独立库，可与任何单元测试框架配合工作。
+
+#### [testdouble.js](https://github.com/testdouble/testdouble.js)
+
+testdouble 是一个声称比 Sinon 更加优秀但名气稍逊的库。其设计、哲学和特性与 Sinon 略有不同使其在许多情况下更实用，你可以从[这里](https://www.sitepoint.com/javascript-testing-tool-showdown-sinon-js-vs-testdouble-js/)、[这里](https://spin.atomicobject.com/2016/03/21/javascript-mocking-testdouble/)和[这里](http://blog.testdouble.com/posts/2016-03-13-testdouble-vs-sinon.html)读到更多。
+
+#### [Wallaby](https://wallabyjs.com/)
+
+Wallaby 是另一款值得一提的工具。尽管需要付费，但很多用户推荐购买。它运行在你的 IDE （支持所有主流 IDE）之上，执行代码变更相关的测试，并在失败后实时定位到代码级别报错。
+
+![wallaby](https://cdn-images-1.medium.com/max/1600/1*b-jNPVyrwyAJssbHNYPwtQ.png)
+
+#### [Cucumber](https://github.com/cucumber/cucumber-js)
+
+Cucumber 通过按验收准则文件 (accpetance criteria files，使用 **Gherkin** 语法) 划分并与之对应的方式帮助编写 BDD 结构的测试用例。框架支持的多种语言都可以编写测试用例，包含我们关注的 JS：
+
+```shell
+# like-article.feature
+Feature: A reader can share an article to social networks
+  As a reader
+  I want to share articles
+  So that I can notify my friends about an article I liked
+Scenario: An article was opened
+    Given I'm inside an article
+    When I share the article
+    Then the article should change to a "shared" state
+```
+
+```javascript
+// like-article.step.js
+module.exports = function() {
+  this.Given(/^I'm inside an article$/, function(callback) {
+    // functional testing tool code
+  })
+
+  this.When(/^I share the article$/, function(callback) {
+    // functional testing tool code
+  })
+
+  this.Then(/^the article should change to a "shared" state$/, function(callback) {
+    // functional testing tool code
+  })
+}
+```
+
+许多团队会发现这种语法比 TDD 更方便。
+
+## 选择你的单元和集成测试框架
+
+你应该做的第一个选择也许是框架与其支持库。建议使用框架内提供的工具直到依赖某些独一无二工具的需求出现。
+
+> * 简而言之，如果你只想入门或针对大型功能寻找一款够快的框架，选择 **Jest**。
+> * 如果你想要灵活和可扩展的配置，选择 **Mocha**。
+> * 如果你喜欢简单选择 **Ava**。
+> * 如果你想要非常底层的框架，选择 **tape**。
+
+这里有一份介绍主流工具及其特性的列表：
+
+#### [mocha](https://github.com/mochajs/mocha)
+
+Mocha 是当前被使用最多的库。不像 Jasmine，它使用第三方的断言、mocking 和 spying 工具（通常是  Enzyme 和 Chai ）。这意味着 Mocha 在初始配置时有一定难度并需要了解更多库，但这也会变的更加灵活、更开放去扩展。
+
+举例来说，如果你想要[特殊的断言逻辑](https://mochajs.org/#assertions)，你可以 fork Chai 并在你的断言库中只替换 Chai。
