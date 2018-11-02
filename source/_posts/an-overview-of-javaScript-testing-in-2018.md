@@ -1,5 +1,5 @@
 ---
-title: 2018 Javascript 测试概观
+title: 2018 JavaScript 测试概观
 date: 2018-10-29 21:26:06
 tags:
 - javascript
@@ -8,11 +8,11 @@ tags:
 ---
 
 > 源文链接：[An Overview of JavaScript Testing in 2018](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
-> 原文链接：
+> 原文链接：[2018 JavaScript 测试概观](http://blog.joouis.com/2018/10/29/an-overview-of-javaScript-testing-in-2018/)
 
 
 
-*（注：图片均来自原文，如无法正常查看请进行“网络加速”）*
+*（注：图片均来自源文，如无法正常查看请进行“网络加速”）*
 
 **摘要：使用 Jest 进行单元和集成测试，使用 TestCafe 进行 UI 测试。**
 
@@ -329,7 +329,7 @@ module.exports = function() {
 
 这里有一份介绍主流工具及其特性的列表：
 
-#### [mocha](https://github.com/mochajs/mocha)
+### [mocha](https://github.com/mochajs/mocha)
 
 Mocha 是当前被使用最多的库。不像 Jasmine，它使用第三方的断言、mocking 和 spying 工具（通常是  Enzyme 和 Chai ）。这意味着 Mocha 在初始配置时有一定难度并需要了解更多库，但这也会变的更加灵活、更开放去扩展。
 
