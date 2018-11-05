@@ -333,4 +333,155 @@ module.exports = function() {
 
 Mocha 是当前被使用最多的库。不像 Jasmine，它使用第三方的断言、mocking 和 spying 工具（通常是  Enzyme 和 Chai ）。这意味着 Mocha 在初始配置时有一定难度并需要了解更多库，但这也会变的更加灵活、更开放去扩展。
 
-举例来说，如果你想要[特殊的断言逻辑](https://mochajs.org/#assertions)，你可以 fork Chai 并在你的断言库中只替换 Chai。
+举例来说，如果你想要[特殊的断言逻辑](https://mochajs.org/#assertions)，可以 fork Chai（*译者注：此处怀疑是笔误，fork Mocha 看起来更合理*）并使用自己的断言库替换 Chai。虽说在 Jasmine 中也可以实现，但这种修改在 Mocha 中显得更加平淡无奇。
+
+- **社区**：有许多插件和扩展来测试独特的场景。
+- **扩展性**：插件、扩展和例如 Sinon 之类的库包含了许多 Jasmine 没有的特性。
+- **全局变量 (Globals)**：默认会创建测试结构的变量，但是显然不像 Jasmine 那样包含了断言、spies 和 mocks ——有些人对这种变量的不一致感到吃惊。
+
+### [Jest](https://facebook.github.io/jest/)
+
+Jest 是 Facebook 推荐的测试框架，基于我们将会讨论的 Jasmine。不过现如今 Facebook [已经替换了大多数 Jasmine 的功能](https://jestjs.io/blog/2016/09/01/jest-15.html)并在顶层新增了许多特性。
+
+> 在阅读了大量文章和博客之后，Jest 的速度和便利令人难以置信。
+
+- **性能 (Performance)**：Jest 首要考虑的是通过实现一个[灵活的并行测试机制](https://jestjs.io/blog/2016/03/11/javascript-unit-testing-performance.html)使得处理包含大量测试文件的大型工程速度更快（以我们的经验和一些博客为例：[这里](https://hackernoon.com/testing-react-components-with-jest-and-enzyme-41d592c174f)，[这里](https://medium.com/@kentcdodds/migrating-to-jest-881f75366e7e)，[这里](https://medium.com/@gethylgeorge/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9)，[这里](https://medium.com/aya-experience/testing-an-angularjs-app-with-jest-3029a613251)）。
+
+- **用户界面 (UI)**：清楚和便利。
+
+- **直接上手 (Ready-To-Go)**：自带和 Sinon 功能相同的断言、spies 和 mocks 库。如果你需要一些额外的特性，使用函数库也很容易。
+
+- **全局变量 (Globals)**：与 Jasmine 类似，Jest 默认创建了测试相关的全局变量因此不用导入它们。虽然这可能导致测试不够灵活和可控而被诟病，但在绝大多数情况下都让测试更加容易：
+
+  ```javascript
+  // "describe" is in the global scope already
+  // so no these require lines are **not required**:
+  // import { describe } from 'jest'
+  // import { describe } from 'jasmine'
+  
+  describe('calculator', function() {
+    ...
+  })
+  ```
+
+- **快照测试 (Snapshot testing)**：Facebook 开发并维护了 [jest-snapshot](https://github.com/facebook/jest/tree/master/packages/jest-snapshot)，不过它也可以作为工具集成的一部分使用在绝大多数框架中，或通过正确的插件来使用。
+
+- **改进后的模组仿真 (Improved modules mocking)**：Jest 提供了一种简单的方法模拟任务繁重的模组以提升测试速度。例如一项服务可以使用 resolve 一个 promise 模拟一次网络请求。
+
+- **代码覆盖 (Code coverage)**：包含一个基于 [Istanbul](https://github.com/gotwarlost/istanbul) 的功能强大、高效的内置代码覆盖工具。
+
+- **可靠性 (Reliability)**：尽管这是一个相对年轻的函数库，但在 2017 年 Jest 稳定下来，现在被认为可靠，且被所有主流 IDEs 和相关工具所支持。
+- **开发 (Development)**：Jest 会对测试文件进行增量更新，因此在观察模式下的测试速度非常快。
+
+### [Jasmine](https://github.com/jasmine/jasmine)
+
+Jest 就是基于 Jasmine 构建的，所以为什么还要使用 Jasmine 呢？因为后者存在得时间更久，有大量来自社区的文章和工具可以参考。同时，Angular 依然推荐使用它而非 Jest，尽管 Jest 目前也已完美适配 Angular 的测试，且有很多人在使用。
+
+- **直接上手 (Ready-To-Go)**：包含所有测试所需的东西。
+- **全局变量 (Globals)**：在全局范围内提供所有重要的测试特性。
+- **社区 (Community)**：自从 2009 年问世以来积攒了海量相关的文章、建议以及工具。
+- **Angular**：Angular 的所有版本都支持 Jasmine，并在[其官方文档](https://angular.io/guide/testing)中推荐使用。
+
+### [AVA](https://github.com/avajs/ava)
+
+Ava 是一个并行执行测试的抽象主义 (minimalistic) 测试库。
+
+- **直接上手 (Ready-To-Go)**：
+
+
+
+## 总结
+
+我们看完了web 开发社区中最流行的测试策略和工具，希望你能更加轻松地测试你的站点。
+
+> 最后，如今关于应用架构的最佳决策是在理解活跃开发社区提出的通用解决模式、与自身经验做结合且考虑应用的特性和特殊需求下做出的。
+
+哎呀，然后编码，再重新编码，再重新编码，再重新编码后，测试不同的解决方案 :)
+
+## 推荐阅读
+
+### 最佳
+
+- [**Javascript tools for end-to-end testing** web applications (July 2017)](http://mo.github.io/2017/07/20/javascript-e2e-integration-testing.html)
+- [**Top 5 Most Rated Node.js Frameworks for End-to-End Web Testing**(March 2017)](https://medium.com/@adrian_lewis/top-5-most-rated-node-js-frameworks-for-end-to-end-web-testing-f8ebca4e5d44)
+- [Top **UI Test Automation Best Practices** You Should Follow (November 2017)](https://www.blazemeter.com/blog/top-15-ui-test-automation-best-practices-you-should-follow)
+- [How to set up E2E browser testing for your **GitHub project (With TestCafe)** (February 2017)](https://hackernoon.com/how-to-set-up-e2e-browser-testing-for-your-github-project-89c24e15a84)
+- [Introduction to **Headless Browser Testing** (September 2017)](https://blog.logrocket.com/introduction-to-headless-browser-testing-44b82310b27c)
+- [**Web Scraping in 2017**: Advanced Headless Chrome Tips & Tricks (august 2017)](https://blog.phantombuster.com/web-scraping-in-2017-headless-chrome-tips-tricks-4d6521d695e8)
+- [How GitLab switched to **Headless Chrome for testing (From Phantom)**(December 2017)](https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/)
+
+### 概览
+
+- [The **Top 8 Essential JavaScript Automation Frameworks** (June 2016)](https://www.joecolantonio.com/2016/06/14/top-8-essential-javascript-automation-frameworks/)
+- [JavaScript Testing: **Unit vs Functional vs Integration Tests** (April 2016)](https://www.sitepoint.com/javascript-testing-unit-functional-integration/)
+- [What are **Unit Testing, Integration Testing and Functional Testing**? (April 2015)](https://codeutopia.net/blog/2015/04/11/what-are-unit-testing-integration-testing-and-functional-testing/)
+- [Top 12 Browser Compatibility Testing Tools (June 2017)](https://www.keycdn.com/blog/browser-compatibility-testing-tools/)
+- [Top 10 Cross Browser Compatibility Testing Tools In 2018 (2018)](https://www.guru99.com/top-10-cross-browser-testing-tools.html)
+
+### spies 和 stubs
+
+- [Bye-Bye, Sinon — **Hello, testdouble** (March 2016)](https://spin.atomicobject.com/2016/03/21/javascript-mocking-testdouble/)
+- [JavaScript Testing Tool Showdown: **Sinon.js vs testdouble.js** (April 2017)](https://www.sitepoint.com/javascript-testing-tool-showdown-sinon-js-vs-testdouble-js/)
+- [**testdouble.js vs. sinon.js** (March 2016)](http://blog.testdouble.com/posts/2016-03-13-testdouble-vs-sinon.html)
+- [**enzyme vs unexpected-react** (April 2017)](https://medium.com/@bruderstein/enzyme-vs-unexpected-react-ee9cb099d12b)
+
+### 测试框架对比
+
+- [React Testing — **Jest or Mocha?** (May 2017)](https://spin.atomicobject.com/2017/05/02/react-testing-jest-vs-mocha/)
+- [Testing React Applications with **Karma, Jest or Mocha** (August 2016)](http://instea.sk/2016/08/testing-react-applications-with-karma-jest-or-mocha/)
+- [Let’s Compare **Javascript Testing Framework** (August 2016)](https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006)
+- [**Jasmine vs. Mocha, Chai, and Sinon** (Updated February 2016)](http://thejsguy.com/2015/01/12/jasmine-vs-mocha-chai-and-sinon.html)
+- [**Jasmine vs. Mocha**- JavaScript Testing Framework Comparison
+  (January 2017)](http://www.tisa-software.com/news/blog/217-jasmine-mocha-javascript-testing-framework-comparison)
+
+### Jest
+
+- [How to **Snapshot** Test Everything in Your **Redux App With Jest**
+  (December 2016)](https://hackernoon.com/how-to-snapshot-test-everything-in-your-redux-app-with-jest-fde305ebedea)
+- [**Migrating to Jest** on the P2P team at PayPal (November 2016)](https://medium.com/@kentcdodds/migrating-to-jest-881f75366e7e)
+- [**Jest**- From 0 to 100% Coverage Real Quick (January 2017)](https://hackernoon.com/from-0-to-100-coverage-real-quick-d71dda7069e5)
+- [The Hidden Power of **Jest Matchers** (January 2017)](https://medium.com/@boriscoder/the-hidden-power-of-jest-matchers-f3d86d8101b0)
+- [Testing **React components with Jest and Enzyme** (December 2016)](https://hackernoon.com/testing-react-components-with-jest-and-enzyme-41d592c174f)
+- [Testing a **React-Redux app using Jest and Enzyme** (January 2017)](https://medium.com/@gethylgeorge/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9)
+- [**Snapshot** Testing React Components with **Jest** (January 2017)](https://semaphoreci.com/community/tutorials/snapshot-testing-react-components-with-jest)
+- [Testing an **AngularJS** app with **Jest** (October 2016)](https://medium.com/aya-experience/testing-an-angularjs-app-with-jest-3029a613251)
+
+### Ava
+
+- [Effortless unit testing with **AVA** (April 2016)](https://wecodetheweb.com/2016/04/19/effortless-unit-testing-with-ava/)
+- [Javascript Testing with **AVA** (February 2017)](https://atendesigngroup.com/blog/javascript-testing-ava)
+- [Unit testing front-end JavaScript with **AVA and jsdom** (November 2016)](https://tech.just-eat.com/2016/11/10/unit-testing-front-end-javascript-with-ava-and-jsdom/)
+- [Testing the Bejeezus out of React Native Apps with **AVA** (June 2016)](https://shift.infinite.red/testing-the-bejeezus-out-of-react-native-apps-with-ava-330f51f8f6c3)
+
+### Tape
+
+- [Why I use **Tape Instead of Mocha** & So Should You (July 2015)](https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4)
+- [Learn **Tape**](https://github.com/dwyl/learn-tape)
+
+### UI 测试
+
+- [Hybrid Application Testing with **Protractor and Appium** (March 2017)](https://moduscreate.com/blog/hybrid-application-testing-with-protractor-and-appium/)
+- [**Headless Chrome vs PhantomJS Benchmark** (September 2017)](https://hackernoon.com/benchmark-headless-chrome-vs-phantomjs-e7f44c6956c)
+- [**Protractor vs WebdriverIO vs NightWatch** (November 2016)](http://www.webdriverjs.com/protractor-vs-webdriverio-vs-nightwatch/)
+- [End to End (e2e) Testing React Apps With **Selenium WebDriver And Node.js** is Easier Than You Think (April 2016)](https://marmelab.com/blog/2016/04/19/e2e-testing-with-node-and-es6.html)
+- [**WebdriverIO**- Using JavaScript to Drive Selenium Tests (August 2016)](https://blog.dmbcllc.com/using-javascript-to-drive-selenium-tests/)
+- [JavaScript Functional Testing with **Nightwatch.js** (August 2016)](https://www.sitepoint.com/javascript-functional-testing-nightwatch-js/)
+- [Node.js End-to-End Testing with **Nightwatch.js** (March 2017)](https://blog.risingstack.com/end-to-end-testing-with-nightwatch-js-node-js-at-scale/)
+- [**Nightmare** of End-to-End Testing (September 2016)](http://dsheiko.com/weblog/nightmare-of-end-to-end-testing)
+- [**Protractor vs WebdriverIO vs NightWatch** (November 2016)](http://www.webdriverjs.com/protractor-vs-webdriverio-vs-nightwatch/)
+- [Stack Overflow- What is the difference between **nightwatch.js And webdriver.io?** (March 2016)](http://stackoverflow.com/questions/35981605/what-is-the-difference-between-nightwatch-js-and-webdriver-io)
+- [**Comparison of JavaScript browser automation and test specification libraries** (December 2015)](https://watirmelon.blog/2015/12/08/comparison-of-javascript-browser-automation-and-test-specification-libraries/)
+- [What is **PhantomJS** and How is it Used? (June 2016)](https://scotch.io/tutorials/what-is-phantomjs-and-how-is-it-used)
+- [Setting up End-to-End Testing in Angular Project with **CodeceptJS**(December 2017)](https://medium.com/@armno/setting-up-end-to-end-testing-in-angular-project-with-codeceptjs-ac1784de3420)
+
+### TestCafe
+
+- [Which automated testing tool to pick — **Testcafe or Selenium WebDriver**? (January 2016)](http://onpathtesting.com/automated-testing-tool-testcafe-or-selenium-webdriver/)
+- [**Introducing TestCafe** — Open Source Testing Framework (Octobeer 2016)](https://devexpress.github.io/testcafe/blog/introducing-testcafe-open-source-testing-framework.html)
+- [Why not use Selenium? (October 2016)](https://testcafe-discuss.devexpress.com/t/why-not-use-selenium/47)
+- [Functional Testing With **TestCafe** (March 2017)](http://mherman.org/blog/2017/03/19/functional-testing-with-testcafe)
+- [UI Test Automation Frameworks Showdown: **TestCafé versus Nightwatch.js** (Fabruary 2018)](http://www.pqatesting.com/our_ideas/blog/u)
+
+### Cypress
+
+- [**Cypress**: The future of end-to-end testing for web applications (Fabruary 2018)](https://quizlet.com/blog/cypress-the-future-of-end-to-end-testing-for-web-applications)
