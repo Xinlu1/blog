@@ -56,11 +56,11 @@ tags:
 
 ```javascript
 describe('calculator', function() {
-  // describes a module with nested "describe" functions
+  // 使用嵌套 "describe" 函数描述一个模组
   describe('add', function() {
-    // specify the expected behavior
+    // 详述预期行为
     it('should add 2 numbers', function() {
-       //Use assertion functions to test the expected behavior
+       // 使用断言函数测试预期行为
        ...  
     })
   })
@@ -70,11 +70,11 @@ describe('calculator', function() {
 **断言函数 (assertions functions)** 确保被测试的变量包含预期值。它们通常看起来像这样，其中最流行的写法莫过于前两种方式：
 
 ```javascript
-// Chai expect (popular)
+// Chai expect (流行)
 expect(foo).to.be.a('string')
 expect(foo).to.equal('bar')
 
-// Jasmine expect (popular)
+// Jasmine expect (流行)
 expect(foo).toBeString()
 expect(foo).toEqual('bar')
 
@@ -94,13 +94,13 @@ expect(foo, 'to be', 'bar')
 ```javascript
 it('should call method once with the argument 3', () => {
   
-  // create a sinon spy to spy on object.method
+  // 创建一个 sinon spy 来监视 object.method
   const spy = sinon.spy(object, 'method')
   
-  // call the method with the argument "3"
+  // 调用方法，入参为 "3"
   object.method(3)
 
-  // make sure the object.method was called once, with the right arguments
+  // 确保在入参正确的情况下 object.method 只被调用了一次
   assert(spy.withArgs(3).calledOnce)
   
 })
@@ -112,7 +112,7 @@ it('should call method once with the argument 3', () => {
 // Sinon
 sinon.stub(user, 'isValid').returns(true)
 
-// Jasmine stubs are actually spies with stubbing functionallity
+// Jasmine stubs 实际是有 stubbing 功能的 spies
 spyOn(user, 'isValid').andReturns(true)
 ```
 
@@ -121,7 +121,7 @@ spyOn(user, 'isValid').andReturns(true)
 ```javascript
 it('resolves with the right name', done => {
   
-  // make sure User.fetch "responds" with our own value "David"
+  // 确保 User.fetch "回复"的是我们配置的值"David"
   const stub = sinon
     .stub(User.prototype, 'fetch')
     .resolves({ name: 'David' })
@@ -138,8 +138,8 @@ it('resolves with the right name', done => {
 
 ```javascript
 it('returns an object containing all users', done => {
-  
-  // create and configure the fake server to replace the native network call
+
+  // 创建并配置一个假的服务器取代原生的网络请求
   const server = sinon.createFakeServer()
   server.respondWith('GET', '/users', [
     200,
@@ -147,7 +147,7 @@ it('returns an object containing all users', done => {
     '[{ "id": 1, "name": "Gwen" },  { "id": 2, "name": "John" }]'
   ])
 
-  // call a process that includes the network request that we mocked
+  // 调用一个包含我们模拟网络请求的流程
   Users.all()
     .done(collection => {
       const expectedCollection = [
@@ -157,11 +157,11 @@ it('returns an object containing all users', done => {
       expect(collection.toJSON()).to.eql(expectedCollection)
       done()
     })
-  
-  // respond to the request
+
+  // 响应请求
   server.respond()
   
-  // remove the fake server
+  // 移除假服务器
   server.restore()
 })
 ```
@@ -171,15 +171,15 @@ it('returns an object containing all users', done => {
 ```javascript
 it('renders correctly', () => {
   
-  // create an instance of the Link component with page and child text
+  // 创建一个包含页面链接和内部文字的 Link 组件实例
   const linkInstance = (
     <Link page="http://www.facebook.com">Facebook</Link>
   )
   
-  // create a data snapshot of the component
+  // 创建一个组件的数据快照
   const tree = renderer.create(linkInstance).toJSON()
   
-  // compare the sata to the last snapshot
+  // 比较数据和上一次快照
   expect(tree).toMatchSnapshot()
 })
 ```
@@ -263,7 +263,7 @@ Karma 允许你在浏览器和近似浏览器环境甚至 jsdom 中进行测试�
 
 #### [Chai](https://github.com/chaijs/chai)
 
-Chai 是最流行的断言库。*（译者注：人狠话不多啊...）*
+Chai 是最流行的断言库。*（译者注：此处人狠话不多）*
 
 #### [Unexpected](https://github.com/unexpectedjs/unexpected)
 
@@ -303,15 +303,15 @@ Scenario: An article was opened
 // like-article.step.js
 module.exports = function() {
   this.Given(/^I'm inside an article$/, function(callback) {
-    // functional testing tool code
+    // 函数式测试工具代码
   })
 
   this.When(/^I share the article$/, function(callback) {
-    // functional testing tool code
+    // 函数式测试工具代码
   })
 
   this.Then(/^the article should change to a "shared" state$/, function(callback) {
-    // functional testing tool code
+    // 函数式测试工具代码
   })
 }
 ```
@@ -354,8 +354,7 @@ Jest 是 Facebook 推荐的测试框架，基于我们将会讨论的 Jasmine。
 - **全局变量 (Globals)**：与 Jasmine 类似，Jest 默认创建了测试相关的全局变量因此不用导入它们。虽然这可能导致测试不够灵活和可控而被诟病，但在绝大多数情况下都让测试更加容易：
 
   ```javascript
-  // "describe" is in the global scope already
-  // so no these require lines are **not required**:
+  // "describe" 已经在全局范围中，因此不需要这些导入代码：
   // import { describe } from 'jest'
   // import { describe } from 'jasmine'
   
