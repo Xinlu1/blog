@@ -1,5 +1,5 @@
 ---
-title: 2018 JavaScript 测试概观
+title: 2018 年 JavaScript 测试概观
 date: 2018-10-29 21:26:06
 tags:
 - javascript
@@ -8,7 +8,7 @@ tags:
 ---
 
 > 源文链接：[An Overview of JavaScript Testing in 2018](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
-> 原文链接：[2018 JavaScript 测试概观](http://blog.joouis.com/2018/10/29/an-overview-of-javaScript-testing-in-2018/)
+> 原文链接：[2018 年 JavaScript 测试概观](http://blog.joouis.com/2018/10/29/an-overview-of-javaScript-testing-in-2018/)
 
 
 
@@ -30,13 +30,17 @@ tags:
 
 不过 Facebook 确实有一个很棒的理由使用这个口号。通常 JS 开发者都[不太喜欢网站测试](http://2016.stateofjs.com/2016/testing/)，JS 测试意味着受限制、很难实现、进度缓慢有时候代价昂贵。尽管如此，只要使用正确的策略和正确的工具组合，一次接近全覆盖的测试也可以完成得有组织、简单且相对快速。
 
+
+
 ## 测试的类型
 
 你可以通过[这里](http://stackoverflow.com/questions/520064/what-is-unit-test-integration-test-smoke-test-regression-test)、[这里](https://www.sitepoint.com/javascript-testing-unit-functional-integration/)以及[这里](https://codeutopia.net/blog/2015/04/11/what-are-unit-testing-integration-testing-and-functional-testing/)更深入地了解不同的测试类型。大体上，对于一个网站来说，最重要的几类测试有：
 
-- **单元测试 (Unit Tests)**：通过输入和预期的输出结果测试独立的函数或者类
-- **集成测试 (Integration Tests)**：测试流程或者组件的表现是否符合预期，包括副作用
-- **UI 测试 (UI Test)**（又名**功能测试 (Functional Tests)**）：在浏览器中对产品进行一些使用场景测试，无视其内部结构，只保证行为符合预期
+- **单元测试 (Unit Tests)**：通过输入和预期的输出结果测试独立的函数或者类；
+- **集成测试 (Integration Tests)**：测试流程或者组件的表现是否符合预期，包括副作用；
+- **UI 测试 (UI Test)**（又名**功能测试 (Functional Tests)**）：在浏览器中对产品进行一些使用场景测试，无视其内部结构，只保证行为符合预期。
+
+
 
 ## 测试工具的类型
 
@@ -211,6 +215,8 @@ exports[`renders correctly 1`] = `
 - **无头浏览器环境 (Headless Browser Environment)** —— 一个为了响应速度更快而缺省 UI 的浏览器。
 - **真实浏览器环境 (Real Browser Environment)** —— 一个运行你测试用例的真实浏览器。
 
+
+
 ## 把所有东西放在一起...
 
 如果可以，我们建议面对所有测试类型都使用同一套工具：相同的**测试结构和语法 (1)**、**断言函数 (2)**、结果报告以及**监控机制 (4)**。
@@ -318,6 +324,8 @@ module.exports = function() {
 
 许多团队会发现这种语法比 TDD 更方便。
 
+
+
 ## 选择你的单元和集成测试框架
 
 你应该做的第一个选择也许是框架与其支持库。建议使用框架内提供的工具直到依赖某些独一无二工具的需求出现。
@@ -383,9 +391,51 @@ Jest 就是基于 Jasmine 构建的，所以为什么还要使用 Jasmine 呢？
 
 ### [AVA](https://github.com/avajs/ava)
 
-Ava 是一个并行执行测试的抽象主义 (minimalistic) 测试库。
+Ava 是一个并行执行测试的极简 (minimalistic) 测试库。
 
-- **直接上手 (Ready-To-Go)**：
+- **直接上手 (Ready-To-Go)**：包含所有测试所需的东西（除了 spying 和 dubbing，不过你可以秒加）。在测试结构使用以下语法、断言函数，并在 Node.js 中运行：
+
+  ```javascript
+  import test from 'ava'
+  
+  test('arrays are equal', t => {
+    t.deepEqual([1, 2], [1, 2])
+  })
+  ```
+
+- **全局变量 (Globals)**：上文可见，Ava 没有创建任何测试相关的全局变量，因此你对你的测试可以有更多控制。
+
+- **简单 (Simplicity)**：支持许多高级特性时有着简单的结构和断言函数，摒弃了复杂的 API。
+
+- **开发 (Development)**：Ava 会对测试文件进行增量更新，因此在观察模式下的测试速度非常快。
+
+- **速度 (Speed)**：以独立 Node.js 进程的方式并行执行测试。
+
+- **快照测试 (Snapshot testing)**：[作为框架的一部分被支持](https://github.com/avajs/ava#snapshot-testing)。
+
+### [tape](https://github.com/substack/tape)
+
+Tape 是这些框架中最简单的。它仅有一个 Node.js 文件和一个非常简短的 API。
+
+- **简单 (Simplicity)**：简约的结构和断言函数，没有一个复杂的 API，甚至超越了 Ava。
+- **全局变量 (Globals)**：不创建任何测试相关的全局变量因此你可以更多地掌控你的测试。
+- **测试间无共享状态 (No Shared State between tests)**：Tape 不鼓励使用 "beforeEach" 之类的函数以确保测试模块化以及对于测试周期的用户最大化控制。
+- **无命令行界面 (No CLI)**：Tape 在任何 JS 可以运行的地方都能跑。
+
+
+
+## UI 测试工具
+
+首先就像之前提过的，你可以在[这里](https://www.keycdn.com/blog/browser-compatibility-testing-tools)和[这里](https://www.guru99.com/top-10-cross-browser-testing-tools.html)找到有关服务提供商的好文，这些服务提供商提供主机帮助你在不同的设备和浏览器上执行你的测试。
+
+长期以 UI 测试为目标的工具从实现、哲学到 API 都多种多样，因此强烈建议花时间理解不同的解决方案并在你的产品中测试它们。
+
+- *简短说，如果你只想通过一个可靠、设置简单的多浏览器合一的工具入门，使用 **TestCafe**。*
+- *如果你想要随波逐流并获得最大的社区支持，**WebdriverIO** 是正道。*
+- *如果你不在乎跨浏览器支持，使用 **Puppeteer**。*
+- *如果你的应用没有复杂的交互和图像，例如一个充满表格和导航的系统，可以使用跨浏览器无头工具如 **Casper**。*
+
+### [selenium](https://github.com/SeleniumHQ/selenium)
 
 
 
@@ -396,6 +446,8 @@ Ava 是一个并行执行测试的抽象主义 (minimalistic) 测试库。
 > 最后，如今关于应用架构的最佳决策是在理解活跃开发社区提出的通用解决模式、与自身经验做结合且考虑应用的特性和特殊需求下做出的。
 
 哎呀，然后编码，再重新编码，再重新编码，再重新编码后，测试不同的解决方案 :)
+
+
 
 ## 推荐阅读
 
