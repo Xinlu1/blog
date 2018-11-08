@@ -51,12 +51,12 @@ tags:
 3. 生成、**展示 (display) 并观察 (watch)**测试结果 ([Mocha](https://mochajs.org/), [Jasmine](http://jasmine.github.io/), [Jest](https://facebook.github.io/jest/), [Karma](https://karma-runner.github.io/))
 4. 生成并对比组件和数据结构的**快照 (snapshots)**确保早先运行中的变化符合预期 ([Jest](https://facebook.github.io/jest/), [Ava](https://github.com/avajs/ava))
 5. 提供 **mocks**、**spies** 和 **stubs** ([Sinon](http://sinonjs.org/), [Jasmine](http://jasmine.github.io/), [enzyme](http://airbnb.io/enzyme/docs/api/), [Jest](https://facebook.github.io/jest/), [testdouble](https://github.com/testdouble/testdouble.js))
-6. 生成**代码覆盖率 (code coverage)** 报告 ([Istanbul](https://gotwarlost.github.io/istanbul/), [Jest](https://facebook.github.io/jest/), [Blanket](http://blanketjs.org/))
-7. 提供**浏览器或近似浏览器环境 (browser or browser-like environment)** 并可以在场景执行时进行控制([Protractor](http://www.protractortest.org/)**,** [Nightwatch](http://nightwatchjs.org/), [Phantom](http://phantomjs.org/)**,** [Casper](http://casperjs.org/))
+6. 生成**代码覆盖 (code coverage)** 报告 ([Istanbul](https://gotwarlost.github.io/istanbul/), [Jest](https://facebook.github.io/jest/), [Blanket](http://blanketjs.org/))
+7. 提供**浏览器或近似浏览器环境 (browser or browser-like environment)** 并可以在场景执行时进行控制 ([Protractor](http://www.protractortest.org/)**,** [Nightwatch](http://nightwatchjs.org/), [Phantom](http://phantomjs.org/)**,** [Casper](http://casperjs.org/))
 
 让我们解释上述提到的一些术语：
 
-**测试结构 (testing structure)** 指的是测试的组织方式。如今测试经常被组织成支持[行为驱动开发](https://en.wikipedia.org/wiki/Behavior-driven_development) (behavior-driven development) 的 **BDD 结构 (BDD structure)** 。通常看起来像这样：
+**测试结构** 指的是测试的组织方式。如今测试经常被组织成支持[行为驱动开发](https://en.wikipedia.org/wiki/Behavior-driven_development) (behavior-driven development) 的 **BDD 结构 (BDD structure)** 。通常看起来像这样：
 
 ```javascript
 describe('calculator', function() {
@@ -71,7 +71,7 @@ describe('calculator', function() {
 })
 ```
 
-**断言函数 (assertions functions)** 确保被测试的变量包含预期值。它们通常看起来像这样，其中最流行的写法莫过于前两种方式：
+**断言函数** 确保被测试的变量包含预期值。它们通常看起来像这样，其中最流行的写法莫过于前两种方式：
 
 ```javascript
 // Chai expect (流行)
@@ -209,7 +209,7 @@ exports[`renders correctly 1`] = `
 
 > **注意：**快照通常用来比对表现数据的组件，其实它们也可以比较其他的数据类型，如 redux stores 或应用中不同单元的内部结构。
 
-**浏览器或近似浏览器环境 (Browser or browser-like environment)** 可以是以下三种之一：
+**浏览器或近似浏览器环境** 可以是以下三种之一：
 
 - [**jsdom**](https://github.com/jsdom/jsdom) —— 一个模拟真实浏览器的纯 JavaScript 环境。它没有 UI 也不做渲染，只提供浏览器 JS 运行时所需的 window, document, body, location, cookies, selectors 等接口。
 - **无头浏览器环境 (Headless Browser Environment)** —— 一个为了响应速度更快而缺省 UI 的浏览器。
@@ -355,11 +355,11 @@ Jest 是 Facebook 推荐的测试框架，基于我们将会讨论的 Jasmine。
 
 - **性能 (Performance)**：Jest 首要考虑的是通过实现一个[灵活的并行测试机制](https://jestjs.io/blog/2016/03/11/javascript-unit-testing-performance.html)使得处理包含大量测试文件的大型工程速度更快（以我们的经验和一些博客为例：[这里](https://hackernoon.com/testing-react-components-with-jest-and-enzyme-41d592c174f)，[这里](https://medium.com/@kentcdodds/migrating-to-jest-881f75366e7e)，[这里](https://medium.com/@gethylgeorge/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9)，[这里](https://medium.com/aya-experience/testing-an-angularjs-app-with-jest-3029a613251)）。
 
-- **用户界面 (UI)**：清楚和便利。
+- **用户界面**：清楚和便利。
 
 - **直接上手 (Ready-To-Go)**：自带和 Sinon 功能相同的断言、spies 和 mocks 库。如果你需要一些额外的特性，使用函数库也很容易。
 
-- **全局变量 (Globals)**：与 Jasmine 类似，Jest 默认创建了测试相关的全局变量因此不用导入它们。虽然这可能导致测试不够灵活和可控而被诟病，但在绝大多数情况下都让测试更加容易：
+- **全局变量**：与 Jasmine 类似，Jest 默认创建了测试相关的全局变量因此不用导入它们。虽然这可能导致测试不够灵活和可控而被诟病，但在绝大多数情况下都让测试更加容易：
 
   ```javascript
   // "describe" 已经在全局范围中，因此不需要这些导入代码：
@@ -371,11 +371,11 @@ Jest 是 Facebook 推荐的测试框架，基于我们将会讨论的 Jasmine。
   })
   ```
 
-- **快照测试 (Snapshot testing)**：Facebook 开发并维护了 [jest-snapshot](https://github.com/facebook/jest/tree/master/packages/jest-snapshot)，不过它也可以作为工具集成的一部分使用在绝大多数框架中，或通过正确的插件来使用。
+- **快照测试**：Facebook 开发并维护了 [jest-snapshot](https://github.com/facebook/jest/tree/master/packages/jest-snapshot)，不过它也可以作为工具集成的一部分使用在绝大多数框架中，或通过正确的插件来使用。
 
 - **改进后的模组仿真 (Improved modules mocking)**：Jest 提供了一种简单的方法模拟任务繁重的模组以提升测试速度。例如一项服务可以使用 resolve 一个 promise 模拟一次网络请求。
 
-- **代码覆盖 (Code coverage)**：包含一个基于 [Istanbul](https://github.com/gotwarlost/istanbul) 的功能强大、高效的内置代码覆盖工具。
+- **代码覆盖**：包含一个基于 [Istanbul](https://github.com/gotwarlost/istanbul) 的功能强大、高效的内置代码覆盖工具。
 
 - **可靠性 (Reliability)**：尽管这是一个相对年轻的函数库，但在 2017 年 Jest 稳定下来，现在被认为可靠，且被所有主流 IDEs 和相关工具所支持。
 - **开发 (Development)**：Jest 会对测试文件进行增量更新，因此在观察模式下的测试速度非常快。
@@ -384,8 +384,8 @@ Jest 是 Facebook 推荐的测试框架，基于我们将会讨论的 Jasmine。
 
 Jest 就是基于 Jasmine 构建的，所以为什么还要使用 Jasmine 呢？因为后者存在得时间更久，有大量来自社区的文章和工具可以参考。同时，Angular 依然推荐使用它而非 Jest，尽管 Jest 目前也已完美适配 Angular 的测试，且有很多人在使用。
 
-- **直接上手 (Ready-To-Go)**：包含所有测试所需的东西。
-- **全局变量 (Globals)**：在全局范围内提供所有重要的测试特性。
+- **直接上手**：包含所有测试所需的东西。
+- **全局变量**：在全局范围内提供所有重要的测试特性。
 - **社区 (Community)**：自从 2009 年问世以来积攒了海量相关的文章、建议以及工具。
 - **Angular**：Angular 的所有版本都支持 Jasmine，并在[其官方文档](https://angular.io/guide/testing)中推荐使用。
 
@@ -393,7 +393,7 @@ Jest 就是基于 Jasmine 构建的，所以为什么还要使用 Jasmine 呢？
 
 Ava 是一个并行执行测试的极简 (minimalistic) 测试库。
 
-- **直接上手 (Ready-To-Go)**：包含所有测试所需的东西（除了 spying 和 dubbing，不过你可以秒加）。在测试结构使用以下语法、断言函数，并在 Node.js 中运行：
+- **直接上手**：包含所有测试所需的东西（除了 spying 和 dubbing，不过你可以秒加）。在测试结构使用以下语法、断言函数，并在 Node.js 中运行：
 
   ```javascript
   import test from 'ava'
@@ -403,22 +403,22 @@ Ava 是一个并行执行测试的极简 (minimalistic) 测试库。
   })
   ```
 
-- **全局变量 (Globals)**：上文可见，Ava 没有创建任何测试相关的全局变量，因此你对你的测试可以有更多控制。
+- **全局变量**：上文可见，Ava 没有创建任何测试相关的全局变量，因此你对你的测试可以有更多控制。
 
 - **简单 (Simplicity)**：支持许多高级特性时有着简单的结构和断言函数，摒弃了复杂的 API。
 
-- **开发 (Development)**：Ava 会对测试文件进行增量更新，因此在观察模式下的测试速度非常快。
+- **开发**：Ava 会对测试文件进行增量更新，因此在观察模式下的测试速度非常快。
 
 - **速度 (Speed)**：以独立 Node.js 进程的方式并行执行测试。
 
-- **快照测试 (Snapshot testing)**：[作为框架的一部分被支持](https://github.com/avajs/ava#snapshot-testing)。
+- **快照测试**：[作为框架的一部分被支持](https://github.com/avajs/ava#snapshot-testing)。
 
 ### [tape](https://github.com/substack/tape)
 
 Tape 是这些框架中最简单的。它仅有一个 Node.js 文件和一个非常简短的 API。
 
-- **简单 (Simplicity)**：简约的结构和断言函数，没有一个复杂的 API，甚至超越了 Ava。
-- **全局变量 (Globals)**：不创建任何测试相关的全局变量因此你可以更多地掌控你的测试。
+- **简单**：简约的结构和断言函数，没有一个复杂的 API，甚至超越了 Ava。
+- **全局变量**：不创建任何测试相关的全局变量因此你可以更多地掌控你的测试。
 - **测试间无共享状态 (No Shared State between tests)**：Tape 不鼓励使用 "beforeEach" 之类的函数以确保测试模块化以及对于测试周期的用户最大化控制。
 - **无命令行界面 (No CLI)**：Tape 在任何 JS 可以运行的地方都能跑。
 
@@ -436,6 +436,164 @@ Tape 是这些框架中最简单的。它仅有一个 Node.js 文件和一个非
 - *如果你的应用没有复杂的交互和图像，例如一个充满表格和导航的系统，可以使用跨浏览器无头工具如 **Casper**。*
 
 ### [selenium](https://github.com/SeleniumHQ/selenium)
+
+Selenium 使用浏览器自动化模拟用户行为。它并不是专为测试创造，通过暴露一个在浏览器上模拟用户行为的服务器来达到多种用途。
+
+Selenium 可以被多种方式控制，支持许多编程语言，甚至支持一些不需要实际编程的工具。
+
+对我们的需求而言，通过一个 [Selenium WebDriver](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html) 提供通信层供我们的 NodeJS 代码与操作浏览器的 Selenium 服务器通信从而实现控制。
+
+​	**Node.js <=> WebDriver <=> Selenium Server <=> FF/Chrome/IE/Safari**
+
+WebDriver 被引入测试框架后，测试代码可参考下面部分代码：
+
+```javascript
+describe('login form', () => {
+ 
+  before(() => {
+    return driver.navigate().to('http://path.to.test.app/')
+  })
+  
+  it('autocompletes the name field', () => {
+    driver
+      .findElement(By.css('.autocomplete'))
+      .sendKeys('John')
+    
+    driver.wait(until.elementLocated(By.css('.suggestion')))
+    
+    driver.findElement(By.css('.suggestion')).click()
+    
+    return driver
+      .findElement(By.css('.autocomplete'))
+      .getAttribute('value')
+      .then(inputValue => {
+        expect(inputValue).to.equal('John Doe')
+      })
+  })
+  
+  after(() => {
+    return driver.quit()
+  })
+  
+})
+```
+
+WebDriver 本身对你来说可能已经足够，实际上[一些人](https://marmelab.com/blog/2016/04/19/e2e-testing-with-node-and-es6.html)也建议使用它本身，不过还是有许多库通过分支或包装的方式扩展它。包装后的 WebDriver 可能添加了多余的代码导致调试更加困难，反之 WebDriver 在2018年持续活跃的开发分支可能已经背离其本身。
+
+一些人偏向不直接使用它，所以让我们看看有关 Selenium 操作的库：
+
+### [Appium](https://github.com/appium/appium)
+
+Appium 提供类似 Selenium 的 API 测试移动设备上的站点，同时使用了以下工具：
+
+- **iOS 9.3+**： Apple’s [XCUITest](https://developer.apple.com/reference/xctest)
+- **Before iOS 9.3**： Apple’s [UIAutomation](https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/)
+- **Android 4.2+**： Google’s [UiAutomator/UiAutomator2](http://developer.android.com/tools/help/uiautomator/index.html)
+- **Android 2.3+**： Google’s [Instrumentation](http://developer.android.com/reference/android/app/Instrumentation.html). （通过打包一个独立的工厂提供指令支持, [Selendroid](http://selendroid.io/)）
+- **Windows Phone**： Microsoft’s [WinAppDriver](http://github.com/microsoft/winappdriver)
+
+因此如果你使用 Selenium 或基于 Selenium 开发的工具，你同样可以使用 Appium 在移动设备上测试。
+
+### **[Protractor](https://github.com/angular/protractor)**
+
+Protractor 是一个包装 Selenium 并支持 Angular 增强语法以及特殊内置钩子的库。
+
+- **Angular**：尽快可以成功接入其他 JS 框架，但针对 Angular 提供了特殊的钩子。[Angular 官方文档](https://angular.io/guide/testing)也推荐使用该工具。
+- **错误报告 (Error reporting)**：很好的机制。
+- **支持 (Support)**：目前已支持 Typescript，库本身的更新维护有庞大的 Angular 团队支持。
+
+### [WebdriverIO](http://webdriver.io/)
+
+WebdriverIO 实现了另一个版本的 Selenium WebDriver：
+
+- **语法**：非常容易和可读。
+- **灵活**：一个简单、灵活和可扩展的库。
+- **社区**：拥有好的支持和热心开发者社区提供的丰富插件及扩展。
+
+### **[Nightwatch](http://nightwatchjs.org/)**
+
+Nightwatch 也实现了另一个 Selenium WebDriver，并提供了自己的测试框架包含一个测试服务器、断言和一些工具。
+
+- **框架**：也可以与其他框架搭配使用，不过在你想要运行功能测试而非其他框架的一部分时特别有用。
+- **语法**：看起来是最简单和最可读的。
+- **支持**：不支持 Typescript，大体上看这个库似乎比其他库的支持要少一丢丢。
+
+### **[TestCafe](https://devexpress.github.io/testcafe/)**
+
+TestCafe 是基于 Selenium 工具的不错替代品，在 2016 年底重写并开源。
+
+**它仍有一款[付费版本](https://testcafe.devexpress.com/)提供免编程的测试工具**例如测试录制和用户支持，这很重要因为有许多过时的文章错误地陈述其代码停止开发并将这视为库的缺点。
+
+它将其作为 JavaScript 脚本注入到网站中而不是像 Selenium 一样控制浏览器。这使得 TestCafe 可以**运行在任意浏览器中，包含移动设备**，并完全控制 JavaScript 的执行循环。
+
+TestCafe 是 JavaScript 和测试导向的。尽管已经被认为稳定和特性十足，但目前仍然处于大规模开发状态。
+
+- **快速构建 (Fast to set up)**：打开一个浏览器就可以跑你的测试。
+- **跨浏览器和设备 (Cross Browser and Devices)**：支持许多浏览器和设备，可与提供设备和浏览器测试的 [SauceLabs](https://saucelabs.com/) 或 [BrowserStack ](https://www.browserstack.com/) 配合使用。这包含了在[无头 Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) 和[无头 Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode) 中运行测试，将会在后续讨论到。
+- **并行测试 (Parallel Testing)**：TestCafe 可以[一次在多个浏览器实例中运行你的测试](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/concurrent-test-execution.html)。这个实践可以显著地降低你的测试时间。
+- **方便的错误报告 (Convenient Error Reporting)**
+- **自有生态系统 (Own Ecosystem)**：[TestCafe 使用自己的测试结构](https://testcafe-discuss.devexpress.com/t/interacting-with-browser-using-testcafe-apis-but-without-testcafe-test-runner/300/6)。这可能很方便，尤其因为 UI 测试经常与其他测试分开执行，[不过有些人并不喜欢](https://medium.com/tech-quizlet/cypress-the-future-of-end-to-end-testing-for-web-applications-8ee108c5b255)。
+
+```javascript
+import { Selector } from 'testcafe';
+
+fixture `Getting Started`
+    .page `https://devexpress.github.io/testcafe/example`
+
+// 自己的测试结构
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button')
+        .expect(Selector('#article-header').innerText)
+        .eql('Thank you, John Smith!')
+})
+```
+
+### [Cypress](https://www.cypress.io/)
+
+Cypress 是 TestCafe 的直接竞争对手之一。他们做的事情相较而言相同，如注入测试到网站中，但 Cypress 尝试将其做得更加现代化、灵活和方便。
+
+Cypress 非常年轻，[刚从封闭 beta 版推进到公开 beta 版](https://www.cypress.io/blog/2017/10/10/cypress-is-now-public-beta/)（在 2017 年十月），却已经有[很多发烧友](https://medium.com/tech-quizlet/cypress-the-future-of-end-to-end-testing-for-web-applications-8ee108c5b255)。
+
+- **不支持跨浏览器**：目前仅支持 Chrome （[也不支持无头版](https://github.com/cypress-io/cypress/issues/832)）。不过这个问题已经被创建，开发者也正在为之努力。
+- **缺乏高级功能**：相较 TestCafe 而言缺少并行测试和专有测试工具，不过这些都已经在产品的路线图中了。
+- **文档**：详实且清楚。
+- **调试工具**：在测试过程中容易调试和打日志。
+- **Mocha**：使用 Mocha 作为其测试结构的提供者，确保使用起来非常标准，UI 测试可与其他测试构建在同一结构中。
+
+```javascript
+describe('My First Cypress Test', function() {
+  it("Gets, types and asserts", function() {
+    cy.visit('https://example.cypress.io')
+
+    cy.contains('type').click()
+
+    // 应在一个包含 '/commands/actions' 的新 URL 上
+    cy.url().should('include', '/commands/actions')
+
+    // Get an input, type into it and verify that the value has been updated
+    // 取一个输入，打字填入其中，并验证其值已经更新
+    cy.get('.action-email')
+      .type('fake@email.com')
+      .should('have.value', 'fake@email.com')
+  })
+})
+```
+
+### **[Puppeteer](https://github.com/GoogleChrome/puppeteer)**
+
+Puppeteer 是一个 Google 开发的 Node.js 库，提供了方便的 Node.js API 操控[无头 Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)。
+
+无头 Chrome 就是一个运行了 `--headless` 标志位的常规 Chrome v59+。当 Chrome 运行在无头模式时，会暴露出 API 供外界管理，而 Puppeteer 就是 Google 提供的 JavaScript 工具来控制它。
+
+值得一提的是 Firefox 在 2017 年底也推出了他们的[无头模式](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode)。
+
+注意其他不同的测试工具如 TestCafe、Krama 也可以使用无头 Chrome 和 Firefox。
+
+- Puppeteer 相对较新，但它有一个很大的社区使用、开发工具和二次封装。
+- **原生 (Native) 所以快，并且使用了最新的 Chrome 引擎**，不像 [PhantomJS 在 WebKit 的旧分支上构建](https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/)。（下一小节会讨论）
+- 无头 Chrome 的（因此也是 Puppeteer 的）一个主要缺点是它[不支持如 flash 的扩展](https://bugs.chromium.org/p/chromium/issues/detail?id=706008)，近期可能也不会支持。
 
 
 
