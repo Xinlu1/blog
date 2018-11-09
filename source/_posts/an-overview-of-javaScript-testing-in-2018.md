@@ -595,6 +595,95 @@ Puppeteer 是一个 Google 开发的 Node.js 库，提供了方便的 Node.js AP
 - **原生 (Native) 所以快，并且使用了最新的 Chrome 引擎**，不像 [PhantomJS 在 WebKit 的旧分支上构建](https://about.gitlab.com/2017/12/19/moving-to-headless-chrome/)。（下一小节会讨论）
 - 无头 Chrome 的（因此也是 Puppeteer 的）一个主要缺点是它[不支持如 flash 的扩展](https://bugs.chromium.org/p/chromium/issues/detail?id=706008)，近期可能也不会支持。
 
+### [PhantomJS](http://phantomjs.org/)
+
+Phantom 通过实现 Chromium 引擎创建了一个可控的类 Chrome 无头浏览器。不过自从[谷歌宣布自家的 Puppeteer](https://www.chromestatus.com/features/5678767817097216) 后，Phantom 的创始人和维护者 [Vitaliy Slobodin](https://medium.com/@vitallium) 便[不再对其投入精力](https://groups.google.com/forum/#!msg/phantomjs/9aI5d-LDuNE/5Z3SMZrqAQAJ)，因此从 2017 年中开始维护和开发速度就大幅下降，尽管还是有人在维护。
+
+那么，为什么你还要使用 Phantom 而非 Puppeteer？
+
+- 首先它有**更多的特性**和许多教程、工具。
+- 它也被许多实用工具如后面会讨论的 **CasperJS** 使用。
+- 它使用更早的 WebKit 因此可以模拟旧版 Chrome。
+- 此外之前提过，Phantom **支持如 Flash 扩展**，这是[无头 Chrome 无法的](https://bugs.chromium.org/p/chromium/issues/detail?id=706008)。
+
+### [Nightmare](https://github.com/segmentio/nightmare)
+
+Nightmare 是一款测试语法特别简单的优秀 UI 测试库，使用与 Phantom 类似的 [Electron](https://electronjs.org/) 开发。后者基于更新版的 Chromium ，处在活跃维护与开发阶段，主要目标是使用 JavaScript、HTML 和 CSS 构建跨平台的桌面应用。
+
+同样 Nightmare 也在[讨论](https://github.com/segmentio/nightmare/issues/1092)和[实验](https://github.com/segmentio/nightmare/pull/1211)使用无头 Chrome。以下是 Nightmare 和 Phantom 代码的比较：
+
+```javascript
+// 译者注：Nightmare 代码
+
+yield Nightmare()
+  .goto('http://yahoo.com')
+  .type('input[title="Search"]', 'github nightmare')
+  .click('.searchsubmit')
+```
+
+```javascript
+// 译者注：Phantom 代码
+
+phantom.create(function (ph) {
+  ph.createPage(function (page) {
+    page.open('http://yahoo.com', function (status) {
+      page.evaluate(
+        function () {
+          var el = document.querySelector('input[title="Search"]')
+          el.value = 'github nightmare'
+        },
+        function (result) {
+          page.evaluate(
+            function () {
+              var el = document.querySelector('.searchsubmit')
+              var event = document.createEvent('MouseEvent')
+              event.initEvent('click', true, false)
+              el.dispatchEvent(event)
+            },
+            function (result) {
+              ph.exit()
+            }
+          ) // page.evaluate
+        }
+      ) // page.evaluate
+    }) // page.open
+  }) // ph.createPage
+}) // phantom.create
+```
+
+### [Casper](https://github.com/casperjs/casperjs)
+
+Casper 基于 PhantomJS 和 [SlimerJS](https://slimerjs.org/) （与 Phantom 相同只不过使用了 Firefox 的 Gecko）编写，抽象了在创建 Phantom 和 Slimer 时复杂的异步脚本，从而提供导航、脚本执行和测试工具。
+
+Slimer 尽管被认为是试验性的产品但已被长期广泛使用，并在 2017 年底**释出了 beta 版本**——使用新版[无头 Firefox](https://developer.mozilla.org/en-US/Firefox/Headless_mode) 的 `1.0.0-beta.1`，目前正在为稳定后发布 `1.0.0` 版本而努力。
+
+Casper 近期可能会从 PhantomJS 移植到 Puppeteer，预期 2.0 版本成为通吃无头 Chrome 和无头 Firefox 的工具，敬请期待吧。
+
+### [CodeceptJS](https://github.com/codeception/codeceptjs/)
+
+类似上面讨论过的 CucumberJS，CodeceptJS 通过不同的函数库 API 提供另一层抽象，哲学上期待你的测试更多关注用户行为。
+
+它大概长这这样：
+
+```javascript
+Scenario('login with generated password', async (I) => {
+  I.fillField('email', 'miles@davis.com');
+  I.click('Generate Password');
+  const password = await I.grabTextFrom('#password');
+  I.click('Login');
+  I.fillField('email', 'miles@davis.com');
+  I.fillField('password', password);
+  I.click('Log in!');
+  I.see('Hello, Miles');
+});
+```
+
+以下是可以使用这段代码执行的函数库列表，上面都讨论过：
+
+[WebDriverIO](https://github.com/Codeception/CodeceptJS/blob/master/docs/helpers/WebDriverIO.md), [Protractor](https://github.com/Codeception/CodeceptJS/blob/master/docs/helpers/Protractor.md), [Nightmare](https://github.com/Codeception/CodeceptJS/blob/master/docs/helpers/Nightmare.md), [Appium](https://github.com/Codeception/CodeceptJS/blob/master/docs/helpers/Appium.md), [Puppeteer](https://github.com/Codeception/CodeceptJS/blob/master/docs/helpers/Puppeteer.md).
+
+如果你相信这种语法更适合你的需求，那就试试看吧。
+
 
 
 ## 总结
