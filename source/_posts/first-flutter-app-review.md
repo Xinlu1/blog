@@ -9,8 +9,6 @@ tags:
 
 
 
-> 欢迎转载，转载是请注明原文链接：https://blog.joouis.com/2018/07/25/first-flutter-app-review/
-
 ## TL;DR
 
 站在负责 UI 层的 Web 前端视角看无线端框架，评判的第一个标准无非是文档够不够全、Demo 能不能很容易在手机上跑起来。近来的热门框架 Flutter 就上手而言给出了漂亮的答案。
@@ -253,11 +251,3 @@ void _incrementCounter() {
 - [A Tour of the Flutter Widget Framework](https://flutter.io/widgets-intro/)
 
 相信你能从上述两个方向发现更多一手、可靠、丰富的信息！
-
-
-
-## **Epilog**
-
-❤️ Lazada 深圳团队招人，欢迎推荐 ❤️
-
-联系方式请用 Base64 解码：bHVja3lqb291QGdtYWlsLmNvbQ==
