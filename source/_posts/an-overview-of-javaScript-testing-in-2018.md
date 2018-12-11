@@ -22,11 +22,11 @@ tags:
 
 看看 Facebook 推出的测试框架 Jest 的 logo：
 
-![jest-logo](https://cdn-images-1.medium.com/max/1600/1*MvrDMspvVYwVpmupxJVWRg.png)
+![jest-logo](https://user-images.githubusercontent.com/8896124/49806071-b5623e80-fd91-11e8-8d83-a4c7eddad7fa.png)
 
 你可以看到他们的口号承诺“无痛”地进行 JavaScript 测试，然而“[评论中的有些人](https://news.ycombinator.com/item?id=13128146#13128900)”指出：
 
-![no-painless-testing](https://cdn-images-1.medium.com/max/1600/1*pnzf1V-QrauJf9gaGDYFFQ.png)
+![no-painless-testing](https://user-images.githubusercontent.com/8896124/49806123-dcb90b80-fd91-11e8-96ac-4ace495044dd.png)
 
 不过 Facebook 确实有一个很棒的理由使用这个口号。通常 JS 开发者都[不太喜欢网站测试](http://2016.stateofjs.com/2016/testing/)，JS 测试意味着受限制、很难实现、进度缓慢有时候代价昂贵。尽管如此，只要使用正确的策略和正确的工具组合，一次接近全覆盖的测试也可以完成得有组织、简单且相对快速。
 
@@ -205,7 +205,7 @@ exports[`renders correctly 1`] = `
 
 当新产生的快照与上一次不同时，将提示开发者是否同意此次改动是有意为之。
 
-![snapshot-changed](https://cdn-images-1.medium.com/max/1600/0*wqUDMDebG-ipMs5d.png)
+![snapshot-changed](https://user-images.githubusercontent.com/8896124/49806146-ecd0eb00-fd91-11e8-9921-2d34870c1d92.png)
 
 > **注意：**快照通常用来比对表现数据的组件，其实它们也可以比较其他的数据类型，如 redux stores 或应用中不同单元的内部结构。
 
@@ -287,7 +287,7 @@ testdouble 是一个声称比 Sinon 更加优秀但名气稍逊的库。其设�
 
 Wallaby 是另一款值得一提的工具。尽管需要付费，但很多用户推荐购买。它运行在你的 IDE （支持所有主流 IDE）之上，执行代码变更相关的测试，并在失败后实时定位到代码级别报错。
 
-![wallaby](https://cdn-images-1.medium.com/max/1600/1*b-jNPVyrwyAJssbHNYPwtQ.png)
+![wallaby](https://user-images.githubusercontent.com/8896124/49806168-fbb79d80-fd91-11e8-8e0d-d709ee1750d9.png)
 
 #### [Cucumber](https://github.com/cucumber/cucumber-js)
 
@@ -696,7 +696,7 @@ Scenario('login with generated password', async (I) => {
 
 
 
-![end-pic](https://cdn-images-1.medium.com/max/2000/1*xS-pf61P4mcyCU3tE5Jv6w.png)
+![end-pic](https://user-images.githubusercontent.com/8896124/49806196-0e31d700-fd92-11e8-876d-e0ffe22a3aa2.png)
 
 
 
