@@ -4,15 +4,40 @@ date: 2018-10-29 21:26:06
 tags:
 - javascript
 - test
+- unit test
+- integration test
+- ui test
+- mocha
+- jasmine
 - jest
+- cucumber
+- chai
+- unexpected
+- karma
+- ava
+- sinon
+- enzyme
+- testdouble
+- istanbul
+- blanket
+- protractor
+- nightwatch
+- phantom
+- casper
+- selenium
+- appium
+- webdriverio
+- testcafe
+- cypress
+- puppeteer
+- nightmare
+- codeceptjs
 ---
 
 > 源文链接：[An Overview of JavaScript Testing in 2018](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
 > 原文链接：[2018 年 JavaScript 测试概观](http://blog.joouis.com/2018/10/29/an-overview-of-javaScript-testing-in-2018/)
 
 
-
-*（注：图片均来自源文，如无法正常查看请进行“网络加速”）*
 
 **摘要：使用 Jest 进行单元和集成测试，使用 TestCafe 进行 UI 测试。**
 
@@ -24,11 +49,11 @@ tags:
 
 ![jest-logo](https://user-images.githubusercontent.com/8896124/49806071-b5623e80-fd91-11e8-8d83-a4c7eddad7fa.png)
 
-你可以看到他们的口号承诺“无痛”地进行 JavaScript 测试，然而“[评论中的有些人](https://news.ycombinator.com/item?id=13128146#13128900)”指出：
+你可以看到他们的口号承诺“无痛”地进行 JavaScript 测试，然而“[评论中的某些人](https://news.ycombinator.com/item?id=13128146#13128900)”指出：
 
 ![no-painless-testing](https://user-images.githubusercontent.com/8896124/49806123-dcb90b80-fd91-11e8-96ac-4ace495044dd.png)
 
-不过 Facebook 确实有一个很棒的理由使用这个口号。通常 JS 开发者都[不太喜欢网站测试](http://2016.stateofjs.com/2016/testing/)，JS 测试意味着受限制、很难实现、进度缓慢有时候代价昂贵。尽管如此，只要使用正确的策略和正确的工具组合，一次接近全覆盖的测试也可以完成得有组织、简单且相对快速。
+不过 Facebook 确实有一个很棒的理由使用这个口号。通常 JS 开发者都[不太喜欢网站测试](http://2016.stateofjs.com/2016/testing/)，JS 测试意味着受限制、很难实现、进度缓慢且时而代价昂贵。尽管如此，只要使用正确的策略和正确的工具组合，一次接近全覆盖的测试也可以完成得有组织、简单并相对快速。
 
 
 
@@ -37,7 +62,7 @@ tags:
 你可以通过[这里](http://stackoverflow.com/questions/520064/what-is-unit-test-integration-test-smoke-test-regression-test)、[这里](https://www.sitepoint.com/javascript-testing-unit-functional-integration/)以及[这里](https://codeutopia.net/blog/2015/04/11/what-are-unit-testing-integration-testing-and-functional-testing/)更深入地了解不同的测试类型。大体上，对于一个网站来说，最重要的几类测试有：
 
 - **单元测试 (Unit Tests)**：通过输入和预期的输出结果测试独立的函数或者类；
-- **集成测试 (Integration Tests)**：测试流程或者组件的表现是否符合预期，包括副作用；
+- **集成测试 (Integration Tests)**：测试流程或组件的表现是否符合预期，包括副作用；
 - **UI 测试 (UI Test)**（又名**功能测试 (Functional Tests)**）：在浏览器中对产品进行一些使用场景测试，无视其内部结构，只保证行为符合预期。
 
 
@@ -56,7 +81,7 @@ tags:
 
 让我们解释上述提到的一些术语：
 
-**测试结构** 指的是测试的组织方式。如今测试经常被组织成支持[行为驱动开发](https://en.wikipedia.org/wiki/Behavior-driven_development) (behavior-driven development) 的 **BDD 结构 (BDD structure)** 。通常看起来像这样：
+**测试结构**指的是测试的组织方式。如今测试经常被组织成支持[行为驱动开发](https://en.wikipedia.org/wiki/Behavior-driven_development) (behavior-driven development) 的 **BDD 结构 (BDD structure)** 。通常看起来像这样：
 
 ```javascript
 describe('calculator', function() {
@@ -71,7 +96,7 @@ describe('calculator', function() {
 })
 ```
 
-**断言函数** 确保被测试的变量包含预期值。它们通常看起来像这样，其中最流行的写法莫过于前两种方式：
+**断言函数**确保被测试的变量包含预期值。它们通常看起来像这样，其中最流行的写法莫过于前两种方式：
 
 ```javascript
 // Chai expect (流行)
@@ -91,9 +116,9 @@ expect(foo, 'to be a', 'string')
 expect(foo, 'to be', 'bar')
 ```
 
-*TIP: 这里有一篇关于高级 Jasmine 断言的[好文](https://medium.com/@boriscoder/the-hidden-power-of-jest-matchers-f3d86d8101b0)。*
+*TIP: 这里有一篇关于进阶的 Jasmine 断言[好文](https://medium.com/@boriscoder/the-hidden-power-of-jest-matchers-f3d86d8101b0)。*
 
-**[Spies](http://sinonjs.org/releases/v2.1.0/spies/)** 提供了函数相关的信息：函数被调用了多少次，在什么情况下被调用，被谁调用？在集成测试中我们会使用 它确保一个流程中的副作用符合预期，例如在下面的场景中观察该方法是否只执行了一次？
+**[Spies](http://sinonjs.org/releases/v2.1.0/spies/)** 提供了函数相关的信息：函数被调用了多少次，在什么情况下被调用，被谁调用？在集成测试中我们会使用它确保一个流程中的副作用符合预期，例如在下列场景中观察该方法是否只执行了一次？
 
 ```javascript
 it('should call method once with the argument 3', () => {
@@ -110,7 +135,7 @@ it('should call method once with the argument 3', () => {
 })
 ```
 
-[**Stubbing** 或 **dubbing**](http://sinonjs.org/releases/v4.2.2/stubs/) （好比电影中的替身演员）通过替换选中的函数来测试模块的正确性。如果我们在测试另外的组件时希望 `user.isValid()` 总是返回 `true`，可以这么做：
+[**Stubbing** 或 **dubbing**](http://sinonjs.org/releases/v4.2.2/stubs/) （好比电影中的替身演员）通过**替换选中的函数**来测试模块的正确性。如果我们在测试另外的组件时希望 `user.isValid()` 总是返回 `true`，可以这么做：
 
 ```javascript
 // Sinon
@@ -138,7 +163,7 @@ it('resolves with the right name', done => {
 })
 ```
 
-[**Mocks** 或 **Fakes**](http://sinonjs.org/releases/v4.2.2/mocks/) 是假装成某一模块或行为测试一系列过程中的不同情况。举例来说，Sinon 能仿冒一个服务器离线和网络状况良好的情况来测试期望的应答。
+[**Mocks** 或 **Fakes**](http://sinonjs.org/releases/v4.2.2/mocks/) 通过**伪装成某些模块或行为**测试一系列过程中的不同情况。举例来说，Sinon 能[仿冒一个服务器](http://sinonjs.org/releases/v4.2.2/fake-xhr-and-server/)离线和网络状况良好的情况来测试期望的应答。
 
 ```javascript
 it('returns an object containing all users', done => {
@@ -207,9 +232,9 @@ exports[`renders correctly 1`] = `
 
 ![snapshot-changed](https://user-images.githubusercontent.com/8896124/49806146-ecd0eb00-fd91-11e8-9921-2d34870c1d92.png)
 
-> **注意：**快照通常用来比对表现数据的组件，其实它们也可以比较其他的数据类型，如 redux stores 或应用中不同单元的内部结构。
+> **注意：**快照通常用来比对体现数据的组件，其实它们也可以比较其他的数据类型，如 redux stores 或应用中不同单元的内部结构。
 
-**浏览器或近似浏览器环境** 可以是以下三种之一：
+**浏览器或近似浏览器环境**可以是以下三种之一：
 
 - [**jsdom**](https://github.com/jsdom/jsdom) —— 一个模拟真实浏览器的纯 JavaScript 环境。它没有 UI 也不做渲染，只提供浏览器 JS 运行时所需的 window, document, body, location, cookies, selectors 等接口。
 - **无头浏览器环境 (Headless Browser Environment)** —— 一个为了响应速度更快而缺省 UI 的浏览器。
@@ -219,9 +244,9 @@ exports[`renders correctly 1`] = `
 
 ## 把所有东西放在一起...
 
-如果可以，我们建议面对所有测试类型都使用同一套工具：相同的**测试结构和语法 (1)**、**断言函数 (2)**、结果报告以及**监控机制 (4)**。
+如果可以，我们建议面对所有测试类型都使用同一套工具：相同的**测试结构和语法 (1)**、**断言函数 (2)**、**结果报告**以及**监控机制 (4)**。
 
-我们还建议创建两个不同的流程，一个运行单元和集成测试，另一个则运行 UI 测试。这是因为 UI 测试需要耗费更长的时间，尤其在跨浏览器测试时通常会使用外部提供的多设备、多浏览器付费服务（这个后续还会讨论），因此相比第一类流程你不会想跑更多的 UI 测试，譬如只在合并一条特性分支前才运行一次。
+我们还建议创建两类不同的流程，一类运行单元和集成测试，另一类则运行 UI 测试。这是因为 UI 测试需要耗费更长的时间，尤其在跨浏览器测试时通常会使用外部提供的多设备、多浏览器付费服务（这个后续还会讨论），因此相比第一类流程你不会想跑更多的 UI 测试，譬如只在合并一条特征分支前才运行一次。
 
 ### 单元测试
 
@@ -235,9 +260,9 @@ exports[`renders correctly 1`] = `
 >
 > 当你修复了某个问题，但是又破坏了其他部分时，集成测试（包含快照）可以从另一个角度捕捉许多未知的错误。
 >
-> 同样需要记住的是，在这个真实的世界存在因各种理由而出现的不完美的设计和广泛应用的黑盒子，并不是所有单元模块都是纯函数，也不是所有单元都可以被测试——有一些单元仅作为一个大的流程中的一部分而能被测试到。
+> 同样需要记住的是，在这个真实的世界存在因各种理由而出现的不完美的设计和广泛应用的黑盒子，并不是所有单元模块都是纯函数，也不是所有单元都可以被测试——有一些单元仅作为某个更大流程中的一部分而能被测试到。
 
-集成测试需要覆盖重要的跨模组间流程。相较于单元测试，你可能会使用 **spies (5)** 确保一些预期的副作用而非只对输出做断言，同时使用 **stubs (5)** 模拟、修改在特定测试中不存在的部分流程。
+集成测试需要覆盖重要的跨模组流程。相较于单元测试，你可能会使用 **spies (5)** 确保一些预期的副作用而非只对输出做断言，同时使用 **stubs (5)** 模拟、修改在特定测试中不存在的部分流程。
 
 并且与单元测试相反，**一个浏览器或近似浏览器环境 (7)** 可以支持依赖 `window` 、渲染某一组件或与组件交互的各种流程。
 
@@ -249,23 +274,23 @@ exports[`renders correctly 1`] = `
 
 UI 测试总是运行在**一个浏览器或近似浏览器环境 (7)** 中，模拟用户行为（点击，输入，滚动等等...），确保这些场景在终端用户眼中确实工作。
 
-需要记得这类测试是最难准备的。设想你自己创建一个环境在不同的机器、设备、浏览器类型和版本上运行一个测试... 这就是为什么有[很多服务商](https://www.keycdn.com/blog/browser-compatibility-testing-tools)为你提供这项服务。[你还可以在这里发现更多](https://www.guru99.com/top-10-cross-browser-testing-tools.html)。
+请记住这类测试是最难准备的。设想你自己创建一个环境在不同的机器、设备、浏览器类型和版本上运行一个测试... 这就是为什么有[很多服务商](https://www.keycdn.com/blog/browser-compatibility-testing-tools)为你提供这项服务。[你还可以在这里发现更多](https://www.guru99.com/top-10-cross-browser-testing-tools.html)。
 
 ### 常见的知名测试工具
 
 #### [Jsdom](https://github.com/jsdom/jsdom)
 
-jsdom 是 WHATWG DOM 和 HTML 标准的一个 JavaScript 实现。换言之 jsdom 仅用纯 JS 模拟了一个浏览器环境。之前提过，在这样的模拟浏览器环境中，测试运行的速度十分快。缺点则是在一个真实浏览器之外 jsdom 无法模拟所有，因此这会限制你的测试范围。
+jsdom 是 WHATWG DOM 和 HTML 标准的一个 JavaScript 实现。换言之 jsdom 仅用纯 JS 模拟了一个浏览器环境。之前提过，在这样的模拟浏览器环境中，测试运行的速度十分快。缺点则是在一个真实浏览器之外 jsdom 无法模拟所有功能，因此这会限制你的测试范围。
 
 值得一提的是 JS 社区很快改进了它，目前的版本已经非常接近真实浏览器。
 
 #### [Istanbul](https://istanbul.js.org/)
 
-Istanbul 会告诉你代码中有多少被单元测试所覆盖。它从状态、行数、函数和分支覆盖维度报告百分比情况以便你更好地理解哪些部分代码没有被覆盖到。
+Istanbul 会告诉你有多少代码被单元测试所覆盖。它通过报告状态、行数、函数和分支覆盖维度的百分比情况以便你更好地理解哪些部分代码没有被覆盖到。
 
 #### [Karma](https://karma-runner.github.io/2.0/index.html)
 
-Karma 允许你在浏览器和近似浏览器环境甚至 jsdom 中进行测试。它运行的测试服务器有一个特殊网页可以让你的测试运行在页面环境中，而这个页面还可以跨浏览器运行。这也意味着测试可以通过 [BrowserStack](https://www.browserstack.com/) 之类的服务远程执行。
+Karma 允许你在浏览器和近似浏览器环境甚至 jsdom 中进行测试。它运行的**测试服务器有一个特殊网页**可以让你的测试运行在页面环境中，而这个页面还可以跨浏览器运行。这也意味着测试可以通过 [BrowserStack](https://www.browserstack.com/) 之类的服务远程执行。
 
 #### [Chai](https://github.com/chaijs/chai)
 
@@ -285,16 +310,16 @@ testdouble 是一个声称比 Sinon 更加优秀但名气稍逊的库。其设�
 
 #### [Wallaby](https://wallabyjs.com/)
 
-Wallaby 是另一款值得一提的工具。尽管需要付费，但很多用户推荐购买。它运行在你的 IDE （支持所有主流 IDE）之上，执行代码变更相关的测试，并在失败后实时定位到代码级别报错。
+Wallaby 是另一款值得一提的工具。尽管需要付费，但很多用户推荐购买。它运行在你的 IDE （支持所有主流 IDE）之上，执行代码变更相关的测试，并在失败后实时定位错误代码。
 
 ![wallaby](https://user-images.githubusercontent.com/8896124/49806168-fbb79d80-fd91-11e8-8e0d-d709ee1750d9.png)
 
 #### [Cucumber](https://github.com/cucumber/cucumber-js)
 
-Cucumber 通过按验收准则文件 (accpetance criteria files，使用 **Gherkin** 语法) 划分并与之对应的方式帮助编写 BDD 结构的测试用例。框架支持的多种语言都可以编写测试用例，包含我们关注的 JS：
+Cucumber 通过按验收准则文件 (accpetance criteria files，使用 **Gherkin** 语法) 划分并按与之对应的方式协助编写 BDD 结构的测试用例。框架支持的多种语言都可以编写测试用例，包含我们关注的 JS：
 
 ```shell
-# like-article.feature
+# Filename: "like-article.feature"
 Feature: A reader can share an article to social networks
   As a reader
   I want to share articles
@@ -306,7 +331,7 @@ Scenario: An article was opened
 ```
 
 ```javascript
-// like-article.step.js
+// Filename: "like-article.step.js"
 module.exports = function() {
   this.Given(/^I'm inside an article$/, function(callback) {
     // 函数式测试工具代码
