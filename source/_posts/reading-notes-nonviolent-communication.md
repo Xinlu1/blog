@@ -1,5 +1,5 @@
 ---
-title: Joou's 读书简记：《非暴力沟通》
+title: 读书简记：《非暴力沟通》
 date: 2019-01-01 17:24:08
 tags:
 - communication
