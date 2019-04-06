@@ -603,8 +603,8 @@ calendar:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: joou
   count: true
   lazyload: false
 
