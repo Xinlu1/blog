@@ -34,9 +34,8 @@ tags:
 - codeceptjs
 ---
 
-> 源文链接：[An Overview of JavaScript Testing in 2018](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
-> 原文链接：[2018 年 JavaScript 测试概观](http://blog.joouis.com/2018/10/29/an-overview-of-javaScript-testing-in-2018/)
 
+> 源文链接：[An Overview of JavaScript Testing in 2018](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3)
 
 
 **摘要：使用 Jest 进行单元和集成测试，使用 TestCafe 进行 UI 测试。**

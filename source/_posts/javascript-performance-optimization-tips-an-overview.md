@@ -6,9 +6,8 @@ tags:
 - optimization
 ---
 
-> 作者：[Ivan Čurić](https://www.sitepoint.com/author/icuric/)
->
-> 原文链接：[JavaScript Performance Optimization Tips: An Overview](https://www.sitepoint.com/javascript-performance-optimization-tips-an-overview/)
+
+> 源文链接：[JavaScript Performance Optimization Tips: An Overview](https://www.sitepoint.com/javascript-performance-optimization-tips-an-overview/)
 
 
 

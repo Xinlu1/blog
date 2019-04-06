@@ -8,6 +8,7 @@ tags:
 - config
 ---
 
+
 安装 Ubuntu 几次便会形成一套 SOP，在此做一个整理。
 <!-- more -->
 

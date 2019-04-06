@@ -7,6 +7,7 @@ tags:
 - web
 ---
 
+
 ## Why Responsive?
 
 ### Setting up Chrome's Dev Tools

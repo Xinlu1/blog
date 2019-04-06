@@ -7,9 +7,8 @@ tags:
 - react
 ---
 
-> 源文链接：[JavaScript code cleanup: how you can refactor to use Classes](https://medium.freecodecamp.org/javascript-code-cleanup-how-you-can-refactor-to-use-classes-3948118e4468)
-> 原文链接：[Javascript 简洁之道：如何使用类重构](https://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/)
 
+> 源文链接：[JavaScript code cleanup: how you can refactor to use Classes](https://medium.freecodecamp.org/javascript-code-cleanup-how-you-can-refactor-to-use-classes-3948118e4468)
 
 
 在一些小规模的 React 工程中，将组件里所用的所有方法维护在组件内部没什么问题。不过到了中等规模的项目时，你可能会将那些方法从组件抽取到一个 "helper" 里。本文将展示如何使用类（而非导出独立的函数和变量）来组织代码。
