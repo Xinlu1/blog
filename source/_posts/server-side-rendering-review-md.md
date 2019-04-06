@@ -9,6 +9,7 @@ tags:
 ---
 
 服务器端渲染（Server-Side Rendering，以下简称 SSR）并非是一门新技术，早期就有 Java, PHP 等后端语言进行页面渲染，后来 JavaScript 兴起、 Jquery, Backbone, React, Vue 等视图框架流行，前端逐渐夺回了渲染的地盘。随着如 Express, Koa 等 Node Web 应用程序框架的出现，SSR 以同构渲染（isomorphic rendering）的方式再次强势归来。
+<!-- more -->
 
 ![](https://cloud.githubusercontent.com/assets/948896/25062958/ca1b6618-2209-11e7-99ae-c2a75ad3dabb.png)
 

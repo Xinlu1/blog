@@ -12,6 +12,7 @@ tags:
 ### Setting up Chrome's Dev Tools
 
 使用 Chrome 浏览器的开发者工具除了可以调试 PC 端的页面外，也可以模拟其他尺寸的设备进行调试。
+<!-- more -->
 
 首先打开 DevTools，点击设备反转按钮开启移动端视图：
 

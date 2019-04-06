@@ -16,6 +16,7 @@ tags:
 - Lang：Simplified Chinese
 - State：12 / 12
 - [Note](https://hackpad.com/Operating-Systems-QPGckPU3RdZ)
+<!-- more -->
 
 # Jserv 指导的嵌入式课程
 ---

@@ -11,6 +11,7 @@ tags:
 structure-view （以下简称 SV）是在开发 YunOS Studio（AliOS Studio 前身）时开源出来的一款代码结构提示插件。代码结构提示是一项由来已久的影响开发效率的功能，早在 VIM 时期就有经典的 ctags + Taglist 插件组合来实现这一功能，在桌面时代各大流行的 IDE 也都支持此功能，如 Eclipse 中的 Outline View 或 Webstorm 中的 Structure View。
 
 YunOS Studio 基于扩展能力优异的 Atom 编辑器开发，由于 Atom 的生态市场缺乏一款好用的代码结构提示插件，因此 SV 应运而生（注：目前主流相关插件的比较可参考附件 PPT 中的 “开发由来与现状” 章节）。
+<!-- more -->
 
 自从今年九月初将其开源并发布到 Atom 市场中，2个多月的时间达到了 800 余次的下载量，总计 20+ 的 star 数量，以及数十个 issues 和 PR。在没（精）啥（力）宣（有）传（限）的情况下，有人下载使用、提问题、提需求，甚至主动贡献 PR，都给了笔者极大的鼓舞，因此在此分享一下这个插件的设计，也欢迎 Atom 党服用此插件。
 
