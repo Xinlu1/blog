@@ -8,7 +8,7 @@ subtitle: Blog of Joou
 description: Stand high, think different.
 keywords: Web,JavaScript,blog,reading,life,前端,生活
 author: John Chou
-language: zh
+language: zh-CN
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: next-7.1.0
 Plugins:
   - hexo-generator-sitemap
   - hexo-generator-baidu-sitemap
@@ -95,3 +95,11 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+# Post wordcount display settings
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  symbols: false
+  time: true
+  total_symbols: true
+  total_time: true
