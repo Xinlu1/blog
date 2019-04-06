@@ -1,6 +1,7 @@
 ---
 title: 读书简记：《极限控制》
-date: 2018-06-11 16:16:08
+date: 2018-08-11 16:16:08
+updated: 2018-08-11 16:16:08
 tags:
 - management
 - leadership

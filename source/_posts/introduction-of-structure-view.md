@@ -1,6 +1,7 @@
 ---
 title: 十分钟带你了解国产自制开源插件 structure-view
 date: 2017-11-21 16:19:22
+updated: 2017-11-24 00:00:00
 tags:
 - structure-view
 - outline

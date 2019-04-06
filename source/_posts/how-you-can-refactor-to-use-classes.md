@@ -1,6 +1,7 @@
 ---
 title: Javascript 简洁之道：如何使用类重构
 date: 2018-08-06 10:29:06
+updated: 2018-08-06 10:29:06
 tags:
 - javascript
 - refactor

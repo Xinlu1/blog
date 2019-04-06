@@ -1,6 +1,7 @@
 ---
 title: Weex Android 发车指南（已弃车）
 date: 2017-08-06 03:42:26
+updated: 2018-05-07 00:00:00
 tags:
 - weex
 - android

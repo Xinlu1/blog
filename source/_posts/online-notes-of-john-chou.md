@@ -1,6 +1,7 @@
 ---
 title: Online notes of John Chou
 date: 2016-04-14 19:15:44
+updated: 2016-06-23 00:00:00
 tags:
 - note
 - embedded
