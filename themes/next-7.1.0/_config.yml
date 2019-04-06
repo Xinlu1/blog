@@ -52,14 +52,14 @@ footer:
   since: 2016
 
   # Icon between year and copyright info.
-  # icon:
+  icon:
     # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons/
     # `heart` is recommended with animation in red (#ff0000).
-    # name: user
+    name: heart
     # If you want to animate the icon, set it to true.
-    # animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
-    # color: "#808080"
+    color: "#ff0000"
 
   # If not defined, `author` from Hexo main config will be used.
   copyright:
@@ -158,8 +158,8 @@ baidu_push: true
 # External url should start with http:// or https://
 menu:
   home: / || home
-  tags: /tags/ || tags
   archives: /archives/ || archive
+  tags: /tags/ || tags
   about: /about/ || user
   #categories: /categories/ || th
   #schedule: /schedule/ || calendar
@@ -268,7 +268,7 @@ sidebar:
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
   # Click any blank part of the page to close sidebar (only for Muse | Mist).
   dimmer: true
 
@@ -331,20 +331,20 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  separated_meta: true
+  separated_meta: false
   item_text_post: true
   item_text_total: false
-  awl: 4
-  wpm: 275
+  awl: 3
+  wpm: 200
 
 codeblock:
   # Manual define the border radius in codeblock, leave it blank for the default value: 1
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
-    show_result: false
+    show_result: true
     # Style: only 'flat' is currently available, leave it blank if you prefer default theme
     style:
 
@@ -358,13 +358,13 @@ wechat_subscriber:
 reward_settings:
   # If true, reward would be displayed in every article by default.
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front Matter.
-  enable: false
+  enable: true
   animation: false
-  #comment: Donate comment here
+  comment: Buy me a cup of coffee :)
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/reward-wechat.jpg
+  alipay: /images/reward-alipay.jpg
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
