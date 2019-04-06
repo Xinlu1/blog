@@ -2,86 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.joouis.com/2017/08/06/weex-android-quick-tutorial/</loc>
+    <loc>https://blog.joouis.com/tags/index.html</loc>
     
-    <lastmod>2019-04-06T16:09:26.330Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2016/04/29/the-details-i-learned-from-software-company-in-silicon-valley/</loc>
-    
-    <lastmod>2019-04-06T16:09:22.105Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2017/11/13/server-side-rendering-review/</loc>
-    
-    <lastmod>2019-04-06T16:09:19.517Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2017/10/04/rwd-fundamentals-note/</loc>
-    
-    <lastmod>2019-04-06T16:09:16.493Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2017/03/26/mysql-note/</loc>
-    
-    <lastmod>2019-04-06T16:09:07.467Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2016/04/09/my-configuration-for-ubuntu-distribution/</loc>
-    
-    <lastmod>2019-04-06T16:09:04.453Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2016/04/14/online-notes-of-john-chou/</loc>
-    
-    <lastmod>2019-04-06T16:09:00.951Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2018/06/11/reading-notes-extreme-ownership/</loc>
-    
-    <lastmod>2019-04-06T16:08:55.526Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2017/02/01/remove-duplicates-from-javascript-array/</loc>
-    
-    <lastmod>2019-04-06T16:08:51.374Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2018/01/13/interviews-for-the-offer-of-alibaba/</loc>
-    
-    <lastmod>2019-04-06T16:08:09.223Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2018/10/29/an-overview-of-javascript-testing-in-2018/</loc>
-    
-    <lastmod>2019-04-06T16:08:00.793Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/</loc>
-    
-    <lastmod>2019-04-06T16:07:57.290Z</lastmod>
+    <lastmod>2019-04-06T15:58:23.526Z</lastmod>
     
   </url>
   
@@ -93,65 +16,142 @@
   </url>
   
   <url>
-    <loc>https://blog.joouis.com/tags/index.html</loc>
-    
-    <lastmod>2019-04-06T15:58:23.526Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.joouis.com/2019/01/01/reading-notes-nonviolent-communication/</loc>
     
-    <lastmod>2019-04-06T15:58:23.524Z</lastmod>
+    <lastmod>2019-01-02T16:00:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.joouis.com/2018/10/06/reading-notes-1587/</loc>
+    <loc>https://blog.joouis.com/2018/10/29/an-overview-of-javascript-testing-in-2018/</loc>
     
-    <lastmod>2019-04-06T15:58:23.524Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2018/05/25/optimization-road-of-count-down-timer/</loc>
-    
-    <lastmod>2019-04-06T15:58:23.523Z</lastmod>
+    <lastmod>2018-12-13T16:00:00.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.joouis.com/2018/11/13/goodbye-alibaba/</loc>
     
-    <lastmod>2019-04-06T15:58:23.522Z</lastmod>
+    <lastmod>2018-11-12T17:34:13.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.joouis.com/2017/11/21/introduction-of-structure-view/</loc>
+    <loc>https://blog.joouis.com/2018/10/06/reading-notes-1587/</loc>
     
-    <lastmod>2019-04-06T15:58:23.522Z</lastmod>
+    <lastmod>2018-10-06T12:26:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2018/08/11/reading-notes-extreme-ownership/</loc>
+    
+    <lastmod>2018-08-11T08:16:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2018/08/06/how-you-can-refactor-to-use-classes/</loc>
+    
+    <lastmod>2018-08-06T02:29:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.joouis.com/2018/07/25/first-flutter-app-review/</loc>
     
-    <lastmod>2019-04-06T15:58:23.521Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
-    
-    <lastmod>2019-04-06T15:58:23.521Z</lastmod>
+    <lastmod>2018-07-24T18:17:05.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.joouis.com/2018/07/17/javascript-performance-optimization-tips-an-overview/</loc>
     
-    <lastmod>2017-12-31T16:00:00.000Z</lastmod>
+    <lastmod>2018-07-17T03:28:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2018/05/25/optimization-road-of-count-down-timer/</loc>
+    
+    <lastmod>2018-05-28T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2017/08/06/weex-android-quick-tutorial/</loc>
+    
+    <lastmod>2018-05-06T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2018/01/13/interviews-for-the-offer-of-alibaba/</loc>
+    
+    <lastmod>2018-01-14T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2017/11/21/introduction-of-structure-view/</loc>
+    
+    <lastmod>2017-11-23T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2017/09/14/server-side-rendering-review/</loc>
+    
+    <lastmod>2017-11-13T11:43:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2017/03/26/mysql-note/</loc>
+    
+    <lastmod>2017-10-19T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2017/10/04/rwd-fundamentals-note/</loc>
+    
+    <lastmod>2017-10-11T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2017/02/01/remove-duplicates-from-javascript-array/</loc>
+    
+    <lastmod>2017-02-27T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
+    
+    <lastmod>2017-02-20T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2016/04/14/online-notes-of-john-chou/</loc>
+    
+    <lastmod>2016-06-22T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2016/04/29/the-details-i-learned-from-software-company-in-silicon-valley/</loc>
+    
+    <lastmod>2016-04-28T17:23:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/2016/04/09/my-configuration-for-ubuntu-distribution/</loc>
+    
+    <lastmod>2016-04-10T16:00:00.000Z</lastmod>
     
   </url>
   
