@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.joouis.com/2018/07/17/javascript-performance-optimization-tips-an-overview/</loc>
-    <lastmod>2019-04-06</lastmod>
-  </url>  <url>
     <loc>https://blog.joouis.com/2017/08/06/weex-android-quick-tutorial/</loc>
     <lastmod>2019-04-06</lastmod>
   </url>  <url>
@@ -49,10 +46,10 @@
     <loc>https://blog.joouis.com/2018/05/25/optimization-road-of-count-down-timer/</loc>
     <lastmod>2019-04-06</lastmod>
   </url>  <url>
-    <loc>https://blog.joouis.com/2017/11/21/introduction-of-structure-view/</loc>
+    <loc>https://blog.joouis.com/2018/11/13/goodbye-alibaba/</loc>
     <lastmod>2019-04-06</lastmod>
   </url>  <url>
-    <loc>https://blog.joouis.com/2018/11/13/goodbye-alibaba/</loc>
+    <loc>https://blog.joouis.com/2017/11/21/introduction-of-structure-view/</loc>
     <lastmod>2019-04-06</lastmod>
   </url>  <url>
     <loc>https://blog.joouis.com/2018/07/25/first-flutter-app-review/</loc>
@@ -60,5 +57,8 @@
   </url>  <url>
     <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
     <lastmod>2019-04-06</lastmod>
+  </url>  <url>
+    <loc>https://blog.joouis.com/2018/07/17/javascript-performance-optimization-tips-an-overview/</loc>
+    <lastmod>2017-12-31</lastmod>
   </url>
 </urlset>
