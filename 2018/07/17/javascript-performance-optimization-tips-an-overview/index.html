@@ -115,13 +115,13 @@
 
 
 
-  <meta name="description" content="作者：Ivan Čurić 原文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们">
+  <meta name="description" content="源文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们通过回答以下问题来更广义地理">
 <meta name="keywords" content="javascript,optimization">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 性能优化概观">
 <meta property="og:url" content="https://blog.joouis.com/2018/07/17/javascript-performance-optimization-tips-an-overview/index.html">
 <meta property="og:site_name" content="江边的旱鸭子">
-<meta property="og:description" content="作者：Ivan Čurić 原文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们">
+<meta property="og:description" content="源文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们通过回答以下问题来更广义地理">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316210mobile-vs-desktop.png">
 <meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316294js-chart-1024x633.png">
@@ -129,10 +129,10 @@
 <meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/15113164081000ms.png">
 <meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316460long-task.jpg">
 <meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316514mobile-vs-desktop-parse-1024x249.png">
-<meta property="og:updated_time" content="2019-04-06T15:58:23.523Z">
+<meta property="og:updated_time" content="2019-04-06T16:10:05.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 性能优化概观">
-<meta name="twitter:description" content="作者：Ivan Čurić 原文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们">
+<meta name="twitter:description" content="源文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们通过回答以下问题来更广义地理">
 <meta name="twitter:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316210mobile-vs-desktop.png">
 
 
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-06 23:58:23" itemprop="dateModified" datetime="2019-04-06T23:58:23+08:00">2019-04-06</time>
+                <time title="修改时间：2019-04-07 00:10:05" itemprop="dateModified" datetime="2019-04-07T00:10:05+08:00">2019-04-07</time>
               
             
           </span>
@@ -532,8 +532,7 @@
 
       
         <blockquote>
-<p>作者：<a href="https://www.sitepoint.com/author/icuric/" target="_blank" rel="noopener">Ivan Čurić</a></p>
-<p>原文链接：<a href="https://www.sitepoint.com/javascript-performance-optimization-tips-an-overview/" target="_blank" rel="noopener">JavaScript Performance Optimization Tips: An Overview</a></p>
+<p>源文链接：<a href="https://www.sitepoint.com/javascript-performance-optimization-tips-an-overview/" target="_blank" rel="noopener">JavaScript Performance Optimization Tips: An Overview</a></p>
 </blockquote>
 <p>我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。</p>
 <p>不过在深入细节之前，先让我们通过回答以下问题来更广义地理解性能优化：高性能的 JS 要考虑哪些指标？这些指标如何与更高维度的 web 性能指标融为一体？<br><a id="more"></a></p>
