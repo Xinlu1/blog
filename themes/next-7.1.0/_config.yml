@@ -605,7 +605,7 @@ calendar:
 disqus:
   enable: true
   shortname: joou
-  count: true
+  count: false
   lazyload: false
 
 # DisqusJS
