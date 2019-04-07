@@ -2,6 +2,8 @@
 title: 服务器端渲染姿势探索
 date: 2017-09-14 20:46:51
 updated: 2017-11-13 19:43:15
+categories:
+- Web 前端
 tags:
 - SSR
 - server-side

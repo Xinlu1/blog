@@ -2,6 +2,8 @@
 title: 从硅谷软件企业学习到的细节
 date: 2016-04-29 01:23:00
 updated: 2016-04-29 01:23:00
+categories:
+- 技术回忆录
 tags:
 - silicon valley
 - software

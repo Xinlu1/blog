@@ -2,6 +2,8 @@
 title: JavaScript 性能优化概观
 date: 2018-07-17 11:28:57
 updated: 2018-07-17 11:28:57
+categories:
+- Web 前端
 tags:
 - javascript
 - optimization

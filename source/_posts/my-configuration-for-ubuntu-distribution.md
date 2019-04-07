@@ -2,6 +2,8 @@
 title: 我的 Ubuntu 系统配置
 date: 2016-04-09 15:40:32
 updated: 2016-04-11 00:00:00
+categories:
+- 笔记小抄
 tags: 
 - ubuntu
 - github

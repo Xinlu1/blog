@@ -2,6 +2,8 @@
 title: 读书简记：《非暴力沟通》
 date: 2019-01-01 17:24:08
 updated: 2019-01-03 00:00:00
+categories:
+- 读书简记
 tags:
 - communication
 - nonviolent communication

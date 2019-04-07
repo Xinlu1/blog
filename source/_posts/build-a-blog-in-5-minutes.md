@@ -2,6 +2,8 @@
 title: 五分钟快速搭建一个博客
 date: 2016-04-09 01:13:52
 updated: 2017-02-21 00:00:00
+categories:
+- 笔记小抄
 tags: 
 - blog 
 - github 

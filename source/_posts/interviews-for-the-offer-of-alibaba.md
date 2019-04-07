@@ -2,6 +2,8 @@
 title: 那些年我拿到阿里巴巴Offer所参加的面试
 date: 2018-01-13 02:29:49
 updated: 2018-01-15 00:00:00
+categories:
+- 技术回忆录
 tags:
 - interview
 - alibaba

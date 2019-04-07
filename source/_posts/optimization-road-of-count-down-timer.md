@@ -2,6 +2,8 @@
 title: 论一个倒计时器的性能优化之路
 date: 2018-05-25 21:40:05
 updated: 2018-05-29 00:00:00
+categories:
+- Web 前端
 tags:
 - optimization
 - counter

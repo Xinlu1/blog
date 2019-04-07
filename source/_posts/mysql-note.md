@@ -2,6 +2,8 @@
 title: MySQL 笔记
 date: 2017-03-26 16:10:11
 updated: 2017-10-20 00:00:00
+categories:
+- 笔记小抄
 tags:
 - mysql
 - note
