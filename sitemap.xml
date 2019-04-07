@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.joouis.com/tags/index.html</loc>
+    <loc>https://blog.joouis.com/categories/index.html</loc>
     
-    <lastmod>2019-04-06T15:58:23.526Z</lastmod>
+    <lastmod>2019-04-07T06:01:27.119Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.joouis.com/about/index.html</loc>
     
-    <lastmod>2019-04-06T15:58:23.526Z</lastmod>
+    <lastmod>2019-04-07T05:59:56.392Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.joouis.com/tags/index.html</loc>
+    
+    <lastmod>2019-04-07T05:58:43.029Z</lastmod>
     
   </url>
   

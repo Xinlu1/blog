@@ -32,6 +32,8 @@
     
     </summary>
     
+      <category term="读书简记" scheme="https://blog.joouis.com/categories/%E8%AF%BB%E4%B9%A6%E7%AE%80%E8%AE%B0/"/>
+    
     
       <category term="communication" scheme="https://blog.joouis.com/tags/communication/"/>
     
@@ -59,6 +61,8 @@
     
     </summary>
     
+      <category term="技术人生谈" scheme="https://blog.joouis.com/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F%E8%B0%88/"/>
+    
     
       <category term="leave" scheme="https://blog.joouis.com/tags/leave/"/>
     
@@ -81,6 +85,8 @@
 &lt;p&gt;&lt;strong&gt;摘要：使用 Jest 进行单元和集成测试，使用 TestCafe 进行 UI 测试。&lt;/strong&gt;&lt;br&gt;
     
     </summary>
+    
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="javascript" scheme="https://blog.joouis.com/tags/javascript/"/>
@@ -160,6 +166,8 @@
     
     </summary>
     
+      <category term="读书简记" scheme="https://blog.joouis.com/categories/%E8%AF%BB%E4%B9%A6%E7%AE%80%E8%AE%B0/"/>
+    
     
       <category term="history" scheme="https://blog.joouis.com/tags/history/"/>
     
@@ -182,6 +190,8 @@
 &lt;p&gt;虽然是误打误撞买得书，我却很乐意将它读完，因为工程师太需要学习一些管理技巧，但平时又不怎么有机会接触到这些东西。从正向看一是帮助管理自己，二是即使一直做技术也会逐渐开始带团队、成为 TL，如何带好一个团队、最大化其战斗力是一门学问；反向说来，从实习到工作发现有不少技术过人的工程师是非常厉害的 IC （Individual Contributor），但可能并非优秀的老板，是管理和沟通成为了他们的绊脚石。&lt;br&gt;
     
     </summary>
+    
+      <category term="读书简记" scheme="https://blog.joouis.com/categories/%E8%AF%BB%E4%B9%A6%E7%AE%80%E8%AE%B0/"/>
     
     
       <category term="management" scheme="https://blog.joouis.com/tags/management/"/>
@@ -210,6 +220,8 @@
     
     </summary>
     
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="javascript" scheme="https://blog.joouis.com/tags/javascript/"/>
     
@@ -233,6 +245,8 @@
       &lt;h2 id=&quot;TL-DR&quot;&gt;&lt;a href=&quot;#TL-DR&quot; class=&quot;headerlink&quot; title=&quot;TL;DR&quot;&gt;&lt;/a&gt;TL;DR&lt;/h2&gt;&lt;p&gt;站在负责 UI 层的 Web 前端视角看无线端框架，评判的第一个标准无非是文档够不够全、Demo 能不能很容易在手机上跑起来。近来的热门框架 Flutter 就上手而言给出了漂亮的答案。&lt;br&gt;
     
     </summary>
+    
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="flutter" scheme="https://blog.joouis.com/tags/flutter/"/>
@@ -262,6 +276,8 @@
     
     </summary>
     
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="javascript" scheme="https://blog.joouis.com/tags/javascript/"/>
     
@@ -283,6 +299,8 @@
       &lt;h2 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h2&gt;&lt;p&gt;回顾这半年，扛需求能力越来越强，业务代码也是越写越多。但稍一认真看看这些当时为了满足快速上线所码的东西，问题其实还是不少。这次就从一个简单的计时器说起。&lt;br&gt;
     
     </summary>
+    
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="javascript" scheme="https://blog.joouis.com/tags/javascript/"/>
@@ -310,6 +328,8 @@
     
     </summary>
     
+      <category term="技术人生谈" scheme="https://blog.joouis.com/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F%E8%B0%88/"/>
+    
     
       <category term="interview" scheme="https://blog.joouis.com/tags/interview/"/>
     
@@ -334,6 +354,8 @@
 &lt;p&gt;YunOS Studio 基于扩展能力优异的 Atom 编辑器开发，由于 Atom 的生态市场缺乏一款好用的代码结构提示插件，因此 SV 应运而生（注：目前主流相关插件的比较可参考附件 PPT 中的 “开发由来与现状” 章节）。&lt;br&gt;
     
     </summary>
+    
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="structure-view" scheme="https://blog.joouis.com/tags/structure-view/"/>
@@ -361,6 +383,8 @@
     
     </summary>
     
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="note" scheme="https://blog.joouis.com/tags/note/"/>
     
@@ -384,6 +408,8 @@
       &lt;p&gt;服务器端渲染（Server-Side Rendering，以下简称 SSR）并非是一门新技术，早期就有 Java, PHP 等后端语言进行页面渲染，后来 JavaScript 兴起、 Jquery, Backbone, React, Vue 等视图框架流行，前端逐渐夺回了渲染的地盘。随着如 Express, Koa 等 Node Web 应用程序框架的出现，SSR 以同构渲染（isomorphic rendering）的方式再次强势归来。&lt;br&gt;
     
     </summary>
+    
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="SSR" scheme="https://blog.joouis.com/tags/SSR/"/>
@@ -411,6 +437,8 @@
     
     </summary>
     
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="weex" scheme="https://blog.joouis.com/tags/weex/"/>
     
@@ -437,6 +465,8 @@
     
     </summary>
     
+      <category term="笔记小抄" scheme="https://blog.joouis.com/categories/%E7%AC%94%E8%AE%B0%E5%B0%8F%E6%8A%84/"/>
+    
     
       <category term="mysql" scheme="https://blog.joouis.com/tags/mysql/"/>
     
@@ -458,6 +488,8 @@
       &lt;p&gt;几乎所有 Javascript （以下简称 js）初学者都会遇到的一个问题：如何（优雅地）去除数组中重复的元素。&lt;br&gt;这个问题在 stack overflow 上被赞了近五百次，不过这并不重要。重要的是，有热心网友给出了全面、专业的回答，让博主看了大呼过瘾。&lt;br&gt;在此对原文进行翻译，与大家一起分享。&lt;br&gt;
     
     </summary>
+    
+      <category term="Web 前端" scheme="https://blog.joouis.com/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="javascript" scheme="https://blog.joouis.com/tags/javascript/"/>
@@ -483,6 +515,8 @@
 &lt;p&gt;就在这个月中旬， Ryan 哥在自己的脸书上写了这里分享的这篇文章，颇具视野和深度，对于我这样的新人来说很受启发，因此也搬运到我的博客上来。本文的&lt;a href=&quot;https://www.facebook.com/ryanyang328/posts/10105200442293837&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;原出处&lt;/strong&gt;&lt;/a&gt;，里面还有一些精彩评论，有兴趣也可以去看看。&lt;br&gt;
     
     </summary>
+    
+      <category term="技术人生谈" scheme="https://blog.joouis.com/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F%E8%B0%88/"/>
     
     
       <category term="silicon valley" scheme="https://blog.joouis.com/tags/silicon-valley/"/>
@@ -514,6 +548,8 @@
     
     </summary>
     
+      <category term="笔记小抄" scheme="https://blog.joouis.com/categories/%E7%AC%94%E8%AE%B0%E5%B0%8F%E6%8A%84/"/>
+    
     
       <category term="note" scheme="https://blog.joouis.com/tags/note/"/>
     
@@ -540,6 +576,8 @@
     
     </summary>
     
+      <category term="笔记小抄" scheme="https://blog.joouis.com/categories/%E7%AC%94%E8%AE%B0%E5%B0%8F%E6%8A%84/"/>
+    
     
       <category term="github" scheme="https://blog.joouis.com/tags/github/"/>
     
@@ -565,6 +603,8 @@
       &lt;p&gt;作为部落格的第一篇文章，就记录一下它的诞生过程吧：）&lt;br&gt;
     
     </summary>
+    
+      <category term="笔记小抄" scheme="https://blog.joouis.com/categories/%E7%AC%94%E8%AE%B0%E5%B0%8F%E6%8A%84/"/>
     
     
       <category term="blog" scheme="https://blog.joouis.com/tags/blog/"/>
