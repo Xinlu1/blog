@@ -3,7 +3,7 @@ title: 阿里，江湖再见
 date: 2018-11-13 01:34:13
 updated: 2018-11-13 01:34:13
 categories:
-- 技术回忆录
+- 技术人生谈
 tags:
 - leave
 ---
