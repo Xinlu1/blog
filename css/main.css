@@ -1811,7 +1811,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d2a1d4;
+  background: #ffe3ac;
 }
 .feed-link,
 .chat {
@@ -2887,4 +2887,7 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.page-post-detail .sidebar-toggle {
+  display: block;
 }
