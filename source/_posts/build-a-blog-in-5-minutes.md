@@ -50,13 +50,15 @@ hexo d -g
 8. 在 source 目录下加入`CNAME`文件，在登陆 DNS 服务商增添 CNAME 记录即可；
 9. 參考[主題配置](http://theme-next.iissnan.com/theme-settings.html)、[第三方服务](http://theme-next.iissnan.com/third-party-services.html)一步步客制化自己的博客。
 
-# 心得
+
+
+## 心得
 
 五分钟是完全足够搭建起博客的，不过真正费时的，就是一点点把它修改成自己想要的样子吧。 头一次使用 Hexo ，比 Jekyll 更方便，并且使用的 NexT 主题基于 Hexo 增添了很多功能接口，像搜索、评论平台等，只需要设置`_config.yml`一个文档基本上就能解决问题，确实很好用！
 
 博客的用途是用来记录，Markdown 语言的特质就是帮助你专注在记录上，而今天使用的 Hexo 和 NexT 亦是如此。
 
-## 
+
 
 ## 更新
 
