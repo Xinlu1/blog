@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
+    
+    <lastmod>2019-04-08T17:05:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.joouis.com/2019/04/08/3rd-blog-anniversary/</loc>
     
     <lastmod>2019-04-08T14:15:38.000Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>https://blog.joouis.com/2017/02/01/remove-duplicates-from-javascript-array/</loc>
     
     <lastmod>2017-02-27T16:00:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
-    
-    <lastmod>2017-02-20T16:00:00.000Z</lastmod>
     
   </url>
   

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>  <url>
     <loc>https://blog.joouis.com/2019/04/08/3rd-blog-anniversary/</loc>
     <lastmod>2019-04-08</lastmod>
   </url>  <url>
@@ -51,9 +54,6 @@
   </url>  <url>
     <loc>https://blog.joouis.com/2017/02/01/remove-duplicates-from-javascript-array/</loc>
     <lastmod>2017-02-27</lastmod>
-  </url>  <url>
-    <loc>https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/</loc>
-    <lastmod>2017-02-20</lastmod>
   </url>  <url>
     <loc>https://blog.joouis.com/2016/04/14/online-notes-of-john-chou/</loc>
     <lastmod>2016-06-22</lastmod>
