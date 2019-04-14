@@ -116,20 +116,20 @@
 
 
   <meta name="description" content="TL;DR站在负责 UI 层的 Web 前端视角看无线端框架，评判的第一个标准无非是文档够不够全、Demo 能不能很容易在手机上跑起来。近来的热门框架 Flutter 就上手而言给出了漂亮的答案。">
-<meta name="keywords" content="flutter,app,dart">
+<meta name="keywords" content="mobile,app,flutter,dart">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易计数器——年轻人的第一个Flutter应用">
 <meta property="og:url" content="https://blog.joouis.com/2018/07/25/first-flutter-app-review/index.html">
 <meta property="og:site_name" content="江边的旱鸭子">
 <meta property="og:description" content="TL;DR站在负责 UI 层的 Web 前端视角看无线端框架，评判的第一个标准无非是文档够不够全、Demo 能不能很容易在手机上跑起来。近来的热门框架 Flutter 就上手而言给出了漂亮的答案。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://user-images.githubusercontent.com/8896124/43093244-1eb0f4a4-8ee2-11e8-9295-e822bbf7125f.png">
-<meta property="og:image" content="https://user-images.githubusercontent.com/8896124/43097549-f2d69750-8eee-11e8-8fb5-65974a859025.png">
+<meta property="og:image" content="https://ua60cg.bn.files.1drv.com/y4mx50xV8910Opf1_TigYabB06b-3qTsFGJf8KmR8dFIArUO5nb5BpePdYkUfp_JA9tj_DeBthEENIc1l8QFt9hVkSDojcSlBHbx7tIxOlqwXqVyrvW1pTDYPTNOj57MVyos5giC9Uv_YTAlLDUcz5ZsH-7vvVEwt_tiwodR5tawta_g1V30y9Br8QdL6TAmuF9Rf603Y4DUjvVFrXZ6a0UwQ">
+<meta property="og:image" content="https://ua6zcg.bn.files.1drv.com/y4mUF6sd-hueRZgEbFQx1UmVfQaYGtyEK6TXqqpD3Z-VB4Bj49dDyTKooH_yZESWfth4XK8OHc_p-WlaNIEaCBv51mZYrSlNxtjPJShjlLFWf1qLXV3-5OPc88KJQQxt2_WGdzV32Fljycb9HjfMPAaqaMUm6_tyXGZ_NJilhRUVpX92WQ8LRT1j_CQPOHxpUXajsuzAuDrht8FpZt-jc4ItA">
 <meta property="og:updated_time" content="2018-07-24T18:17:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简易计数器——年轻人的第一个Flutter应用">
 <meta name="twitter:description" content="TL;DR站在负责 UI 层的 Web 前端视角看无线端框架，评判的第一个标准无非是文档够不够全、Demo 能不能很容易在手机上跑起来。近来的热门框架 Flutter 就上手而言给出了漂亮的答案。">
-<meta name="twitter:image" content="https://user-images.githubusercontent.com/8896124/43093244-1eb0f4a4-8ee2-11e8-9295-e822bbf7125f.png">
+<meta name="twitter:image" content="https://ua60cg.bn.files.1drv.com/y4mx50xV8910Opf1_TigYabB06b-3qTsFGJf8KmR8dFIArUO5nb5BpePdYkUfp_JA9tj_DeBthEENIc1l8QFt9hVkSDojcSlBHbx7tIxOlqwXqVyrvW1pTDYPTNOj57MVyos5giC9Uv_YTAlLDUcz5ZsH-7vvVEwt_tiwodR5tawta_g1V30y9Br8QdL6TAmuF9Rf603Y4DUjvVFrXZ6a0UwQ">
 
 
 
@@ -529,13 +529,13 @@
 </ol>
 <p>命令行输入 <code>open ios/Runner.xcworkspace</code> 打开 Runner 工程，选择模拟器即可跑起来默认的 Demo 工程。</p>
 <h2 id="Code-Review-for-Official-Counter"><a href="#Code-Review-for-Official-Counter" class="headerlink" title="Code Review for Official Counter"></a>Code Review for Official Counter</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>官方默认的 Demo 工程是一个简易计数器。先看眼效果，真的非常简单，右下角点击加号，中间的数字对应增长，就酱~</p>
-<p><img src="https://user-images.githubusercontent.com/8896124/43093244-1eb0f4a4-8ee2-11e8-9295-e822bbf7125f.png" alt="image"></p>
+<p><img src="https://ua60cg.bn.files.1drv.com/y4mx50xV8910Opf1_TigYabB06b-3qTsFGJf8KmR8dFIArUO5nb5BpePdYkUfp_JA9tj_DeBthEENIc1l8QFt9hVkSDojcSlBHbx7tIxOlqwXqVyrvW1pTDYPTNOj57MVyos5giC9Uv_YTAlLDUcz5ZsH-7vvVEwt_tiwodR5tawta_g1V30y9Br8QdL6TAmuF9Rf603Y4DUjvVFrXZ6a0UwQ" alt></p>
 <p>外行看热闹，内行看门道。应用层代码总共就六十多行，反正也不会 Dart，就边看边学习一下。</p>
 <h3 id="Import"><a href="#Import" class="headerlink" title="Import"></a>Import</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:flutter/material.dart'</span>;</span><br></pre></td></tr></table></figure>
 <p>首先是 Dart 依赖的导入。Dart 使用 <code>pubspec.yaml</code> 文件定义工程和依赖，类似 Node 世界里的 <code>package.json</code>；<code>pub</code> 则是对应 <code>npm</code> 的存在，<code>pub get</code> 一下即可安装相关的依赖包；安装完成后，会在项目根目录生成一个 <code>.packages</code> 文件，记录了所有依赖包在系统中对应的缓存地址，大概长这样：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Generated by pub on 2018-07-18 20:28:35.360131.</span></span><br><span class="line">analyzer:file:///Users/joou/workspace/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.31.2-alpha.2/lib/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> Generated by pub on 2018-07-18 20:28:35.360131.</span><br><span class="line">analyzer:file:///Users/joou/workspace/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.31.2-alpha.2/lib/</span><br></pre></td></tr></table></figure>
 <p>再来说说最上方的引用语句。除了引用相对路径的 dart 文件外，引用包需加上 <code>package:</code> 前缀，Dart 运行时会自动去查询包文件。那这里引用的 <code>flutter/material.dart</code> 在哪呢？笔者的第一反应是在 Flutter SDK 工程中，果不其然在此：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">joou 2018-07-19 Thu 11:36:~/workspace/flutter/packages/flutter/lib(beta 50d8h)</span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">analysis_options_user.yaml foundation.dart            painting.dart              scheduler.dart             src</span><br><span class="line">animation.dart             gestures.dart              physics.dart               semantics.dart             widgets.dart</span><br><span class="line">cupertino.dart             material.dart              rendering.dart             services.dart</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">joou 2018-07-19 Thu 11:36:~/workspace/flutter/packages/flutter/lib(beta 50d8h)</span><br><span class="line"><span class="meta">$</span> ls</span><br><span class="line">analysis_options_user.yaml foundation.dart            painting.dart              scheduler.dart             src</span><br><span class="line">animation.dart             gestures.dart              physics.dart               semantics.dart             widgets.dart</span><br><span class="line">cupertino.dart             material.dart              rendering.dart             services.dart</span><br></pre></td></tr></table></figure>
 <p>SDK 中已经内置了不少包，让我们看看 <code>material.dart</code> 这个物料包里有些啥：</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="string">'src/material/about.dart'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="string">'src/material/animated_icons.dart'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="string">'src/material/app.dart'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="string">'src/material/app_bar.dart'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="string">'src/material/arc.dart'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="string">'src/material/back_button.dart'</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
 <p>所以说 <code>flutter/lib</code> 下的包文件类似一个入口，类似 C 语言里的 header file，暴露给外界 <code>flutter/lib/src</code> 中的各种组件，想要深入了解某个包的具体实现去对应目录下即可找到真相。</p>
@@ -583,7 +583,7 @@
 <li>屏幕右下角的按钮由 <code>FloatingActionButton</code> 描述，使用了加号图标，绑定之前定义好的 <code>_incrementCounter</code> 函数作为 <code>onPressed</code> 事件的处理者。</li>
 </ul>
 <p>好了说了这么多组件，让我们使用 Flutter tool 的 <code>Toggle Debug Paint</code> 指令直观感受一把。</p>
-<p><img src="https://user-images.githubusercontent.com/8896124/43097549-f2d69750-8eee-11e8-8fb5-65974a859025.png" alt="image"></p>
+<p><img src="https://ua6zcg.bn.files.1drv.com/y4mUF6sd-hueRZgEbFQx1UmVfQaYGtyEK6TXqqpD3Z-VB4Bj49dDyTKooH_yZESWfth4XK8OHc_p-WlaNIEaCBv51mZYrSlNxtjPJShjlLFWf1qLXV3-5OPc88KJQQxt2_WGdzV32Fljycb9HjfMPAaqaMUm6_tyXGZ_NJilhRUVpX92WQ8LRT1j_CQPOHxpUXajsuzAuDrht8FpZt-jc4ItA" alt></p>
 <h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>笔者去年写了篇 Weex 从入门到放弃的上手文，说实话这次 Flutter 上手体验要比 Weex 好非常多——详实的文档，齐全的基础脚手架，轻松在手机/模拟器上运行应用。</p>
 <p>对于没有客户端开发经验的笔者来说，能看着文档打通流程（实际编译出一个安装包并在对应平台上安装、执行）是一件非常关键的事情，它意味着小白也能使用这项技术栈独立开发简单的应用，能给学习者十足的信心。过去接触 Weex，只能使用 Playground App 扫码跑 demo，非常的“半成品”，而 Flutter 轻松几个指令，就在你的设备上跑起了你的工程，赞！</p>
 <p>至于 Flutter 相关的信息，如学习 Dart 语言、Flutter 入门教程、代码范例、官方库接口等资料已经颇为丰富，Stack Overflow 上也有一些讨论的话题，对于一个处于 Beta 阶段的框架来很成熟了。</p>
@@ -600,6 +600,18 @@
 
     
       
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/08/06/weex-android-quick-tutorial/" rel="bookmark">Weex Android 发车指南（已弃车）</a></div>
+      
+    </li>
+  
+  </ul>
 
 
     
@@ -678,9 +690,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/flutter/" rel="tag"># flutter</a>
+            <a href="/tags/mobile/" rel="tag"># mobile</a>
           
             <a href="/tags/app/" rel="tag"># app</a>
+          
+            <a href="/tags/flutter/" rel="tag"># flutter</a>
           
             <a href="/tags/dart/" rel="tag"># dart</a>
           
@@ -995,7 +1009,31 @@
                     
                       
                     
-                    <span class="site-state-item-count">84</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

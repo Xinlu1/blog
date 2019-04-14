@@ -116,19 +116,19 @@
 
 
   <meta name="description" content="前言还记得刚入职见到第一个 YunOS App 时，笔者问师兄 Manifest.json 文件是干嘛用的，师兄说如果你有 Android 开发经验的话就会明白了。当下笔者立马找了本电子书放在桌面准备苦读，结果…时至今日未曾宠幸过。对于没有一点 Java 经验的笔者来说，不知道何时才会迈出无线开发第一步，直到最近遇见了 Weex。">
-<meta name="keywords" content="weex,android,web,vue">
+<meta name="keywords" content="javascript,weex,android,web,vue,mobile,tutorial,app">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Weex Android 发车指南（已弃车）">
 <meta property="og:url" content="https://blog.joouis.com/2017/08/06/weex-android-quick-tutorial/index.html">
 <meta property="og:site_name" content="江边的旱鸭子">
 <meta property="og:description" content="前言还记得刚入职见到第一个 YunOS App 时，笔者问师兄 Manifest.json 文件是干嘛用的，师兄说如果你有 Android 开发经验的话就会明白了。当下笔者立马找了本电子书放在桌面准备苦读，结果…时至今日未曾宠幸过。对于没有一点 Java 经验的笔者来说，不知道何时才会迈出无线开发第一步，直到最近遇见了 Weex。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://weex.apache.org/cn/guide/images/flow.png">
+<meta property="og:image" content="https://v64blg.bn.files.1drv.com/y4mgihO5S41NuNsjSkDcgj3dmHqmgoCLojI9FuKZ1AaB76FK7uSYiyR1HhkKeNwtpDk3UZMvW0gsthHEg1eOyhcoOhZNzE3OzIMwciSO-vDQU5M2F15ZhKe7mU54RriMLd_T3SyoepJfMnxQH7fs_cYOP--tjsnJ5MRCqHwjuF8GC34xP6eODvWzGZbXl8qRj9xl4Enm2-xL6w3b6uRRPCAMQ">
 <meta property="og:updated_time" content="2018-05-06T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weex Android 发车指南（已弃车）">
 <meta name="twitter:description" content="前言还记得刚入职见到第一个 YunOS App 时，笔者问师兄 Manifest.json 文件是干嘛用的，师兄说如果你有 Android 开发经验的话就会明白了。当下笔者立马找了本电子书放在桌面准备苦读，结果…时至今日未曾宠幸过。对于没有一点 Java 经验的笔者来说，不知道何时才会迈出无线开发第一步，直到最近遇见了 Weex。">
-<meta name="twitter:image" content="http://weex.apache.org/cn/guide/images/flow.png">
+<meta name="twitter:image" content="https://v64blg.bn.files.1drv.com/y4mgihO5S41NuNsjSkDcgj3dmHqmgoCLojI9FuKZ1AaB76FK7uSYiyR1HhkKeNwtpDk3UZMvW0gsthHEg1eOyhcoOhZNzE3OzIMwciSO-vDQU5M2F15ZhKe7mU54RriMLd_T3SyoepJfMnxQH7fs_cYOP--tjsnJ5MRCqHwjuF8GC34xP6eODvWzGZbXl8qRj9xl4Enm2-xL6w3b6uRRPCAMQ">
 
 
 
@@ -528,7 +528,7 @@
 <p>Weex 是集团去年推出的移动开发框架，Apache 顶级开源项目，已经被手淘、天猫等业务广泛使用，经历了双十一等活动的考验。它与传统的移动开发不同、也是吸引笔者的地方，即使用 Web 前端技术进行开发且能达到 Native 级别的性能体验。</p>
 <p>既然笔者毫无 Java 以及 Android 开发经验，必然会站在 <strong>纯前端人员的视角</strong> 来带领大家上车。此外，Weex 在集团内外的热度真的是非常之高，相关的文档、博文也是数不胜数，因此文中将会使用一些引用来保证心得的简洁同时给大家更多延伸的内容。</p>
 <h2 id="什么是-Weex-？"><a href="#什么是-Weex-？" class="headerlink" title="什么是 Weex ？"></a>什么是 Weex ？</h2><p>理论角度，<a href="http://weex.apache.org/cn/guide/intro/how-it-works.html" target="_blank" rel="noopener">官方文档</a>上已经说得挺清楚的了，一张流程图可以说明一切。</p>
-<p><img src="http://weex.apache.org/cn/guide/images/flow.png" alt="flow"></p>
+<img src="https://v64blg.bn.files.1drv.com/y4mgihO5S41NuNsjSkDcgj3dmHqmgoCLojI9FuKZ1AaB76FK7uSYiyR1HhkKeNwtpDk3UZMvW0gsthHEg1eOyhcoOhZNzE3OzIMwciSO-vDQU5M2F15ZhKe7mU54RriMLd_T3SyoepJfMnxQH7fs_cYOP--tjsnJ5MRCqHwjuF8GC34xP6eODvWzGZbXl8qRj9xl4Enm2-xL6w3b6uRRPCAMQ" title="Source: http://weex.apache.org/cn/guide/images/flow.png">
 <p>不过回到实际开发，Weex 是什么，这点在没有上手前很难从官方文档中得出结论。（网上有不少声音吐槽 Weex 文档写的不好，笔者持保留态度，不过确实从落地的角度来说，缺乏一些必要的细节，这个后面还会再提。此外作者还有一个疑问，官方文档究的目标群体究竟是谁？是传统的移动端开发者？还是 Web 前端背景的开发人员？至少笔者觉得不是后者。）</p>
 <p>以实践的角度，在笔者看来，Weex 有两部分，一是前端技术方面的自动化框架，在PC端帮助开发人员快速进行 vue 文件的开发、打包等，这部分可以在官网<a href="http://weex.apache.org/cn/guide/set-up-env.html" target="_blank" rel="noopener">搭建开发环境</a>的教程中获取；二是使 JS 代码能在移动端成功运行起来的各平台 SDK 套件或源码，在编译各平台安装包时加入，<a href="http://weex.apache.org/cn/guide/integrate-to-your-app.html" target="_blank" rel="noopener">文档</a>中也有提及。</p>
 <p>除了 Weex 本身，其配套的开发工具比较丰富。有脚手架 <a href="http://weex.apache.org/cn/guide/tools/toolkit.html" target="_blank" rel="noopener">weex-toolkit</a> 、移动端的预览工具 <a href="http://weex.apache.org/cn/playground.html" target="_blank" rel="noopener">Weex Playground</a> 、在线代码执行工具 <a href="http://dotwe.org/vue" target="_blank" rel="noopener">Weex Playground</a> 等。</p>
@@ -570,6 +570,34 @@
       
       
       <div class="popular-posts-title"><a href="/2017/10/04/rwd-fundamentals-note/" rel="bookmark">响应式网站设计基础</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/07/25/first-flutter-app-review/" rel="bookmark">简易计数器——年轻人的第一个Flutter应用</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/08/06/how-you-can-refactor-to-use-classes/" rel="bookmark">Javascript 简洁之道：如何使用类重构</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/21/introduction-to-structure-view/" rel="bookmark">十分钟带你了解国产自制开源插件 structure-view</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/05/25/optimization-road-of-count-down-timer/" rel="bookmark">论一个倒计时器的性能优化之路</a></div>
       
     </li>
   
@@ -652,6 +680,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
             <a href="/tags/weex/" rel="tag"># weex</a>
           
             <a href="/tags/android/" rel="tag"># android</a>
@@ -659,6 +689,12 @@
             <a href="/tags/web/" rel="tag"># web</a>
           
             <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/mobile/" rel="tag"># mobile</a>
+          
+            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+          
+            <a href="/tags/app/" rel="tag"># app</a>
           
         </div>
       
@@ -971,7 +1007,31 @@
                     
                       
                     
-                    <span class="site-state-item-count">84</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

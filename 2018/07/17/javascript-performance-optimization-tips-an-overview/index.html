@@ -116,24 +116,24 @@
 
 
   <meta name="description" content="源文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们通过回答以下问题来更广义地理">
-<meta name="keywords" content="javascript,optimization">
+<meta name="keywords" content="javascript,optimization,performance">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 性能优化概观">
 <meta property="og:url" content="https://blog.joouis.com/2018/07/17/javascript-performance-optimization-tips-an-overview/index.html">
 <meta property="og:site_name" content="江边的旱鸭子">
 <meta property="og:description" content="源文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们通过回答以下问题来更广义地理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316210mobile-vs-desktop.png">
-<meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316294js-chart-1024x633.png">
-<meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316348rail.png">
-<meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/15113164081000ms.png">
-<meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316460long-task.jpg">
-<meta property="og:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316514mobile-vs-desktop-parse-1024x249.png">
+<meta property="og:image" content="https://uk6xcg.bn.files.1drv.com/y4mNVFLuHYlzHBeyfNYZsHgIHuDsfmF11B33HcdkHvMvvvIN3F5zXQIMsx5f2T6FTwIjNOB924XGxOyLVwfhrceWQTgqSANcEEglZy_zXdhayApGYOSCA68RyeOsEEbxzfRIGozZuO_wrU79c35vJqQz5o454NRbJRpJj0mT3uoxsXAsuaNwKWhSpxXoi3rlfbhxEa4ztlINll-bSMqHfPDnw">
+<meta property="og:image" content="https://uk6wcg.bn.files.1drv.com/y4m0-ZmIf1Xp68or_HfkesuOljc0Gw252YypTC3P6P6VpgBHI0-gXEYaaEyF8nqlDWnJSBxCTdFSIRjZULLHMFEkR8Zfkne6s8bJnYmdD5a9BPj2YVHDLfTIFYICJvJ2ff6ycJCauE298dxQFhFM3fysXz9rOBSmqxpl4bET8VLjW1R4Xh_JkU2rgZU90d_czDrPEM5eG7_ufUqskK0hI2xPg">
+<meta property="og:image" content="https://uk6vcg.bn.files.1drv.com/y4mmLE_Js1ooQjEX8AGy_4ytOtExYWfJ3SMsL4Q63loBlFj19s2GlTeQBv1fZn-eAP-EBfSbpPCuAjzM29rYAM2iHM-5MrDNa-r8iG_bQhRFSgmLfQuOMbXYeEwf_5PQbzt77QO5qXSVIZ3NZxVoeMDfvHt9zk78ZOuZGGtHZ0TuHo84Gw8qzSZf8_H3-4I-yIzgFPzBMZt6wMUvhuSuyJ2pA">
+<meta property="og:image" content="https://ua62cg.bn.files.1drv.com/y4mJXYSoOY-zysDoELXReJbrP9qgAlCz955Rlpuip5GmXG9kWD3BhEIB57MPHkmmbxrvhifOErq5rV54TSjKmsw7UgLrNNIVweRGVcyk4is2K_zZfDXM7HuPreemrsBs1TnplWdvyvi1i3MIndUqprEkSaONy1gWVcJZkXC9ULwXGJ27_3wPKnWFwAUbjxHBl7zgtEVM2p-35t4FbpQP-ZBgw">
+<meta property="og:image" content="https://uk6ucg.bn.files.1drv.com/y4mf7OwF4UaBXdoAo5nmOKXVbIO52qOl0GsAP9_bpZNFT0Qm8dEFmJPzIeVLBrmsjgSTK-Mn1V6TQath0tmAFE9cCsSmH0hc_MK5e8I7uar-osIsRW1sKyfFBexLaJg3pSiGKctRsv7a83Bn0N-E6jSb6XDGmsxUx9tf9XmHD7b9nrLEmnmNuR6c8biwbDqpM9O0BW0LCKJ5oii9iLFg0KxgA">
+<meta property="og:image" content="https://ua63cg.bn.files.1drv.com/y4mmTS-JT-S3MyBeSJilW_BXMGOnvluzo-h4RC_2PkHPBfg2eU1pv__euNdtWHKIGJz9q67ARN2Hsy4YDUVS4iYbI2L78ZepPII9Q_bR89luYO4ikzWXr-Ae2xZ7hlVhYE5sSp-zHKqMvro8a8f2Sn5CNpPA3A97Q0scvJIvP_yZnY8cBVyBchtAz-yYeUKET79O3Vw5uoN6wV1orMk2_vvgw">
 <meta property="og:updated_time" content="2018-07-17T03:28:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 性能优化概观">
 <meta name="twitter:description" content="源文链接：JavaScript Performance Optimization Tips: An Overview  我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。 不过在深入细节之前，先让我们通过回答以下问题来更广义地理">
-<meta name="twitter:image" content="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316210mobile-vs-desktop.png">
+<meta name="twitter:image" content="https://uk6xcg.bn.files.1drv.com/y4mNVFLuHYlzHBeyfNYZsHgIHuDsfmF11B33HcdkHvMvvvIN3F5zXQIMsx5f2T6FTwIjNOB924XGxOyLVwfhrceWQTgqSANcEEglZy_zXdhayApGYOSCA68RyeOsEEbxzfRIGozZuO_wrU79c35vJqQz5o454NRbJRpJj0mT3uoxsXAsuaNwKWhSpxXoi3rlfbhxEa4ztlINll-bSMqHfPDnw">
 
 
 
@@ -519,31 +519,22 @@
 <p>我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。</p>
 <p>不过在深入细节之前，先让我们通过回答以下问题来更广义地理解性能优化：高性能的 JS 要考虑哪些指标？这些指标如何与更高维度的 web 性能指标融为一体？<br><a id="more"></a></p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>首先，让我们避开如下事情：如果你只在台式机上测试，你已将 <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank" rel="noopener">超过 50%</a> 的用户排除在外了。</p>
-<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316210mobile-vs-desktop.png" alt="Image: Desktop vs Mobile vs Tablet Market Share Worldwide"></p>
+<p><img src="https://uk6xcg.bn.files.1drv.com/y4mNVFLuHYlzHBeyfNYZsHgIHuDsfmF11B33HcdkHvMvvvIN3F5zXQIMsx5f2T6FTwIjNOB924XGxOyLVwfhrceWQTgqSANcEEglZy_zXdhayApGYOSCA68RyeOsEEbxzfRIGozZuO_wrU79c35vJqQz5o454NRbJRpJj0mT3uoxsXAsuaNwKWhSpxXoi3rlfbhxEa4ztlINll-bSMqHfPDnw" alt></p>
 <p>由于新兴市场偏爱使用低于 100 美金的安卓设备上网，该趋势只会持续增长。台式机作为主力上网设备的时代已经结束，未来十亿网民将会首选移动设备访问你的网站。</p>
 <p>Chrome DevTool 工具的设备模拟器并不能有效替代真实设备进行测试。即便限制 CPU 和网络性能有所帮助，但它相比性能较弱的真实设备来说完全是另一个等级。所以请在真实设备上测试！</p>
 <p>即使是使用真实设备测试，你也很可能用的是自己新买的高端旗舰机。然而，这并非你的用户使用的设备。让我们看看配置处在中等水平的移动设备，例如摩托罗拉的 G1，只有不足 1GB 的运行内存、孱弱的 CPU 和 GPU。</p>
 <p>当 <a href="https://docs.google.com/spreadsheets/d/1wHcNNQea28LhwQ_amFamT33d5woVrJfJy53Z1k6V090" target="_blank" rel="noopener">解析一个文件体积为平均数的 JS 包</a>（JS bundle）时，让我们看看它的解析速度排名。</p>
-<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316294js-chart-1024x633.png" alt="Image: Time spend in JS parse &amp; eval for average JS"></p>
-<blockquote>
-<p><em>Addy Osmani: <a href="https://docs.google.com/spreadsheets/d/1wHcNNQea28LhwQ_amFamT33d5woVrJfJy53Z1k6V090" target="_blank" rel="noopener">Time spent in JS Parse &amp; eval for average JS</a>.</em></p>
-</blockquote>
+<p><img src="https://uk6wcg.bn.files.1drv.com/y4m0-ZmIf1Xp68or_HfkesuOljc0Gw252YypTC3P6P6VpgBHI0-gXEYaaEyF8nqlDWnJSBxCTdFSIRjZULLHMFEkR8Zfkne6s8bJnYmdD5a9BPj2YVHDLfTIFYICJvJ2ff6ycJCauE298dxQFhFM3fysXz9rOBSmqxpl4bET8VLjW1R4Xh_JkU2rgZU90d_czDrPEM5eG7_ufUqskK0hI2xPg" alt="Addy Osmani: Time spent in JS Parse &amp; eval for average JS"></p>
 <p>虽然这张图只涵盖了 JS 解析和编译的时间（后续时间将会消耗更多）而非常规的性能数据，但有着强关联的它可以被视作 JS 性能的指标之一。</p>
 <p>Bruce Lawson 曾说 “<a href="https://vimeo.com/194968584" target="_blank" rel="noopener">it’s the World-Wide Web, not the Wealthy Western Web</a>”。因此你需要在比你的 MacBook 或 iPhone 慢 25 倍左右的设备上探讨 web 性能。让我们看看我们的实际目标是什么。</p>
 <h2 id="高性能的-JS-代码是怎样的？"><a href="#高性能的-JS-代码是怎样的？" class="headerlink" title="高性能的 JS 代码是怎样的？"></a>高性能的 JS 代码是怎样的？</h2><p>现在我们了解了我们的目标平台，就可以解答下一个问题：高性能的 JS 代码是什么？</p>
 <p>虽说没有绝对的分类来定义高性能代码，但我们有一个以用户为中心的性能模型可以参考：<a href="https://developers.google.com/web/fundamentals/performance/rail" target="_blank" rel="noopener">RAIL 模型</a>。</p>
-<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316348rail.png" alt="Image: Planning for Performance: PRPL"></p>
-<blockquote>
-<p><em>Sam Saccone: <a href="https://www.youtube.com/watch?v=RWLzUnESylc" target="_blank" rel="noopener">Planning for Performance: PRPL</a></em></p>
-</blockquote>
+<p><img src="https://uk6vcg.bn.files.1drv.com/y4mmLE_Js1ooQjEX8AGy_4ytOtExYWfJ3SMsL4Q63loBlFj19s2GlTeQBv1fZn-eAP-EBfSbpPCuAjzM29rYAM2iHM-5MrDNa-r8iG_bQhRFSgmLfQuOMbXYeEwf_5PQbzt77QO5qXSVIZ3NZxVoeMDfvHt9zk78ZOuZGGtHZ0TuHo84Gw8qzSZf8_H3-4I-yIzgFPzBMZt6wMUvhuSuyJ2pA" alt="Sam Saccone: Planning for Performance: PRPL"></p>
 <h3 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h3><p>如果你的应用在 100 毫秒内响应用户的操作，给用户的感知就是立即响应。这适用于网页中可敲击的元素，但是滑动或拖拽时则不行。</p>
 <h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><p>在 60Hz 帧率的显示器上，我们期望在动画和滑动时画面恒定在 60 帧每秒，这意味着约 16 毫秒显示一帧。由于 16 毫秒的预算，你实际上只有 8 到 10 毫秒去完成所有工作，剩余时间将被浏览器内部以及其它一些差异消耗掉。（深度阅读：《<a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&amp;mid=2651228065&amp;idx=2&amp;sn=0db2e69aa9344d4b086e9d98301aebad" target="_blank" rel="noopener">从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</a>》）</p>
 <h3 id="闲置"><a href="#闲置" class="headerlink" title="闲置"></a>闲置</h3><p>如果你正在运行一个昂贵且持久的任务，请确保将它切分为更小的部分以便主线程有空响应用户的输入。不应该有阻塞用户输入超过 50 毫秒的任务存在。</p>
 <h3 id="负载"><a href="#负载" class="headerlink" title="负载"></a>负载</h3><p>一个页面的加载应低于 1000 毫秒，超过这个时间你的用户将会变得烦躁。而在移动设备上要求页面变得可交互而不仅完成渲染和可滑动时，是一个非常难的目标。实际上，可用于加载的时间往往更少：</p>
-<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/15113164081000ms.png" alt="Image: Modern Loading Best Pratices"></p>
-<blockquote>
-<p><a href="https://www.youtube.com/watch?v=_srJ7eHS3IM" target="_blank" rel="noopener"><em>Fast By Default: Modern Loading Best Practices (Chrome Dev Summit 2017)</em></a></p>
-</blockquote>
+<p><img src="https://ua62cg.bn.files.1drv.com/y4mJXYSoOY-zysDoELXReJbrP9qgAlCz955Rlpuip5GmXG9kWD3BhEIB57MPHkmmbxrvhifOErq5rV54TSjKmsw7UgLrNNIVweRGVcyk4is2K_zZfDXM7HuPreemrsBs1TnplWdvyvi1i3MIndUqprEkSaONy1gWVcJZkXC9ULwXGJ27_3wPKnWFwAUbjxHBl7zgtEVM2p-35t4FbpQP-ZBgw" alt="Fast By Default: Modern Loading Best Practices"></p>
 <p>在实践中，可交互时间以 5 秒为目标，这也是 Chrome 在其 Lighthouse audit 中使用的标志。</p>
 <p>现在我们知道了度量指标，让我们来看<a href="https://storage.googleapis.com/doubleclick-prod/documents/The_Need_for_Mobile_Speed_-_FINAL.pdf" target="_blank" rel="noopener">一些数据统计</a>：</p>
 <ul>
@@ -567,15 +558,9 @@
 <p>JavaScript 没有被预先编译过。它在浏览器中通过相对较慢的网络被下载为可读的代码，总而言之，浏览器就是 JS 程序的“操作系统”。</p>
 <p>代码首先需要被解析——更确切地说读取并将其变成计算机可寻址的结构以便编译。在设备/浏览器可以执行前，代码还需被编译成字节码，最终是机器码。</p>
 <p>另一件非常重要的事情是 JavaScript 是单线程的，运行在浏览器的主线程上。这意味着一次只有一颗处理器可以运行 JS 代码。如果 Chrome DevTools 的性能时间轴被黄色峰值填充，即 CPU 使用率达到 100%，画面将会出现长帧、掉帧、难用的滑动以及其他所有扎心的体验。</p>
-<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316460long-task.jpg" alt="Image: When everything&#39;s important, nothing is!"></p>
-<blockquote>
-<p><em>Paul Lewis: <a href="https://aerotwist.com/blog/when-everything-is-important-nothing-is/" target="_blank" rel="noopener">When everything’s important, nothing is!</a>.</em></p>
-</blockquote>
+<p><img src="https://uk6ucg.bn.files.1drv.com/y4mf7OwF4UaBXdoAo5nmOKXVbIO52qOl0GsAP9_bpZNFT0Qm8dEFmJPzIeVLBrmsjgSTK-Mn1V6TQath0tmAFE9cCsSmH0hc_MK5e8I7uar-osIsRW1sKyfFBexLaJg3pSiGKctRsv7a83Bn0N-E6jSb6XDGmsxUx9tf9XmHD7b9nrLEmnmNuR6c8biwbDqpM9O0BW0LCKJ5oii9iLFg0KxgA" alt="Paul Lewis: When everything&#39;s important, nothing is!"></p>
 <p>所以在你的 JS 代码开始运行前，上述所有工作需要完成。在 Chrome V8 引擎执行 JS 代码的总时间中，解析和编译占据了约 50% 的时间。</p>
-<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316514mobile-vs-desktop-parse-1024x249.png" alt="Image: JavaScript Start-up Performance"></p>
-<blockquote>
-<p><em>Addy Osmani: <a href="https://medium.com/reloading/javascript-start-up-performance-69200f43b201" target="_blank" rel="noopener">JavaScript Start-up Performance</a>.</em></p>
-</blockquote>
+<p><img src="https://ua63cg.bn.files.1drv.com/y4mmTS-JT-S3MyBeSJilW_BXMGOnvluzo-h4RC_2PkHPBfg2eU1pv__euNdtWHKIGJz9q67ARN2Hsy4YDUVS4iYbI2L78ZepPII9Q_bR89luYO4ikzWXr-Ae2xZ7hlVhYE5sSp-zHKqMvro8a8f2Sn5CNpPA3A97Q0scvJIvP_yZnY8cBVyBchtAz-yYeUKET79O3Vw5uoN6wV1orMk2_vvgw" alt="Addy Osmani: JavaScript Start-up Performance"></p>
 <p>从这一部分我们学会两件事：</p>
 <ol>
 <li>尽管未必是线性关系，但 JS 的解析时间与包的体积呈正比。加载的 JS 代码体积越小，速度越快。</li>
@@ -607,6 +592,12 @@
 <p>如果浏览器无法识别 <code>async</code> 函数，我们则判定它是一个旧版浏览器并加载已经 polyilled 的包，反之将加载一个简洁且现代化的变体。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我们想要你从本文得到的观点是 JS 是一门运行昂贵、应该被小心使用的语言。</p>
 <p>请确保在真实网络环境下使用低端设备测试你的网站性能。你的网站应该尽可能快被加载且变得可交互。这意味着通过任何有必要的方法减少 JS 的代码体积、加快加载速度。只要有可能时，你的代码应该都是 minified 过的，被切成更小、可控的包，并被异步加载的。在服务器端，确保启用了 HTTP/2 协议以获得更快的并行传输速度，同时使用 gzip/Brotli 压缩更加彻底地减少 JS 包体积。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1wHcNNQea28LhwQ_amFamT33d5woVrJfJy53Z1k6V090" target="_blank" rel="noopener">Addy Osmani: Time spent in JS Parse &amp; eval for average JS</a></li>
+<li><a href="https://www.youtube.com/watch?v=RWLzUnESylc" target="_blank" rel="noopener">Sam Saccone: Planning for Performance: PRPL</a></li>
+<li><a href="https://www.youtube.com/watch?v=_srJ7eHS3IM" target="_blank" rel="noopener"><em>Fast By Default: Modern Loading Best Practices (Chrome Dev Summit 2017)</em></a></li>
+<li><a href="https://medium.com/reloading/javascript-start-up-performance-69200f43b201" target="_blank" rel="noopener">Addy Osmani: JavaScript Start-up Performance</a></li>
+</ul>
 
       
     </div>
@@ -634,14 +625,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017/02/01/remove-duplicates-from-javascript-array/" rel="bookmark">小议 Javascript 数组去重</a></div>
+      <div class="popular-posts-title"><a href="/2017/08/06/weex-android-quick-tutorial/" rel="bookmark">Weex Android 发车指南（已弃车）</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/10/29/an-overview-of-javascript-testing-in-2018/" rel="bookmark">2018 年 JavaScript 测试概观</a></div>
+      <div class="popular-posts-title"><a href="/2017/11/21/introduction-to-structure-view/" rel="bookmark">十分钟带你了解国产自制开源插件 structure-view</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/02/01/remove-duplicates-from-javascript-array/" rel="bookmark">小议 Javascript 数组去重</a></div>
       
     </li>
   
@@ -727,6 +725,8 @@
             <a href="/tags/javascript/" rel="tag"># javascript</a>
           
             <a href="/tags/optimization/" rel="tag"># optimization</a>
+          
+            <a href="/tags/performance/" rel="tag"># performance</a>
           
         </div>
       
@@ -1039,7 +1039,31 @@
                     
                       
                     
-                    <span class="site-state-item-count">84</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1134,7 +1158,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高性能的-JS-代码是怎样的？"><span class="nav-number">2.</span> <span class="nav-text">高性能的 JS 代码是怎样的？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应"><span class="nav-number">2.1.</span> <span class="nav-text">响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画"><span class="nav-number">2.2.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闲置"><span class="nav-number">2.3.</span> <span class="nav-text">闲置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载"><span class="nav-number">2.4.</span> <span class="nav-text">负载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下文即一切"><span class="nav-number">3.</span> <span class="nav-text">上下文即一切</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析、编译以及执行"><span class="nav-number">4.</span> <span class="nav-text">解析、编译以及执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包的大小就是一切"><span class="nav-number">5.</span> <span class="nav-text">包的大小就是一切</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高性能的-JS-代码是怎样的？"><span class="nav-number">2.</span> <span class="nav-text">高性能的 JS 代码是怎样的？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应"><span class="nav-number">2.1.</span> <span class="nav-text">响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画"><span class="nav-number">2.2.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闲置"><span class="nav-number">2.3.</span> <span class="nav-text">闲置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载"><span class="nav-number">2.4.</span> <span class="nav-text">负载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下文即一切"><span class="nav-number">3.</span> <span class="nav-text">上下文即一切</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析、编译以及执行"><span class="nav-number">4.</span> <span class="nav-text">解析、编译以及执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包的大小就是一切"><span class="nav-number">5.</span> <span class="nav-text">包的大小就是一切</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">7.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>

@@ -116,20 +116,17 @@
 
 
   <meta name="description" content="几乎所有 Javascript （以下简称 js）初学者都会遇到的一个问题：如何（优雅地）去除数组中重复的元素。这个问题在 stack overflow 上被赞了近五百次，不过这并不重要。重要的是，有热心网友给出了全面、专业的回答，让博主看了大呼过瘾。在此对原文进行翻译，与大家一起分享。">
-<meta name="keywords" content="javascript,array,remove duplicates">
+<meta name="keywords" content="javascript,array,remove duplicates,stackoverflow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小议 Javascript 数组去重">
 <meta property="og:url" content="https://blog.joouis.com/2017/02/01/remove-duplicates-from-javascript-array/index.html">
 <meta property="og:site_name" content="江边的旱鸭子">
 <meta property="og:description" content="几乎所有 Javascript （以下简称 js）初学者都会遇到的一个问题：如何（优雅地）去除数组中重复的元素。这个问题在 stack overflow 上被赞了近五百次，不过这并不重要。重要的是，有热心网友给出了全面、专业的回答，让博主看了大呼过瘾。在此对原文进行翻译，与大家一起分享。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://sd.keepcalm-o-matic.co.uk/i-w600/too-young-too-simple-and-sometimes-naive.jpg">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1486654688&di=198726a46d395132a054fc379ac281d8&imgtype=jpg&er=1&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201601%2F17%2F20160117232154_awF3y.jpeg">
 <meta property="og:updated_time" content="2017-02-27T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小议 Javascript 数组去重">
 <meta name="twitter:description" content="几乎所有 Javascript （以下简称 js）初学者都会遇到的一个问题：如何（优雅地）去除数组中重复的元素。这个问题在 stack overflow 上被赞了近五百次，不过这并不重要。重要的是，有热心网友给出了全面、专业的回答，让博主看了大呼过瘾。在此对原文进行翻译，与大家一起分享。">
-<meta name="twitter:image" content="http://sd.keepcalm-o-matic.co.uk/i-w600/too-young-too-simple-and-sometimes-naive.jpg">
 
 
 
@@ -526,13 +523,8 @@
 
       
         <p>几乎所有 Javascript （以下简称 js）初学者都会遇到的一个问题：如何（优雅地）去除数组中重复的元素。<br>这个问题在 stack overflow 上被赞了近五百次，不过这并不重要。重要的是，有热心网友给出了全面、专业的回答，让博主看了大呼过瘾。<br>在此对原文进行翻译，与大家一起分享。<br><a id="more"></a></p>
-<p>注：</p>
-<ul>
-<li>下文中的“物件”对应英文”object”。</li>
-</ul>
-<h1 id="“Smart”-but-naive-way"><a href="#“Smart”-but-naive-way" class="headerlink" title="“Smart” but naïve way"></a>“Smart” but naïve way</h1><p><img src="http://sd.keepcalm-o-matic.co.uk/i-w600/too-young-too-simple-and-sometimes-naive.jpg" alt></p>
-<p>(图片来源：<a href="http://www.keepcalm-o-matic.co.uk/" target="_blank" rel="noopener">http://www.keepcalm-o-matic.co.uk/</a>)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uniqueArray = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, pos</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.indexOf(item) == pos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注：下文中的“物件”对应英文”object”。</p>
+<h1 id="“Smart”-but-naive-way"><a href="#“Smart”-but-naive-way" class="headerlink" title="“Smart” but naïve way"></a>“Smart” but naïve way</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uniqueArray = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, pos</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.indexOf(item) == pos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>最基本的版本：我们迭代整个数组，检查其中每一个元素在数组中第一次出现的位置与该元素实际的位置是否相等，如果不等则为重复元素。<br>使用 <code>filter</code> 的回调函数中的第三个参数 <code>self</code> ，可以避免数组变量的闭包问题（数组中的元素还是数组）。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uniqueArray = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, pos, self</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> self.indexOf(item) == pos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>尽管这种算法简洁明了，但是对于大型数组来说尤其缺乏效率（时间复杂度为 n^2）。</p>
@@ -543,8 +535,7 @@
 <li>同理，例如 <code>uniq([{foo:1},{foo:2}])</code> 这样具有相同键的物件也会被认为是一样的，仅得到 <code>[{foo:1}]</code> 。</li>
 </ul>
 <p>也就是说，如果你的数组中仅包含 js 的原始类型 (primitives) 且你无需在意它们的具体种类（例如它们全都是数字），这个算法是最佳的。</p>
-<h1 id="The-best-from-two-worlds"><a href="#The-best-from-two-worlds" class="headerlink" title="The best from two worlds"></a>The best from two worlds</h1><p>结合上述两种方法，有一个通用的解决方案：原始类型使用哈希表查找，而物件使用线性查找。</p>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1486654688&amp;di=198726a46d395132a054fc379ac281d8&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201601%2F17%2F20160117232154_awF3y.jpeg" alt></p>
+<h1 id="The-best-from-two-worlds"><a href="#The-best-from-two-worlds" class="headerlink" title="The best from two worlds"></a>The best from two worlds</h1><p>结合上述两种方法，有一个通用的解决方案：原始类型使用哈希表查找，而物件使用线性查找…</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">uniq</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> prims = &#123;<span class="string">"boolean"</span>:&#123;&#125;, <span class="string">"number"</span>:&#123;&#125;, <span class="string">"string"</span>:&#123;&#125;&#125;, objs = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> type = <span class="keyword">typeof</span> item;</span><br><span class="line">        <span class="keyword">if</span>(type <span class="keyword">in</span> prims)</span><br><span class="line">            <span class="keyword">return</span> prims[type].hasOwnProperty(item) ? <span class="literal">false</span> : (prims[type][item] = <span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> objs.indexOf(item) &gt;= <span class="number">0</span> ? <span class="literal">false</span> : objs.push(item);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="sort-uniq"><a href="#sort-uniq" class="headerlink" title="sort | uniq"></a>sort | uniq</h1><p>还有一个选择是先对数组排序，然后去除与前一元素相等的元素：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">uniq</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.sort().filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, pos, ary</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> !pos || item != ary[pos - <span class="number">1</span>];</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -590,7 +581,7 @@
 <p>这篇文章也讨论了数组去重问题：<a href="https://www.toobug.net/article/array_unique_in_javascript.html" target="_blank" rel="noopener">https://www.toobug.net/article/array_unique_in_javascript.html</a></p>
 </blockquote>
 <hr>
-<p>原文链接:<br><a href="http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array" target="_blank" rel="noopener">Remove Duplicates from JavaScript Array</a></p>
+<p>源文链接:<br><a href="http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array" target="_blank" rel="noopener">Remove Duplicates from JavaScript Array</a></p>
 
       
     </div>
@@ -611,7 +602,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/07/17/javascript-performance-optimization-tips-an-overview/" rel="bookmark">JavaScript 性能优化概观</a></div>
+      <div class="popular-posts-title"><a href="/2017/08/06/weex-android-quick-tutorial/" rel="bookmark">Weex Android 发车指南（已弃车）</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/11/21/introduction-to-structure-view/" rel="bookmark">十分钟带你了解国产自制开源插件 structure-view</a></div>
       
     </li>
   
@@ -625,7 +623,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/10/29/an-overview-of-javascript-testing-in-2018/" rel="bookmark">2018 年 JavaScript 测试概观</a></div>
+      <div class="popular-posts-title"><a href="/2018/07/17/javascript-performance-optimization-tips-an-overview/" rel="bookmark">JavaScript 性能优化概观</a></div>
       
     </li>
   
@@ -713,6 +711,8 @@
             <a href="/tags/array/" rel="tag"># array</a>
           
             <a href="/tags/remove-duplicates/" rel="tag"># remove duplicates</a>
+          
+            <a href="/tags/stackoverflow/" rel="tag"># stackoverflow</a>
           
         </div>
       
@@ -1025,7 +1025,31 @@
                     
                       
                     
-                    <span class="site-state-item-count">84</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
