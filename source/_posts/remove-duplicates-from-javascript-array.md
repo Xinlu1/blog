@@ -8,6 +8,7 @@ tags:
 - javascript
 - array
 - remove duplicates
+- stackoverflow
 ---
 
 
@@ -16,15 +17,8 @@ tags:
 在此对原文进行翻译，与大家一起分享。
 <!-- more -->
 
-注：
-- 下文中的“物件”对应英文"object"。
-
-
+注：下文中的“物件”对应英文"object"。
 # "Smart" but naïve way
-
-![](http://sd.keepcalm-o-matic.co.uk/i-w600/too-young-too-simple-and-sometimes-naive.jpg)
-
-(图片来源：http://www.keepcalm-o-matic.co.uk/)
 
 ```js
 uniqueArray = a.filter(function(item, pos) {
@@ -63,9 +57,7 @@ function uniq(a) {
 
 # The best from two worlds
 
-结合上述两种方法，有一个通用的解决方案：原始类型使用哈希表查找，而物件使用线性查找。
-
-![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1486654688&di=198726a46d395132a054fc379ac281d8&imgtype=jpg&er=1&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201601%2F17%2F20160117232154_awF3y.jpeg)
+结合上述两种方法，有一个通用的解决方案：原始类型使用哈希表查找，而物件使用线性查找...
 
 ```js
 function uniq(a) {
@@ -287,5 +279,5 @@ uniq_set, ms/loop: 1.728
 > 这篇文章也讨论了数组去重问题：[https://www.toobug.net/article/array_unique_in_javascript.html](https://www.toobug.net/article/array_unique_in_javascript.html)
 
 ---
-原文链接:
+源文链接:
 [Remove Duplicates from JavaScript Array](http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array)
