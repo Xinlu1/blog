@@ -7,12 +7,11 @@ categories:
 tags:
 - javascript
 - optimization
+- performance
 ---
 
 
 > 源文链接：[JavaScript Performance Optimization Tips: An Overview](https://www.sitepoint.com/javascript-performance-optimization-tips-an-overview/)
-
-
 
 我们将坚持“工具不代表规则（Tools, not rules）”的老话，尽量少提 JS 相关的流行术语。很显然我们不可能在一篇 2000 来字的文章里覆盖 JS 性能的方方面面，因此请在后续阅读本文的参考书目并自行研究。
 
@@ -23,7 +22,7 @@ tags:
 
 首先，让我们避开如下事情：如果你只在台式机上测试，你已将 [超过 50%](http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet) 的用户排除在外了。
 
-![Image: Desktop vs Mobile vs Tablet Market Share Worldwide](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316210mobile-vs-desktop.png)
+![](https://uk6xcg.bn.files.1drv.com/y4mNVFLuHYlzHBeyfNYZsHgIHuDsfmF11B33HcdkHvMvvvIN3F5zXQIMsx5f2T6FTwIjNOB924XGxOyLVwfhrceWQTgqSANcEEglZy_zXdhayApGYOSCA68RyeOsEEbxzfRIGozZuO_wrU79c35vJqQz5o454NRbJRpJj0mT3uoxsXAsuaNwKWhSpxXoi3rlfbhxEa4ztlINll-bSMqHfPDnw)
 
 由于新兴市场偏爱使用低于 100 美金的安卓设备上网，该趋势只会持续增长。台式机作为主力上网设备的时代已经结束，未来十亿网民将会首选移动设备访问你的网站。
 
@@ -33,9 +32,7 @@ Chrome DevTool 工具的设备模拟器并不能有效替代真实设备进行�
 
 当 [解析一个文件体积为平均数的 JS 包](https://docs.google.com/spreadsheets/d/1wHcNNQea28LhwQ_amFamT33d5woVrJfJy53Z1k6V090)（JS bundle）时，让我们看看它的解析速度排名。
 
-![Image: Time spend in JS parse & eval for average JS](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316294js-chart-1024x633.png)
-
-> *Addy Osmani: [Time spent in JS Parse & eval for average JS](https://docs.google.com/spreadsheets/d/1wHcNNQea28LhwQ_amFamT33d5woVrJfJy53Z1k6V090).*
+![Addy Osmani: Time spent in JS Parse & eval for average JS](https://uk6wcg.bn.files.1drv.com/y4m0-ZmIf1Xp68or_HfkesuOljc0Gw252YypTC3P6P6VpgBHI0-gXEYaaEyF8nqlDWnJSBxCTdFSIRjZULLHMFEkR8Zfkne6s8bJnYmdD5a9BPj2YVHDLfTIFYICJvJ2ff6ycJCauE298dxQFhFM3fysXz9rOBSmqxpl4bET8VLjW1R4Xh_JkU2rgZU90d_czDrPEM5eG7_ufUqskK0hI2xPg)
 
 虽然这张图只涵盖了 JS 解析和编译的时间（后续时间将会消耗更多）而非常规的性能数据，但有着强关联的它可以被视作 JS 性能的指标之一。
 
@@ -47,9 +44,7 @@ Bruce Lawson 曾说 “[it’s the World-Wide Web, not the Wealthy Western Web](
 
 虽说没有绝对的分类来定义高性能代码，但我们有一个以用户为中心的性能模型可以参考：[RAIL 模型](https://developers.google.com/web/fundamentals/performance/rail)。
 
-![Image: Planning for Performance: PRPL](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316348rail.png)
-
-> *Sam Saccone: [Planning for Performance: PRPL](https://www.youtube.com/watch?v=RWLzUnESylc)*
+![Sam Saccone: Planning for Performance: PRPL](https://uk6vcg.bn.files.1drv.com/y4mmLE_Js1ooQjEX8AGy_4ytOtExYWfJ3SMsL4Q63loBlFj19s2GlTeQBv1fZn-eAP-EBfSbpPCuAjzM29rYAM2iHM-5MrDNa-r8iG_bQhRFSgmLfQuOMbXYeEwf_5PQbzt77QO5qXSVIZ3NZxVoeMDfvHt9zk78ZOuZGGtHZ0TuHo84Gw8qzSZf8_H3-4I-yIzgFPzBMZt6wMUvhuSuyJ2pA)
 
 ### 响应
 
@@ -67,9 +62,7 @@ Bruce Lawson 曾说 “[it’s the World-Wide Web, not the Wealthy Western Web](
 
 一个页面的加载应低于 1000 毫秒，超过这个时间你的用户将会变得烦躁。而在移动设备上要求页面变得可交互而不仅完成渲染和可滑动时，是一个非常难的目标。实际上，可用于加载的时间往往更少：
 
-![Image: Modern Loading Best Pratices](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/15113164081000ms.png)
-
-> [*Fast By Default: Modern Loading Best Practices (Chrome Dev Summit 2017)*](https://www.youtube.com/watch?v=_srJ7eHS3IM)
+![Fast By Default: Modern Loading Best Practices](https://ua62cg.bn.files.1drv.com/y4mJXYSoOY-zysDoELXReJbrP9qgAlCz955Rlpuip5GmXG9kWD3BhEIB57MPHkmmbxrvhifOErq5rV54TSjKmsw7UgLrNNIVweRGVcyk4is2K_zZfDXM7HuPreemrsBs1TnplWdvyvi1i3MIndUqprEkSaONy1gWVcJZkXC9ULwXGJ27_3wPKnWFwAUbjxHBl7zgtEVM2p-35t4FbpQP-ZBgw)
 
 在实践中，可交互时间以 5 秒为目标，这也是 Chrome 在其 Lighthouse audit 中使用的标志。
 
@@ -109,15 +102,11 @@ JavaScript 没有被预先编译过。它在浏览器中通过相对较慢的网
 
 另一件非常重要的事情是 JavaScript 是单线程的，运行在浏览器的主线程上。这意味着一次只有一颗处理器可以运行 JS 代码。如果 Chrome DevTools 的性能时间轴被黄色峰值填充，即 CPU 使用率达到 100%，画面将会出现长帧、掉帧、难用的滑动以及其他所有扎心的体验。
 
-![Image: When everything's important, nothing is!](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316460long-task.jpg)
-
-> *Paul Lewis: [When everything’s important, nothing is!](https://aerotwist.com/blog/when-everything-is-important-nothing-is/).*
+![Paul Lewis: When everything's important, nothing is!](https://uk6ucg.bn.files.1drv.com/y4mf7OwF4UaBXdoAo5nmOKXVbIO52qOl0GsAP9_bpZNFT0Qm8dEFmJPzIeVLBrmsjgSTK-Mn1V6TQath0tmAFE9cCsSmH0hc_MK5e8I7uar-osIsRW1sKyfFBexLaJg3pSiGKctRsv7a83Bn0N-E6jSb6XDGmsxUx9tf9XmHD7b9nrLEmnmNuR6c8biwbDqpM9O0BW0LCKJ5oii9iLFg0KxgA)
 
 所以在你的 JS 代码开始运行前，上述所有工作需要完成。在 Chrome V8 引擎执行 JS 代码的总时间中，解析和编译占据了约 50% 的时间。
 
-![Image: JavaScript Start-up Performance](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/11/1511316514mobile-vs-desktop-parse-1024x249.png)
-
-> *Addy Osmani: [JavaScript Start-up Performance](https://medium.com/reloading/javascript-start-up-performance-69200f43b201).*
+![Addy Osmani: JavaScript Start-up Performance](https://ua63cg.bn.files.1drv.com/y4mmTS-JT-S3MyBeSJilW_BXMGOnvluzo-h4RC_2PkHPBfg2eU1pv__euNdtWHKIGJz9q67ARN2Hsy4YDUVS4iYbI2L78ZepPII9Q_bR89luYO4ikzWXr-Ae2xZ7hlVhYE5sSp-zHKqMvro8a8f2Sn5CNpPA3A97Q0scvJIvP_yZnY8cBVyBchtAz-yYeUKET79O3Vw5uoN6wV1orMk2_vvgw)
 
 从这一部分我们学会两件事：
 
@@ -199,3 +188,10 @@ new webpack.optimize.CommonsChunkPlugin({
 我们想要你从本文得到的观点是 JS 是一门运行昂贵、应该被小心使用的语言。
 
 请确保在真实网络环境下使用低端设备测试你的网站性能。你的网站应该尽可能快被加载且变得可交互。这意味着通过任何有必要的方法减少 JS 的代码体积、加快加载速度。只要有可能时，你的代码应该都是 minified 过的，被切成更小、可控的包，并被异步加载的。在服务器端，确保启用了 HTTP/2 协议以获得更快的并行传输速度，同时使用 gzip/Brotli 压缩更加彻底地减少 JS 包体积。
+
+## 引用
+
+- [Addy Osmani: Time spent in JS Parse & eval for average JS](https://docs.google.com/spreadsheets/d/1wHcNNQea28LhwQ_amFamT33d5woVrJfJy53Z1k6V090)
+- [Sam Saccone: Planning for Performance: PRPL](https://www.youtube.com/watch?v=RWLzUnESylc)
+- [*Fast By Default: Modern Loading Best Practices (Chrome Dev Summit 2017)*](https://www.youtube.com/watch?v=_srJ7eHS3IM)
+- [Addy Osmani: JavaScript Start-up Performance](https://medium.com/reloading/javascript-start-up-performance-69200f43b201)
