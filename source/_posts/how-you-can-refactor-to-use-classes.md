@@ -8,6 +8,7 @@ tags:
 - javascript
 - refactor
 - react
+- hoc
 ---
 
 
@@ -68,7 +69,7 @@ export const someFunction = () => 'Hey, I am text'
 
 
 
-![demo-pic](https://cdn-images-1.medium.com/max/2000/1*2Dj3heIrZkJLPmYdtkHICg.png)
+![](https://ua6wcg.bn.files.1drv.com/y4mYy_pu9AzJk55bWAa0HOHDdjZDUp6QId12MxyJKxSSyBDQX8L-w321hFpMC47CYkQCl1Hly1JCATTUeP6-KTjE05cxDg46eOARJogyaVeodrYaM3bm3i8hcPo9dbhQ7wQOq0A2SAkUGdhaeS1C7xX2Do4yLK_ThI45fsjemuXGxGAb0UeuqpqghFkUUr-kqnLmw7AQZVQh1-kHQTP9mkTYQ)
 
 
 
@@ -142,11 +143,3 @@ export default class ObjectManipulator {
 ## 引用
 
 [Good old Mozilla Class docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-
-
-
-## **Epilog**
-
-❤️ Lazada 深圳团队招人，欢迎推荐 ❤️
-
-联系方式请用 Base64 解码：bHVja3lqb291QGdtYWlsLmNvbQ==
