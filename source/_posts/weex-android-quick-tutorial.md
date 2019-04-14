@@ -9,6 +9,10 @@ tags:
 - android
 - web
 - vue
+- mobile
+- javascript
+- tutorial
+- app
 ---
 
 
@@ -27,9 +31,7 @@ Weex 是集团去年推出的移动开发框架，Apache 顶级开源项目，�
 
 理论角度，[官方文档](http://weex.apache.org/cn/guide/intro/how-it-works.html)上已经说得挺清楚的了，一张流程图可以说明一切。
 
-![flow](http://weex.apache.org/cn/guide/images/flow.png)
-
-
+{% img "" "https://v64blg.bn.files.1drv.com/y4mgihO5S41NuNsjSkDcgj3dmHqmgoCLojI9FuKZ1AaB76FK7uSYiyR1HhkKeNwtpDk3UZMvW0gsthHEg1eOyhcoOhZNzE3OzIMwciSO-vDQU5M2F15ZhKe7mU54RriMLd_T3SyoepJfMnxQH7fs_cYOP--tjsnJ5MRCqHwjuF8GC34xP6eODvWzGZbXl8qRj9xl4Enm2-xL6w3b6uRRPCAMQ" "Source: http://weex.apache.org/cn/guide/images/flow.png" %}
 
 不过回到实际开发，Weex 是什么，这点在没有上手前很难从官方文档中得出结论。（网上有不少声音吐槽 Weex 文档写的不好，笔者持保留态度，不过确实从落地的角度来说，缺乏一些必要的细节，这个后面还会再提。此外作者还有一个疑问，官方文档究的目标群体究竟是谁？是传统的移动端开发者？还是 Web 前端背景的开发人员？至少笔者觉得不是后者。）
 
