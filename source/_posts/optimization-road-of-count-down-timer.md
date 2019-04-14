@@ -24,9 +24,7 @@ tags:
 
 倒计时器组件在一个活动列表页面里被使用，列表中每一项都是一个促销活动入口。倒计时器位于每个活动区块的左上方，提醒用户该活动还有多久结束，如下动图所示（测试设备 SONY E5663，后同）。
 
-![original-state](https://user-images.githubusercontent.com/8896124/40551893-be27ce72-6070-11e8-9f13-4d6aaf162056.gif)
-
-
+![](https://wa4vlg.bn.files.1drv.com/y4mZVE-fw1i9bD_kBAmIyIwXmUob3Nr05qg1YjPF0X-lSiHJc4LkQFxRvsKRz97Q2Ka66a8BQAv7uXaVGgw-BEsRSXgD3KQy7vdxPBlRtcjplbb8EvTgCphRslC6C7LY-Fi9ipADd3BzZ_oTGQnJlXQowA0Sdniyq5dyYsTMP0Ppu8zje6DNccDiArViYnj7vcL8a5R_Xm43nk4mkExYUuJuQ)
 
 当页面滑动时，可以明显看到计时器停止，这意味着页面并没有刷新。直到松手后一两秒才恢复计时，且不稳定，又卡顿了一到两秒。
 
@@ -55,7 +53,7 @@ componentWillMount() {
 
 不得不说，贴出这么一段槽点满满的代码是极其需要勇气的，这...居然是我写的？
 
-![否认三连](https://www.xp510.com/uploadfile/2018/0112/20180112094215252.jpg)
+![](https://wa4xlg.bn.files.1drv.com/y4mGDo6NnUlyo6Ta4BeRYmuW5hyO2xvGEglK6as5epLMdQsvtnX_1M6GnuNAapBHNHScn4T3QyDyMo3A6OpMKTYSkKjOijyJIDAVktpNRKFnHncIYnW1XOgSzNNvEEjDfwbIxI5jgaWwKdzgbhX51EUU_clFjpZhjmSJVJp_SpH91E5DvG_nSxu3RferNzBBzeccGryqCzSN3dKscCpskG8Vg)
 
 那么开始分（tu）析（cao）吧，让我们自上而下依次盘点：
 
@@ -100,17 +98,15 @@ componentDidMount() {
 
 从下方两张截图可以看到测试机与模拟器的性能相差十倍左右，且测试机的运算时间波动较大（下方上图为模拟器数据，下图为测试机数据）：
 
-<img width="731" alt="1st-pc" src="https://user-images.githubusercontent.com/8896124/40605519-3cda4120-6295-11e8-86ee-8715f8113de0.png">
+![模拟器数据](https://wa4wlg.bn.files.1drv.com/y4m_2AunQuSGHxfUfucsT63rQWJC6lxKFUImyV4Fg1ItlV7KgbP3GKFP_rbZsbsOFoIFnk4UNn9a--ROa-FKuu8IXsa3H65sSUv3vD935DAsjvnRaiB16PTMR-kfqYBbbuCC1VzlRWGkoXWyezIH84a0hdgLO75iOFMi1Ims6NcPqaUVot0br01sfXnpJ1uHP1fiAyBCWr4GNdcNqB_xTGONw)
 
-<img width="845" alt="1st-mobile" src="https://user-images.githubusercontent.com/8896124/40617203-3ad37632-62c0-11e8-96c1-de164748844d.png">
+![测试机数据](https://wa4ulg.bn.files.1drv.com/y4mTKOcKn5J034yunDQU3rensrbOB8Loba_2riPbNj-0ggpCgeGiAyWQj4zCDgIOIxuzCiYFFQgJyg224ON7LKdjk3F0HnRVpmupohV-6iUjtTnIpbb0lACPf1l1ljvnNUl-cH7qGDB7lfG2hA5xZAYkmsCvdZEogstwLUDKaBzGoCtPYRCidYRUu5effnpEs61raVdT3R_a7XhTbwkY0HxTQ)
 
 其实上面的埋点代码添加在 `setState` 的回调函数里，就明显能说明一个问题：`setState` 方法并不保证同步渲染更新，尽管截图中的时序看上去是同步的。
 
 重点是，整个更新渲染的周期非常长，即使降低至 30Hz 的流畅画面要求，一帧可用的渲染时间也只有不到 34 毫秒，还不是业务代码独享！ 之所以渲染速度慢，是因为调用一次 `setState` 方法会依次执行 React 生命周期中的 4 个函数：`shouldComponentUpdate`、`componentWillUpdate`、`render` 和 `componentDidUpdate` （如下图所示）。
 
-![react-life-cycle](https://user-images.githubusercontent.com/8896124/40606279-7065c4d6-6297-11e8-9379-c0a29b9c799b.png)
-
-> *[图片来源](https://medium.com/@joseph_bug/day13-react-lifecycle-%E4%B8%8D%E6%90%9E%E6%87%82%E5%B0%B1%E6%8E%B0%E4%BA%86-559d927b454e)*
+![Source: https://bit.ly/2Pb6sn5](https://wa4tlg.bn.files.1drv.com/y4mH5wzx6FvvX4Ivw12vqJacZkkN7Lj-Ukqp1Pmgp47MIBZNoIl2NVYcHcICpllBTZ52bc4jHTSO1zj1149_lSExWuB-j-oDQTanr1LsNfIbzWKX3GbI5EgQuDRovuQB9sD1GM67ny_Rk5p1tHRKXgRHr5--qxxZ3UDwXOP0wTFrRgbjFAzoO1lc8YV5WsbykbDQ4HjI8LmqfNJZCJdRkuPYA)
 
 ### 直接撸 DOM，要啥 jQuery
 
@@ -139,9 +135,9 @@ componentDidMount() {
 
 让我们来看看效果如何：模拟器上的更新时间缩短至 0.3 毫秒，比之前快了十几到二十几倍；测试机的数据也漂亮多了（如下图），再滑几下试试... 美滋滋！
 
-<img width="935" alt="2nd-mobile" src="https://user-images.githubusercontent.com/8896124/40607869-4b8d8054-629c-11e8-8c1d-1f8fd8f3b8e7.png">
+![](https://uk63cg.bn.files.1drv.com/y4mqJ8C6KonIi1uAISi4pEmOOwNdU8v65SRIRhNXt1JFz__hBhTyWthddLBjDNsFa_7nON7ee1lemoqa-fVSfzAjfHDLI20DNVswyDt1Tqb-lIDygnV2o4EnKoirhN4zT0-GldtJZSl4wGkQFia1bSdpo4obitIpE68skhikurHQIOXmfcf6_1dlWqN951ETFmxhr9tqb6WzAkHsbJXUSmHMw)
 
-![remove-setstate](https://user-images.githubusercontent.com/8896124/40608376-db5922be-629d-11e8-87c2-d007eea204cd.gif)
+![](https://uk62cg.bn.files.1drv.com/y4mmLDLLxMSz-HbaSGM708E-mDIWxfBVX8pOgMg2v0g6fwb5btM1rx3FXLt5_h5G0g-eeaaHoeR4pHg0dC0VSgG9ZMEBTpX5qMfQ8MPygAioKa2JKG-r-wUa4GCtq_bVOCvhYudySc3ncVfHyh3OWYpUM3maBiV2c8oaokRyH_ijMV7oIbEtvOJm9izrFJZdR2XSLqrWnyIg-75hMXRCFUjSA)
 
 ## 更好的更新策略
 
@@ -157,7 +153,7 @@ componentDidMount() {
 
 如果有毅力的朋友推荐看看[权威的 HTML 标准文档](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)，没耐心的就看看这个动图简单感受一下原理吧。
 
-![event-loop-demo](https://user-images.githubusercontent.com/8896124/40614225-8f267844-62b4-11e8-87d0-835bf5838432.gif)
+![](https://uk61cg.bn.files.1drv.com/y4mcSzGXI67z9tGYkWxelXSAFLpRIaks9Y2vutDbVXmV4xEUO5VIOCAriv4qFN88wlj7dc82LfaJpTn8iqgS2LmLNfct48dCXPL_iRYVO_iaJSbDFD_OEWgG5Td5-QG5SMW2cqbaVVJftCHkMoxkSYA6tl33pNryxdaEoPvnKt8s5hTwlm39XfMWCyTwlbH8Ss0UKhPF9Pzt5_DrKI8Ya4pIA)
 
 所以回归正题，不用 `setInterval` 那用啥？
 
@@ -191,10 +187,11 @@ componentDidMount() {
 }
 ```
 
-那么这样实现足够精准了吗？打印出每次更新的时间戳瞅瞅（下方上图为模拟器数据，下图为测试机数据）。
+那么这样实现足够精准了吗？打印出每次更新的时间戳瞅瞅（上图为模拟器数据，下图为测试机数据）。
 
-<img width="758" alt="3rd-pc" src="https://user-images.githubusercontent.com/8896124/40616293-1d4f3e0a-62bd-11e8-9717-c2de2311d4f8.png">
-<img width="870" alt="3rd-mobile" src="https://user-images.githubusercontent.com/8896124/40616294-1e23cf94-62bd-11e8-9586-feae410f751b.png">
+![模拟器数据](https://uk60cg.bn.files.1drv.com/y4mQ1PgkiRAaXCfZdrIAIF9BBI5tkJKiuOg-cVIpGT2MqDg0_tga1jcdnf7KsqsLZAKTkVaMjrT1_QcNIl5t-iJkZFPajCeBf6F07lvrfhu3D_HQhwkp8-P5CvU1feucSLmeVM_7FVykz5ZoCOpIaeE3dc2srLtyq0liZcsLQfJxf89j1m6WQns6000dhgP1MjzWb6RFrdP2hTVTqc36WLxAw)
+
+![测试机数据](https://uk6zcg.bn.files.1drv.com/y4mu2QEBM0rzmdCCPp5zDS_jVAHLDQtHzNXzsEkNcmx2ujBQP2KZsIkfDzAAHvqyt5VEvxSgr-I2X-3pH80BShnKyQJ-tXMltsyK07xEqCmmdtg9oqucFwu_9rPfpjRyCpHDwpMijoHuq6QLz7rl3irdEY8zxfmgNcKHnLhlV5G-Gph_YgSRtSYX1YAygmf3rGE_s0BAgg3pnKqdUay5jbraw)
 
 可以看到模拟器上已经相当精准，每秒的误差在 +0.15 毫秒左右，也就是运行将近 2 小时会有 1 秒的误差，笔者觉得完全可以接受。不过测试机上的误差就有点大了，每秒的误差在 +10 毫秒左右，虽然笔者觉得也可以接受（很少有人会在活动页停留很久），但本着工（tai）匠（gang）精神，想想是否还能优化呢？
 
