@@ -9,6 +9,12 @@ tags:
 - outline
 - ctags
 - open source
+- javascript
+- ctags
+- outline view
+- structure view
+- atom
+- ide
 ---
 
 structure-view （以下简称 SV）是在开发 YunOS Studio（AliOS Studio 前身）时开源出来的一款代码结构提示插件。代码结构提示是一项由来已久的影响开发效率的功能，早在 VIM 时期就有经典的 ctags + Taglist 插件组合来实现这一功能，在桌面时代各大流行的 IDE 也都支持此功能，如 Eclipse 中的 Outline View 或 Webstorm 中的 Structure View。
@@ -18,7 +24,7 @@ YunOS Studio 基于扩展能力优异的 Atom 编辑器开发，由于 Atom 的�
 
 自从今年九月初将其开源并发布到 Atom 市场中，2个多月的时间达到了 800 余次的下载量，总计 20+ 的 star 数量，以及数十个 issues 和 PR。在没（精）啥（力）宣（有）传（限）的情况下，有人下载使用、提问题、提需求，甚至主动贡献 PR，都给了笔者极大的鼓舞，因此在此分享一下这个插件的设计，也欢迎 Atom 党服用此插件。
 
-![demo](https://user-images.githubusercontent.com/8896124/30044182-61ee94c6-922e-11e7-8181-10122681a1d9.gif)
+{% img "https://wk4tlg.bn.files.1drv.com/y4mN2I10UfETZdexdzTftd3jf_T3Ib94IPry-EWT69byliaUtzRSIo5zJ2DW4Uqib05ZmX4mPIq0lfLS_CkKf6-aYB6GFJRE7rmfguVYvz1uaJg2awvZfzPPy-C3hgQ5ORboLxnb5b-xY2ekYKwT1wThsrA3s2VtyTcSQnVJPrPmMRq-uYhG-Gf2EHM2lqnZrmjWUT6qxP5gskoz-5hPJjtmg" %}
 
 链接：
 
@@ -78,7 +84,7 @@ SV 最初是为 YunOS Studio 设计，其用户——YunOS 开发者主要使用
 
 SV 的代码结构解析流程与现有插件大体一致，如下图所示。
 
-![image](https://user-images.githubusercontent.com/8896124/33109259-8cfb021e-cf7b-11e7-980b-fb447481a648.png)
+{% img "https://wk4ulg.bn.files.1drv.com/y4mc9Zhw83pbn0yN-CveyHdr9ui5NuMjEmSlmyKMVMupYsffd6LTZRTjbV2Dn13JloGV7wGVHj4tJ0Po66jJp3GzRiUh5OFWWuyKIcbQYlKb0NJRhiSMSqsCibAZ1g2qT00miHPlfkW0Q4QsqaweuVIPwJBSGyS8a6JYF4t0DkxxJ31heIREKZMMz68_5-gYdt5ssjc9YXqscYUvNQMIGhuVg" %}
 
 一次完整的解析显示流程可分解为以下几步：
 
@@ -99,9 +105,7 @@ SV 的设计思想其实与 Nuclide 相似，也集成了多个语法解析器�
 
 具体的架构图如下所示。
 
-
-
-![image](https://user-images.githubusercontent.com/8896124/33109092-8909ab5c-cf7a-11e7-864a-c09189f34d0d.png)
+{% img "https://wk4vlg.bn.files.1drv.com/y4mLUlTJAXfBGYQwwryeg8IwBCTnFZRjXG7pqyUlIt_i5R04DhxiqJGEHczlmvIfqYusKqKxV-48n8yLPlL8LexeYRBioLbSvOUViST6YEneIe1wQc_X7zyCSsrXOftKnUIoY5mHDLBK-9s9XrEy26WVjD1bAE52y21oEoRuAQ6IENMTlLt_eA1RNW3FYuvMvMhjGqCdg6zkfydvriQrtsVsw" %}
 
 #### Tag Generator
 
@@ -141,7 +145,5 @@ Tag Parser 的作用很简单，就是为 View Controller 提供整理好的树�
 - 灵活的代码标签生成器架构保证了工具的可扩展性
 - 吸取市面上主流IDE工具的功能特性，力求好用易用
 - 独立设计、开发，无 IP 依赖，利于推广和开源
-
-
 
 附件：[structure-view-intro-cn-v1.0.pdf](https://github.com/Joouis/blog/files/1500624/structure-view-intro-cn-v1.0.pdf)
