@@ -49,11 +49,11 @@ tags:
 
 看看 Facebook 推出的测试框架 Jest 的 logo：
 
-![jest-logo](https://user-images.githubusercontent.com/8896124/49806071-b5623e80-fd91-11e8-8d83-a4c7eddad7fa.png)
+![](https://ua6ucg.bn.files.1drv.com/y4mzt4dGxfvhghwHmJ1cOG61-jm4I3sK7rl1JeHhEqMY9t8bKW2Ednwn7ntduQywMmbQ6WAA0aKyvkcuTySVHOV4mgEJG8jxro9Cowdfi_oi8PBPK7A8muv2Rfq5rUQ4KAYyucW79coT9KXdQBtOvfTgIrhI0x2b-sIuloCLvSrNnNMXGJ3UoulMDRbZ2mSAuvL_HX5-kdXVt0fKl7GcvhTTg)
 
 你可以看到他们的口号承诺“无痛”地进行 JavaScript 测试，然而“[评论中的某些人](https://news.ycombinator.com/item?id=13128146#13128900)”指出：
 
-![no-painless-testing](https://user-images.githubusercontent.com/8896124/49806123-dcb90b80-fd91-11e8-96ac-4ace495044dd.png)
+![](https://uq63cg.bn.files.1drv.com/y4mBInnhjMSj7yDXlFnklP4Ts-MyNAfN0ptQlUnrBzA5yEC2mA2vP4uxB347fuh86GLCNnQJwqNuQgvkCcLWqoW3ZdOrnS-tAJO4fbma7Ri8cE2kbu2c3EAl4jXPiyobqVKhrSb6gLuqG8UTlLuBAuw3vJ2jAqhjKktMsZn867h0MyMk_oyA_hRLbmSjUh8WGaeAtPPt90-dHU-znudYdueZA)
 
 不过 Facebook 确实有一个很棒的理由使用这个口号。通常 JS 开发者都[不太喜欢网站测试](http://2016.stateofjs.com/2016/testing/)，JS 测试意味着受限制、很难实现、进度缓慢且时而代价昂贵。尽管如此，只要使用正确的策略和正确的工具组合，一次接近全覆盖的测试也可以完成得有组织、简单并相对快速。
 
@@ -232,7 +232,7 @@ exports[`renders correctly 1`] = `
 
 当新产生的快照与上一次不同时，将提示开发者是否同意此次改动是有意为之。
 
-![snapshot-changed](https://user-images.githubusercontent.com/8896124/49806146-ecd0eb00-fd91-11e8-9921-2d34870c1d92.png)
+![](https://uq62cg.bn.files.1drv.com/y4mTfqnysoW01bKk4CWz60Y2v43G_VRxvulJeWDZklZz0IJY5Bs-Vjxkn1ALXo8Jp5jMsm6e2_4gJiQ5nRu8UEHRvZfU_xKZ_mFYaAcwd4bpWB5b7l0ySjfzhlQx84BTU3dMQZ-g7Z-4WmvjjxQUBg-I_TJ5sHhDU9QJ3SOXbHQDGej28ivoAikmDz3Cn9P30gQqGE5PjxVoc25P7oIgp7Lrg)
 
 > **注意：**快照通常用来比对体现数据的组件，其实它们也可以比较其他的数据类型，如 redux stores 或应用中不同单元的内部结构。
 
@@ -314,7 +314,7 @@ testdouble 是一个声称比 Sinon 更加优秀但名气稍逊的库。其设�
 
 Wallaby 是另一款值得一提的工具。尽管需要付费，但很多用户推荐购买。它运行在你的 IDE （支持所有主流 IDE）之上，执行代码变更相关的测试，并在失败后实时定位错误代码。
 
-![wallaby](https://user-images.githubusercontent.com/8896124/49806168-fbb79d80-fd91-11e8-8e0d-d709ee1750d9.png)
+![](https://uq60cg.bn.files.1drv.com/y4mYsR4FCiOSU6upwCHNy5GuzHpJwYIOc1EDSs688BAdAmiY280rv-rbSgsEufXYttC34OqCpq3B-z2w2AVYIfLRy1CzjjxMto8H0BGMOGIMBd9h1F5ZPNAzwU86jayH4ylT2NC17YNmrwbGXABhEvm1xPBxcHn1QUoGd72g1rmq55T8flw-jAiv2iM7kOK_B6QQ9DUNHe3-n_7RU3PWTEnIw)
 
 #### [Cucumber](https://github.com/cucumber/cucumber-js)
 
@@ -720,9 +720,7 @@ Scenario('login with generated password', async (I) => {
 
 噢，然后编码，再重新编码，再重新编码，再重新编码后，测试不同的解决方案 :)
 
-
-
-![end-pic](https://user-images.githubusercontent.com/8896124/49806196-0e31d700-fd92-11e8-876d-e0ffe22a3aa2.png)
+![](https://uq61cg.bn.files.1drv.com/y4m5Hsf55vPDgt2WkOq0qHEeEdQ7dj27ovAZLK4_JyfnwxaZNreWgW8Mh0lNUTdXRIzl2xmx_Oh_gWTPCGuqQuerACxTrxD4McCE5SaLCcWAOSrnDonVPapk7j1L-B3_4WImEfBIGeDsMHpgEgyEG2hRZlJg9_F0gXokxSvAK1RcWWovEWHrIOYkjt5ZEQ5PJtP4Bq6aNi5aI2X4Y1CwLPHmA)
 
 
 
