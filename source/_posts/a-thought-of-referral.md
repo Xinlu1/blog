@@ -57,7 +57,7 @@ tags:
 
 好了废话那么多，进入正题吧(???)。通常招聘帖底下都会遇到很多人问 XX 职位招不招、X 年经验招不招，这里列了个表格给大家介绍我们近期正在招的一些职位以及对应要求。
 
-![opening-position](<https://vq4xlg.bn.files.1drv.com/y4msrXqv1wi3A2GqY4A3cAYnMYDceCsHiW0cYO-HHHmXYfiX1UvGtirTR7TLDniugj5yV3Lw5CrSqNs0qsNp-hUQzXRZxqmstO3uJdj-2A-eEdr1VzKldgDI09UwLNIvqnOWadSSKV7070kFie3YHUTxgeDBmnq-9PA43BcMJBPCHb07mbnh89XjTSoiJyzviAWa8XsZCkFY5oaKupZ2mGazw>)
+![Posted at 2019.04.11](<https://vq4xlg.bn.files.1drv.com/y4msrXqv1wi3A2GqY4A3cAYnMYDceCsHiW0cYO-HHHmXYfiX1UvGtirTR7TLDniugj5yV3Lw5CrSqNs0qsNp-hUQzXRZxqmstO3uJdj-2A-eEdr1VzKldgDI09UwLNIvqnOWadSSKV7070kFie3YHUTxgeDBmnq-9PA43BcMJBPCHb07mbnh89XjTSoiJyzviAWa8XsZCkFY5oaKupZ2mGazw>)
 
 至于想问 XX 职位招不招的朋友们，除了可以直接问我外，也可以线访问以下两个链接查看、搜索目前开放的职位：
 
@@ -66,4 +66,4 @@ tags:
 
 ## 6. 联系方式
 
-请写信至 `luckyjoou at gmail.com`，24 小时内必回喔~
+请写信至 `luckyjoou ## gmail.com`，24 小时内必回喔~
