@@ -95,5 +95,5 @@ tags:
 
 Learn from yesterday, live for today, hope for tomorrow. Let's cheer up!
 
-![procedure-to-get-offer](https://user-images.githubusercontent.com/8896124/34893104-beb680da-f816-11e7-8e51-821b47fd4e96.png)
+{% img "https://wa4zlg.bn.files.1drv.com/y4myFzzFENIFeXKKbBNl29MUrhHaqWthLpi4C6LlnQ2B8ph1jjR5P7pMN16Sqe3ygvU60P-A2JAXOs4xEc1uOw15lnLXCmdRJhx16uk1mAvVb2mTAMMxJP6PleiaZwq0mrpTfEkbjQDHRqlE5ejxFBqBe43lGlRrlDnHSDIp7WAi4ka_KCTwDMmJKIszOqiYhugClq5n3hHaCQ9kYKQFZ3ARA" %}
 
