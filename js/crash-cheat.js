@@ -7,9 +7,6 @@ document.addEventListener('visibilitychange', function () {
     clearTimeout(titleTime);
   } else {
     $('[rel="icon"]').attr('href', "/images/hacker.ico");
-    document.title = "(ฅ>ω<*ฅ) What's happening~" + originalTitle;
-    titleTime = setTimeout(function () {
-      document.title = originalTitle;
-    }, 2000);
+    document.title = originalTitle;
   }
 });
