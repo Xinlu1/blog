@@ -115,18 +115,18 @@
 <meta name="baidu-site-verification" content="ChOTP1bKoM">
 
 
-  <meta name="description" content="有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的提升，值得记录一下。">
+  <meta name="description" content="有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的进步，值得记录一下。">
 <meta name="keywords" content="blog,anniversary,hexo,refactor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="写在博客三周年">
 <meta property="og:url" content="https://blog.joouis.com/2019/04/08/3rd-blog-anniversary/index.html">
 <meta property="og:site_name" content="江边的旱鸭子">
-<meta property="og:description" content="有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的提升，值得记录一下。">
+<meta property="og:description" content="有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的进步，值得记录一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-14T15:05:00.000Z">
+<meta property="og:updated_time" content="2019-04-16T17:25:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="写在博客三周年">
-<meta name="twitter:description" content="有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的提升，值得记录一下。">
+<meta name="twitter:description" content="有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的进步，值得记录一下。">
 
 
 
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-14 23:05:00" itemprop="dateModified" datetime="2019-04-14T23:05:00+08:00">2019-04-14</time>
+                <time title="修改时间：2019-04-17 01:25:00" itemprop="dateModified" datetime="2019-04-17T01:25:00+08:00">2019-04-17</time>
               
             
           </span>
@@ -525,19 +525,19 @@
       
 
       
-        <p>有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的提升，值得记录一下。</p>
+        <p>有的时候事情就是这么巧。比如这篇博文，并非专程为三周年而写，而是恰好在这个时间节点博客有了一些质的进步，值得记录一下。</p>
 <a id="more"></a>
 <h2 id="引"><a href="#引" class="headerlink" title="引"></a>引</h2><p>翻修博客的起因源自写游记的需求，今年过年在泰国玩了十来天，想在博客上记录心得。一直拖到现在还未动笔，除了年后工作较忙外，也是考虑想给博客找一个合适的图床托管图片，毕竟游记涵盖大量照片，而目前图片都托管在 GitHub 上，访问速度得不到保障，时常还会被墙，非常影响阅读体验。此外偶尔也想过距离博客搭建之初已久，会不会在最新版本的博客框架中支持一些新的特性可以提升博客书写和访问的体验，例如支持视频、音乐播放等。</p>
-<p>于是，在清明假期的第一天，我看了下本博客使用的 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT</a> 主题，发现都已经更新到了第七个版本，支持不少新特性，如从 CDN 加载第三方库、支持 <code>quicklink</code>、代码可复制等等。翻着翻着，突然好奇此博客的创建时间，在 GitHub 上惊奇地发现第一次 commit 是在 2016.04.28，也就是说博客即将年满三岁！因此趁着假期，干脆把博客的技术框架升级，同时整理博文内容，作为三周年的纪念，也为日后更好地乘凉而种树。</p>
-<h2 id="升级思路"><a href="#升级思路" class="headerlink" title="升级思路"></a>升级思路</h2><p>关于博客是怎么搭建的，在最初建站之时就写了一篇简单的<a href="https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/">文章</a>，随后两年多的时间里还添加了评论功能、小修小补了一些地方。照理说这类静态博客的核心就是文章，只要把文章转移到新的工程里，其余的工作量主要就在配置框架。</p>
-<p>因此首先更新 hexo 脚手架，用脚手架生成一个最新版的工程样例。对比现有博客的工程结构，把属于内容的部分抠出来放到新工程里，主要是 <code>source</code> 目录下的资料。接着对照旧版 <code>_config.yml</code> 文件，一点点把新的配置文件填好即可。这时候在本地起个服务看看，应该要和目前线上运行的博客一模一样，毕竟主题没变。</p>
-<p>接下来就是更新主题框架了。这里并没有按照官方推荐的方式通过 <code>git clone</code> 把 <code>master</code> 分支的工程拉下来，而是出于稳定性考量从 <code>releases</code> 下载了最新版的 <code>zip</code> 文件。考虑到之前可能魔改过一些 layout 文件（这种做法不太可取），而新版主题可能已经升级过一些样式细节，因此就只对照 <code>_config.yml</code> 文件重新配置主题，舍弃过去魔改的部分，未来哪里看着不顺眼再改。</p>
-<p>7.1.0 版本的 NexT 主题配置文件已达到一千两百多行，内容非常的丰富，把每一个配置过一遍也是学习博客功能的过程。就这么了解每一个配置是干嘛的，确认现有博客中配置过没、如何配置的，然后决定在新版博客里要怎么配。通常依赖到 hexo 第三方库的功能，要额外 <code>yarn add</code> 一下；而主题自身支持的功能，函数库一般以 <code>theme-next-</code> 开头的，其实并不用把代码下载到指定的 <code>source/js/</code> 目录下，因为配置已经支持 CDN 访问，非常的方便！</p>
-<p>在配置博客的过程中，可以通过 <code>hexo server</code> 本地起一个服务实时查看效果，有的配置也是通过这样调试的方式才知道是干嘛的。完成配置后，本地生成静态资源，通过脚手架推送到 <code>gh-pages</code> 分支，线上检查是否和本地运行的结果一致。另外有些问题，如百度打点推送功能，只有线上环境才能验证。</p>
-<p>此外，在整个升级过程中，由于新增了分类页、主页文章列表支持预览功能、更换图床链接等等，对博文内容也要进行一些对应的修改。后续时间充裕时还可以补充一些标签以便发挥”相关热门文章”功能，甚至是给一些适合的文章添加合适的音乐 ;)</p>
+<p>于是，在清明假期的第一天，我看了下本博客使用的 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT</a> 主题，发现都已经更新到第七个版本，支持不少新功能，如从 CDN 加载第三方库、支持 <code>quicklink</code>、代码可复制等等。翻着翻着，又突然好奇博客的创建时间，在 GitHub 上惊奇地发现第一次 commit 是在 2016.04.28，也就是说博客即将年满三岁！因此趁着假期，干脆把博客的技术框架升级，同时整理博文内容，作为三周年的纪念。</p>
+<h2 id="升级思路"><a href="#升级思路" class="headerlink" title="升级思路"></a>升级思路</h2><p>关于博客是怎么搭建的，在最初建站时就写了一篇简单的<a href="https://blog.joouis.com/2016/04/09/build-a-blog-in-5-minutes/">文章</a>，随后两年多的时间里还添加了评论功能、统计功能、小修小补了一些地方。照理说这类静态博客的核心就是文章，只要把文章挪到新的工程里，剩余工作主要就是配置框架。</p>
+<p>因此首先更新 hexo 脚手架，用脚手架生成一个最新版的工程样例。对比现有博客的工程结构，把属于内容的部分抠出来放到新工程里，主要是 <code>source</code> 目录下的资料。接着对照旧版 <code>_config.yml</code> 文件，一点点把新的配置文件填好即可。这时候在本地把博客运行起来，应该要和线上运行的版本一模一样，毕竟主题没变。</p>
+<p>接下来就要更新主题框架了。这里并没有按照官方推荐的方式去 <code>git clone</code> <code>master</code> 分支，而是出于稳定性考量从 <code>releases</code> 页面下载了最新版的 <code>zip</code> 包。考虑到之前可能魔改过一些主题的 layout 文件（这种做法显然不可取），而新版主题可能已经升级过一些样式细节，因此遵循新版主题的所有设计，只对照 <code>_config.yml</code> 文件重新配置，舍弃过去魔改的部分，未来哪里看着不顺眼再改进。</p>
+<p>7.1.0 版本的 NexT 主题配置文件已达到一千两百多行，内容非常的丰富，把每一个配置过一遍也是学习博客功能的过程。就这么了解每一个配置的功能，确认当前博客是否配置过、如何配置的，然后决定在新版博客里要怎么配。通常依赖到 hexo 第三方库的功能，要额外通过 <code>yarn add</code> 安装；而主题自身支持的功能，函数库一般以 <code>theme-next-</code> 开头的，其实并不用把代码下载到指定的 <code>source/js/</code> 目录下，因为配置已经支持 CDN 加载，非常的方便！</p>
+<p>在配置博客的过程中，可以通过 <code>hexo server</code> 在本地起一个服务实时查看效果，有的配置也是通过这样的调试方式才了解其作用。完成配置后，本地生成静态资源，使用脚手架推送到 <code>gh-pages</code> 分支，最后进行线上验证。另外有些问题，如百度打点推送功能，也只有线上环境才能验证。</p>
+<p>此外，在整个升级过程中，由于新增分类页、支持主页文章的预览、更换图床链接等，对博文内容也进行了一些相应的修改。后续时间充裕时还可以补充一些标签以便更好地发挥”相关热门文章”功能，甚至是给一些适合的文章添加合适的音乐 ;)</p>
 <h2 id="改善点"><a href="#改善点" class="headerlink" title="改善点"></a>改善点</h2><p>此次博客改版主要有以下更新：</p>
 <ul>
-<li>为每篇博文添加 Creative Common 版权信息。选择 <code>BY-ND</code> 而非 <code>BY-NC-ND</code> 是考虑如果我的博文能帮助别人赚到钱，那么何乐而不为呢；</li>
+<li>为每篇博文添加 Creative Common 版权信息。选择 <code>BY-ND</code> 而非 <code>BY-NC-ND</code> 是考虑到如果我的博文能帮助别人赚到钱，那么何乐而不为呢；</li>
 <li>将所有图片从 GitHub 迁移到了 OneDrive，后者的 CDN 极大提升了图片的可访问性与访问速度；</li>
 <li>优化了一些 SEO 配置项。更新了蜘蛛协议的 <code>robots.txt</code> 文件，向 Google 和百度提交了 <code>sitemap.xml</code> 文件，不知道一个月后再看数据会不会有涨幅呢；</li>
 <li>预加载页面内的链接内容，加速访问体验；</li>
@@ -557,17 +557,17 @@
 </ul>
 </li>
 <li>优化搜索方案，从 Swifttype 切换为本地索引方式，搜索速度提升非常明显；</li>
-<li>升级 Fancybox 版本，支持图片名称、查看文内所有图片等，浏览体验大大增强；</li>
+<li>升级 Fancybox 版本，支持图片名称、查看文内所有图片等功能，浏览体验大大增强；</li>
 <li>添加 pace 进度条，提升加载体验；</li>
-<li>支持页面阅读位置保存。此功能最早在微信公众号上体验到，对于阅读长文时很有用；</li>
-<li>隐藏标签菜单入口。考虑到目前已有大几十种标签，太多太杂，不如换成分类菜单。但是保留文章内的标签展示，作为二级入口可以查看某一标签的所有博文；</li>
+<li>支持页面阅读位置保存。最早在微信公众号上体验到这个特性，对于阅读长文很有帮助；</li>
+<li>隐藏标签菜单入口。考虑到目前已有大几十种标签，太多太杂，不如换成分类菜单。同时保留文章内的标签展示，作为二级入口可以查看某一标签的所有博文；</li>
 <li>支持 Aplayer 音乐播放器；</li>
 <li>添加了一个小彩蛋，希望你能发现 LOL。</li>
 </ul>
 <h2 id="尾巴"><a href="#尾巴" class="headerlink" title="尾巴"></a>尾巴</h2><p>博客的升级花费大概两天的时间，一点点扣细节，既当产品又做技术，搞一个自嗨的项目，还是玩得非常开心。未来当然还是以输出文章为主，除了内容本身外，也试着丰富展现形式，达到一个比较舒服的阅读体验。最后关于博客的推广，其实在建站之初只想创造一个属于自己的空间，不过现在慢慢感受到，如果自己的文字能够帮助到更多人，是一件正能量满满的事情。</p>
 <p>等到五周年时再看看发生了些什么变化吧~</p>
 
-    <div id="aplayer-EGPlzWGj" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28737747" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86" data-mini="true"></div>
+    <div id="aplayer-gDCGkVUr" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28737747" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86" data-mini="true"></div>
       
     </div>
 
