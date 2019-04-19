@@ -15,7 +15,7 @@ date: 2019-04-20 01:01:00
 
 {% video "https://f.us.sinaimg.cn/004yFcq5lx07pmRPBhwk01040201v8g70k020.mp4?label=mp4_hd&template=852x480.28.0&Expires=1555698655&ssig=4Lyj3lCKoP&KID=unistore,video" %}
 
-再来说说我自己的一些感想：
+再来说说我自己的一些感受：
 
 - 作为开发，微软的硬件环境还是相当不错的。入职时工位就准备好了 Dell 双屏幕和 Humanscale 的支架，一台大概 Dell Precision 5820 Tower Workstation 等级的主机，一台 Surfacebook2。此外无需审批即可申请几台 VM 开发用，系统从 Windows Server 到主流 Linux distributions 都有，尝试新技术、玩 side project 的宽容度比互联网公司高很多。此外员工都有 Visual Studio Subscriptions，那些软件序列号啥的就不提了，Azure 每个月有 150 美刀的额度，可以干很多事情了哈哈。
 - 作为员工，公司的福利也不错。苏州这边每层楼都有一台 Jura 全自动咖啡机、一台雀巢胶囊咖啡机，热的茶饮料好几种换着喝，冰柜里汽水、豆奶、茶饮料、牛奶等等也是无限喝。楼下的篮球、足球、网球场是公司修的，只对员工开放，不用抢场地真的是美滋滋。工会每个月提供健身费，以及一年三千多的培训费用。其他互联网公司有的福利巨硬基本都有，在这就不提了。
