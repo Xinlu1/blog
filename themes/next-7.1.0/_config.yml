@@ -162,7 +162,7 @@ menu:
   categories: /categories/ || th
   # tags: /tags/ || tags
   about: /about/ || user
-  referral: /referral/ || star
+  recruit: /recruit/ || star
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
