@@ -140,10 +140,10 @@
         <category>Web 前端</category>
       </categories>
       <tags>
-        <tag>mobile</tag>
-        <tag>app</tag>
         <tag>flutter</tag>
+        <tag>app</tag>
         <tag>dart</tag>
+        <tag>mobile</tag>
       </tags>
   </entry>
   <entry>
@@ -245,13 +245,13 @@
       </categories>
       <tags>
         <tag>javascript</tag>
+        <tag>app</tag>
+        <tag>mobile</tag>
         <tag>weex</tag>
         <tag>android</tag>
         <tag>web</tag>
         <tag>vue</tag>
-        <tag>mobile</tag>
         <tag>tutorial</tag>
-        <tag>app</tag>
       </tags>
   </entry>
   <entry>
