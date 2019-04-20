@@ -46,12 +46,11 @@ date: 2019-04-20 01:01:00
 
 ![](https://u66xcg.bn.files.1drv.com/y4msxcbh3npjZyHWR35bHOX0I5FoUTWc3H23uN2qvVK5mawU3CtnYrxCFbCyFT_k8D09utINptMa_N1q-tiAaAb-XlK53a7XkSislgtFnCpj7JXOBMIIHsYDYlW5KHBcGq0a0xPkKpSev-1B3dUlrpFw-f2wZdorc3IBSqgS3imSK1-ZteS9tvZeLJT6l4mKbrLCaAfzTE6wwhc8UdMUS_yTQ)
 
-### 2019.04.19
 
-设计职位开放咯，base 地除了 JD 中的外，北京也是可以的。出差比较多，面试会有英文面。另外香港、美国以及澳洲也在招聘，不过要求会比较高喔。
 
-- [Consultant - UX Designer](https://careers.microsoft.com/us/en/job/603152/Consultant-UX-Designer)
-- [Architect - UX Design](https://careers.microsoft.com/us/en/job/603088/Architect-UX-Design)
+{% tabs Categories unique name %}
+
+<!-- tab Mobile -->
 
 ### 2019.04.17
 
@@ -59,10 +58,40 @@ MMX 移动团队，听过他们的分享，很不错，近年也取得了很棒�
 
 ![](https://u66ycg.bn.files.1drv.com/y4mjncZngOWTdtT-3A8aSMA63m21jR-22L2T4rhf9eTF4JTOH_U9BQFw8vAtyht9uVtwIVQYjRX7QcIlLJgT6m5WFTBvYFb9bduH5RUVIFjiuAEmYpUS_icP8QllsB5Bd9HcMq9H5QCKg5Ac4sgE1gKJ_88dzDx9_NQq7TmMP7fPj3vF0a9jlLCNQah8lix8oAcfb-vqWAjjLVscbc6pa0TNw)
 
+<!-- endtab -->
+
+<!-- tab Dynamics 365 -->
+
+### 2019.04.17
+
 Dynamics 365 团队招聘的方向包括 Global Experience (DGX)、Retail + Commerce、Supply Chain Management。这里放一张 Global Experience 团队的介绍。
 
 ![](https://u66wcg.bn.files.1drv.com/y4m29GjwbxqhSmei5H6lRJ3tnIiSs7ShNi5MMezbXnK1-wtsxG9PK8BbyJs_aX8ipeXqKKZfKOr_0PxmeqIbJx6HOHlN1MM8_L0cedyietfTOGgHZjVV8TXfY2oOf51ASh8eNvOW9E9r3FNrTOEJ5v5h8NLaEb7wCqGnsg5jsF1XEZEDzPoVXIwcUhPB2gg_uGeU7Epdem9Fh67YQirpBy88Q)
 
+<!-- endtab -->
+
+ <!-- tab Azure Big Data -->
+
 ### 2019.04.16
 
 ![](https://u66zcg.bn.files.1drv.com/y4msbW1h8QI6_rXxW2weAynH1HVi4GR1ypWaZZFeuY8d2cj-XjDPzJBqj3SpcQC8xQWFFTEFrBOYG6zim5BteybJKZH4JQNloUiQ2nV_Jz-VS6w7H4mx7eDGzq8wd_tgnjSGzNoiBVCfUnVfFZbNSjEo2uAaw8Vpk9QwmNqZ0krU52yfeI9FKH0hQqBI3Q4JMHkxCGLzw6F2enBtmg-cpPAdw)
+
+ <!-- endtab -->
+
+ <!-- tab UX Designer -->
+
+### 2019.04.19
+
+设计职位开放咯，base 地除了 JD 中的外，北京也是可以的。出差比较多，面试会有英文面。另外香港、美国以及澳洲也在招聘，不过要求会比较高喔。
+
+- [Consultant - UX Designer](https://careers.microsoft.com/us/en/job/603152/Consultant-UX-Designer)
+- [Architect - UX Design](https://careers.microsoft.com/us/en/job/603088/Architect-UX-Design)
+
+ <!-- endtab -->
+
+{% endtabs %}
+
+
+
+
+
