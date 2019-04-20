@@ -13,7 +13,7 @@ date: 2019-04-20 01:01:00
 
 先看看我软小姐姐录的视频吧， VLOG 『程序猿的一天』。
 
-{% video "https://f.us.sinaimg.cn/004yFcq5lx07pmRPBhwk01040201v8g70k020.mp4?label=mp4_hd&template=852x480.28.0&Expires=1555698655&ssig=4Lyj3lCKoP&KID=unistore,video" %}
+{% video "https://u662cg.bn.files.1drv.com/y4myKHbSJBKrmGVLI_CzWCkbrhVGAu0dop38DgKfdpjHiFTRz5TTlTRuXtaTaSYSdBBc-50-O8wdxycG5FASHLrX8wZJYeFZ4MWxs5CS4Ew8DmeQrSIxmhk0pCnfoMpDE5ZPsZ7kxUyMsQgJO7zZys0Teuf-d3O4siQT47BaRJoP29YFGPy0XD7qxartZkdAGa-/One%20day%20in%20the%20life%20of%20a%20Software%20Engineer.mp4" %}
 
 再来说说我自己的一些感受：
 
