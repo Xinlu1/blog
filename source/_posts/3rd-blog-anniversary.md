@@ -1,7 +1,7 @@
 ---
 title: 写在博客三周年
 date: 2019-04-08 22:15:38
-updated: 2019-04-17 01:25:00
+updated: 2019-04-20 21:43:00
 categories:
 - 技术人生谈
 tags:
@@ -39,6 +39,7 @@ tags:
 
 此次博客改版主要有以下更新：
 
+- 顶部菜单加入了"招聘"菜单，是的[**微软中国正在招人**](https://blog.joouis.com/recruit/)喔！
 - 为每篇博文添加 Creative Common 版权信息。选择 `BY-ND` 而非 `BY-NC-ND` 是考虑到如果我的博文能帮助别人赚到钱，那么何乐而不为呢；
 - 将所有图片从 GitHub 迁移到了 OneDrive，后者的 CDN 极大提升了图片的可访问性与访问速度；
 - 优化了一些 SEO 配置项。更新了蜘蛛协议的 `robots.txt` 文件，向 Google 和百度提交了 `sitemap.xml` 文件，不知道一个月后再看数据会不会有涨幅呢；
