@@ -68,14 +68,9 @@ date: 2019-04-20 01:01:00
 #### **互联网工程院**
 
 1. 微软小冰-Speech recognition-研发工程师，3-10年相关工作经验；
-
 2. 微软小娜-Data engineer，1年以上工作经验；
-
-3. 必应广告-CTR算法工程师，至少1年以上工作经验；
-
-4. AI Solutions engineer，3-5年/5年及以上相关研究工作经验；
-
-5. Windows edge team-安卓开发工程师-北京，1年以上工作经验，多岗位；
+3. AI Solutions engineer，3-5年/5年及以上相关研究工作经验；
+4. Windows edge team-安卓开发工程师-北京，1年以上工作经验，多岗位；
 
 <!-- endtab -->
 
