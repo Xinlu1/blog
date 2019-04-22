@@ -134,9 +134,9 @@ date: 2019-04-20 01:01:00
 
 <!-- tab Mobile -->
 
-MMX 移动团队，听过他们的分享，很不错，近年也取得了很棒的成绩。除了 Launcher 外，Edge 浏览器团队也在招人，这里就放一张图作为介绍啦。
+MMX 移动团队，听过他们的分享，很不错，近年也取得了很棒的成绩。Edge 浏览器团队正在招人，他们的文案做的也很用心喔。
 
-![](https://u66ycg.bn.files.1drv.com/y4mjncZngOWTdtT-3A8aSMA63m21jR-22L2T4rhf9eTF4JTOH_U9BQFw8vAtyht9uVtwIVQYjRX7QcIlLJgT6m5WFTBvYFb9bduH5RUVIFjiuAEmYpUS_icP8QllsB5Bd9HcMq9H5QCKg5Ac4sgE1gKJ_88dzDx9_NQq7TmMP7fPj3vF0a9jlLCNQah8lix8oAcfb-vqWAjjLVscbc6pa0TNw)
+![](https://u660cg.bn.files.1drv.com/y4m7gM25moAbCmf1dg9Lb6EXAZxZ4h3N-EKyKqPKrZ5Y1gLzcqNzZsSeavdZQotkA5yeW04GOUC8wYm_g5cIIUAhtnsWDzhJURxcS_EC5BQYp7lY0XEEcWHdssAWx-Le555YSzflDomvD5V22jpc3QrZ9UO_RQES3jNQEv4K_as0E-YBueMNGt5ByxgQPi8dCztCf3n-XQCSnr3kBcW0mk7Lg)
 
 <!-- endtab -->
 
