@@ -42,17 +42,97 @@ date: 2019-04-20 01:01:00
 
 如果你在这里没有看到心怡的职位，千万不要灰心，请通过[**微软招聘官网**](https://careers.microsoft.com/us/en/search-results?rt=professional)查看更多海量岗位。微软是一家全球市值名列前茅的公司，对各类人才的渴望超出你的想象。
 
-以下表格是目前招聘职位的汇总，时效性不作保证。表格后还有按时间线排列的各个职位介绍，请慢慢观看 ; )
+下面会**定期更新**目前开放的职位，不过还是请在看到钟意的职位后尽早与我联系哈，有的职位可能上周开放这周就招到人了 ; )
 
-![](https://u66xcg.bn.files.1drv.com/y4msxcbh3npjZyHWR35bHOX0I5FoUTWc3H23uN2qvVK5mawU3CtnYrxCFbCyFT_k8D09utINptMa_N1q-tiAaAb-XlK53a7XkSislgtFnCpj7JXOBMIIHsYDYlW5KHBcGq0a0xPkKpSev-1B3dUlrpFw-f2wZdorc3IBSqgS3imSK1-ZteS9tvZeLJT6l4mKbrLCaAfzTE6wwhc8UdMUS_yTQ)
+### 2019.04.22
+
+{% tabs Locations unique name %}
+
+<!-- tab 北京 -->
+
+#### **微软亚洲研究院**
+
+1. Researcher（PhD-System/Data Analysis/AI Infra/Machine learning/Blockchain）
+2. RSDE（Research Software Engineer）-Master（ML/Networking/Cloud）北京或上海
+
+#### **云计算与人工智能事业部**
+
+1. Azure 大数据平台-前端开发工程师/全栈开发工程师，1-8年工作经验，大数据平台开发经验；
+
+2. Azure Networking-软件开发工程师，3-10年工作经验，网络开发经验，后端开发背景；
+
+3. 计算机视觉- 计算机视觉算法工程师，3-5年/5年及以上相关研究工作经验；
+
+4. Azure Global Asia Engineer-后端开发工程师（1年以上工作经验）；
+
+#### **互联网工程院**
+
+1. 微软小冰-Speech recognition-研发工程师，3-10年相关工作经验；
+
+2. 微软小娜-Data engineer，1年以上工作经验；
+
+3. 必应广告-CTR算法工程师，至少1年以上工作经验；
+
+4. AI Solutions engineer，3-5年/5年及以上相关研究工作经验；
+
+5. Windows edge team-安卓开发工程师-北京，1年以上工作经验，多岗位；
+
+<!-- endtab -->
+
+<!-- tab 苏州 -->
+
+#### **Office 365-多岗位热招**
+
+1. Office 365-Performance team-全栈开发工程师, C++/C#/Java，2-9年工作经验，可英文沟通；
+2. Office 365-Flighting team-后端/全栈开发工程师,1-8年工作经验，可英文沟通；
+3. Office 365-Core fabric-mornitoring team-后端/全栈开发工程师-4-10年工作经验，可英文沟通；
+4. Office 365-IP-Mornitoring Connectivity-软件开发工程师，3-8年工作经验，可英文沟通；
+5. Office 365-Networking-软件开发工程师，4-10年架构相关经验，可英文沟通；
+6. Office 365 Mail protocols/Server-软件开发工程师，3-10年工作经验，可英文沟通；
+7. Office 365 AD team-软件开发工程师，1-10年工作经验，可英文沟通；
+8. Office 365-Information Protection team-软件开发工程师，1-10年工作经验，可英文沟通；
+9. Windows edge team-安卓开发工程师-苏州，1年以上工作经验，多岗位；
+
+#### **硬件团队职位**
+
+1. 测试平台-软件开发工程师，2-10年云平台软件开发工作经验，可英文沟通；
+2. Senior Reliability Engineer，可靠性工程师，10年及以上相关工作经验，可英文沟通；
+3. Design Verification Engineer II，8年 及以上相关工作经验，可英文沟通；
+4. Senior Factory Management Engineer，15年及以上相关工作经验，可英文沟通。
+
+<!-- endtab -->
+
+ <!-- tab 上海 -->
+
+#### **云计算与人工智能事业部**
+
+1. Azure HPC-高性能计算-资深开发工程师（8年及以上大规模分布式系统及高性能计算经验）
+
+2. Azure-Dynamics 365 开发工程师，1年以上工作经验，可英文沟通（多岗位）
+
+3. Azure data factory 资深开发工程师（8年及以上相关工作经验）
+
+ <!-- endtab -->
+
+ <!-- tab 深圳 -->
+
+#### **微软硬件团队**
+
+1. Senior Packaging Engineer Manager：10年以上相关工作经验，可英文沟通；
+
+2. Social and Environmental Accountability Program Manager：10年以上相关工作经验，可英文沟通；
+
+ <!-- endtab -->
+
+{% endtabs %}
 
 
+
+### 2019.04.19
 
 {% tabs Categories unique name %}
 
 <!-- tab Mobile -->
-
-### 2019.04.17
 
 MMX 移动团队，听过他们的分享，很不错，近年也取得了很棒的成绩。除了 Launcher 外，Edge 浏览器团队也在招人，这里就放一张图作为介绍啦。
 
@@ -62,8 +142,6 @@ MMX 移动团队，听过他们的分享，很不错，近年也取得了很棒�
 
 <!-- tab Dynamics 365 -->
 
-### 2019.04.17
-
 Dynamics 365 团队招聘的方向包括 Global Experience (DGX)、Retail + Commerce、Supply Chain Management。这里放一张 Global Experience 团队的介绍。
 
 ![](https://u66wcg.bn.files.1drv.com/y4m29GjwbxqhSmei5H6lRJ3tnIiSs7ShNi5MMezbXnK1-wtsxG9PK8BbyJs_aX8ipeXqKKZfKOr_0PxmeqIbJx6HOHlN1MM8_L0cedyietfTOGgHZjVV8TXfY2oOf51ASh8eNvOW9E9r3FNrTOEJ5v5h8NLaEb7wCqGnsg5jsF1XEZEDzPoVXIwcUhPB2gg_uGeU7Epdem9Fh67YQirpBy88Q)
@@ -72,15 +150,11 @@ Dynamics 365 团队招聘的方向包括 Global Experience (DGX)、Retail + Comm
 
  <!-- tab Azure Big Data -->
 
-### 2019.04.16
-
 ![](https://u66zcg.bn.files.1drv.com/y4msbW1h8QI6_rXxW2weAynH1HVi4GR1ypWaZZFeuY8d2cj-XjDPzJBqj3SpcQC8xQWFFTEFrBOYG6zim5BteybJKZH4JQNloUiQ2nV_Jz-VS6w7H4mx7eDGzq8wd_tgnjSGzNoiBVCfUnVfFZbNSjEo2uAaw8Vpk9QwmNqZ0krU52yfeI9FKH0hQqBI3Q4JMHkxCGLzw6F2enBtmg-cpPAdw)
 
  <!-- endtab -->
 
  <!-- tab UX Designer -->
-
-### 2019.04.19
 
 设计职位开放咯，base 地除了 JD 中的外，北京也是可以的。出差比较多，面试会有英文面。另外香港、美国以及澳洲也在招聘，不过要求会比较高喔。
 
