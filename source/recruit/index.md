@@ -3,6 +3,10 @@ title: 微软中国期待你的加入
 date: 2019-04-20 01:01:00
 ---
 
+{% fi "https://vk6zcg.bn.files.1drv.com/y4mKEQqdvzN0EdcOES0z2tNUEsYJWLqPsdrhn1H8BYdwlWh8SG_CJ7QTypUo3rSq5qZaKsupZpBdZWuDCwr9jvHVnfV-UMbkEDEiLiJLF_RI51-23ijbFx0kftsZbqN3eE9uTRN3Hz7VbVrwGi-vjEPvVrnhg4sEo16PzIU-ItQtDY-CdP4zrqhVLy5_XQ0dlZJ8iMYudfU99h3BVrTVEjGOg" %}
+
+
+
 ## TL;DR
 
 微软中国海量招人啦，Web 前后端、算法、设计等等职位都缺人！通过[官网](https://careers.microsoft.com/us/en/search-results?rt=professional)筛选出你喜欢且自认为适合的工作，邮件我，我来给你靠谱的建议、内推你并持续帮你跟进后续进展直到你拿到 offer。
