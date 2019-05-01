@@ -55,11 +55,9 @@ tags:
 
 ## 5. 职位获取渠道
 
-好了废话那么多，进入正题吧(???)。通常招聘帖底下都会遇到很多人问 XX 职位招不招、X 年经验招不招，这里列了个表格给大家介绍我们近期正在招的一些职位以及对应要求。
+好了废话那么多，进入正题吧(???)。通常招聘帖底下都会遇到很多人问 XX 职位招不招、X 年经验招不招以及招聘帖里的职位还招不招。**面对这些常见的问题，为了提升效率，我将招聘有关的信息都整理到了[博客的招聘页](https://blog.joouis.com/recruit/)，并会定期更新当下开放的职位，使它成为一个稳定的信息源。**欢迎关注、收藏。
 
-![Posted at 2019.04.11](<https://vq4xlg.bn.files.1drv.com/y4msrXqv1wi3A2GqY4A3cAYnMYDceCsHiW0cYO-HHHmXYfiX1UvGtirTR7TLDniugj5yV3Lw5CrSqNs0qsNp-hUQzXRZxqmstO3uJdj-2A-eEdr1VzKldgDI09UwLNIvqnOWadSSKV7070kFie3YHUTxgeDBmnq-9PA43BcMJBPCHb07mbnh89XjTSoiJyzviAWa8XsZCkFY5oaKupZ2mGazw>)
-
-至于想问 XX 职位招不招的朋友们，除了可以直接问我外，也可以线访问以下两个链接查看、搜索目前开放的职位：
+至于想问 XX 职位招不招的朋友们，除了查看上面的招聘页面外，也可以线访问以下两个链接查看、搜索目前开放的职位：
 
 - 推荐手机端查看：https://microsoft.tupu360.com/position/list?type=SOCIALRECRUITMENT
 - 推荐 PC 端查看：https://careers.microsoft.com/us/en/search-results?rt=professional
