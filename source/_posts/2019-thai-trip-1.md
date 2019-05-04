@@ -214,7 +214,7 @@ M 是个严重洁癖患者，出去玩可以不去景点，但一定要隔一两
 
 ![](https://wk6faa.bn.files.1drv.com/y4mXUJfv-wzG6nLvCe0OzInnwzwD4KPcqesEgt3byzkFC0AoORb-bCjl_Qfax2K2tWPCwN02tEpASLyZ2msqQVr5XivKnFKv0dOg7Bbf3JVZWQ4YygiICrOA_Bx4iL9-czroy-4JmGxEEDNpCNx9oC8QPLkPWFJH1Wy6kQF00zhPSyD6FS0pLPX_XCfI87hPG6U77OlQNoP-qzFg-9l3Q_W6w?width=2016&height=1512&cropmode=none)
 
-最后，吃饱喝足，散步逛一逛夜市，终于结束了今天这漫长的一回合。
+最后，吃饱喝足，散步逛一逛夜市，买杯芒果汁，结束今天这漫长的一回合。
 
 ![](https://wk6eaa.bn.files.1drv.com/y4mPn6Veonph1COS5i2fx-mNxsgpzUY3VSPH0BNOu09ml2DlkfmYSX_6U9yk4ZRp3mA5Sr81fJ9fYXAAW41wfm32kpD3i2BcGieRolRqiwWN0_qDwTi1qNcmlr-6Ab5TbhaXmEO5Kj_uCm_lKZ91lk_R84OJrCqSb5n3rHVazRQ1kRW9yXIXxxk-cCKaSVtGpGsFDLIPFCynUGfyC89mZBQ7g?width=2016&height=1512&cropmode=none)
 
