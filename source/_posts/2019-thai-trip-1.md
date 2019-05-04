@@ -162,7 +162,7 @@ M 是个严重洁癖患者，出去玩可以不去景点，但一定要隔一两
 
 ![](https://v66haa.bn.files.1drv.com/y4mwZQeqrBZftlv6_4SScqtyayaCi2Wh1Otr3AidD5dpx71Dfmzmty5N-wPvgV6c4J6P9IiqLAKcRgt_Bsklp0Q55suFzZsZfnb6dZYrDfWb7P2RCP7i4zQUJtawMBYGkIbGVLSzrkOsffQ7jYq_-bMli_KJ0w3IsD5qUBv6CAshSiiSslXVA2oy00yo4ttVYipfZgIZMMbNVbXkSfNT64t-g?width=1512&height=2016&cropmode=none)
 
-去小七的路上才发现住的地方离海边非常近，步行只要五分钟。海边也没什么人，处处写满了宁静与悠闲。
+去小七的路上才发现住的地方离海边非常近，步行只要五分钟。海边也没什么人，处处写满了宁静与悠闲。非常舒服~~
 
 ![](https://v66eaa.bn.files.1drv.com/y4m3rd8x-_xTyuN6xxMxlgDZOCbierZuCid4XZ2dHebRBBQVkj29qh66UDhdgmbP4KW2HGqucOi9a8er-SZ0VIeR5p3GHvO7fxjBcaSl61MVpUqmT5yu-KW0-NkqUOe7fxqD1AHzq9Lo2owBRkVbsyEDbM5Uo-FzMjqeVzaqH4a7xVNjh5NHGWXmKY2I-KcnlTkWczre79cQCFsPs0Ne2WPFg?width=2016&height=1512&cropmode=none)
 
