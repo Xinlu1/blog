@@ -28,10 +28,6 @@ date: 2019-04-20 01:01:00
 
 我是一名 Web 前端开发工程师，非猎头或 HR。所以我没有 KPI 之类的压力，也不会忽悠你来面试。我更关心你是否喜欢职位、是否符合职位要求，因为只有你成功入职后我才有 reward。
 
-先来看看社区的评价 😝
-
-![](https://u661cg.bn.files.1drv.com/y4mxifR4zl_EAeYYKS3Pcppavl884YM27s5eYBAkmtKe3E88knpY6jt8RGV494nd3a-JTlGwCoezYaLfYoVZ9cSyAt0TxiqTgozzd8MXGJrrtt5WXJ6njDF-cn3ZDGZT2wpwJn4oOraU6LFZJO3DT2axGKRZuLXDhMQe3FDAsFgs2eDxX-BO43VAEYITvtoc_5ng-RJ8lmdgTpj6KEJWXBVMg)
-
 **关于内推的过程以及心得，我专门写了一篇[『博文』](https://blog.joouis.com/2019/04/11/a-thought-of-referral/)详细介绍。如果你有意加入微软，推荐你花几分钟时间阅读。即便你不找我内推，相信你也能从中了解微软基本的面试流程与要求。**
 
 ## 联系方式
