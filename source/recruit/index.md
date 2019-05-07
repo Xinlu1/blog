@@ -48,6 +48,162 @@ date: 2019-04-20 01:01:00
 
 下面会**定期更新**目前开放的职位，不过还是请在看到钟意的职位后尽早与我联系哈，有的职位可能上周开放这周就招到人了 ; )
 
+### 2019.05.07
+
+研发类职位还在整理中，目前更新了售前、部署、优化、实施、交复、PM 类职位，也有不少是工程师岗位喔~
+
+{% tabs Locations unique name %}
+
+<!-- tab Part 1 -->
+
+**Architect**
+
+- ID: 579270/565991
+
+- Requirements: solution architect experience, Azure, application development, 10+ years’ experience
+
+- Language: Professional English level
+
+- Travel: 50-75%
+
+- Location: Beijing/Shanghai/Shenzhen/Guangzhou
+
+**Premier Field Engineer**
+
+- ID: 567399
+
+- Requirements: .net/Java, 5+ years’ experience, DevOps, Kubernetes
+
+- Language: Professional English level
+
+- Travel: 50%
+
+- Location: Shenzhen/Guangzhou
+
+**Consultant**
+
+- ID: 555256
+
+- Requirements: Java and .net, 10+ years, cloud experience, DevOps
+
+- Language: Professional English level
+
+- Travel: 50-75%
+
+- Location: Shenzhen/Guangzhou
+
+**Project Manager**
+
+- ID: 563971
+
+- Requirements: Good Communication, SCRUM, millions Dollars of project experience. 10+ years’ experience.
+
+- Language: Professional English level
+
+- Travel: 50-75%
+
+- Location: Shenzhen/Guangzhou
+
+<!-- endtab -->
+
+<!-- tab Part 2 -->
+
+[**Project Manager SI**](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcareers.microsoft.com%2Fus%2Fen%2Fjob%2F581137%2FProject-Manager&data=01|01|a-wenl%40microsoft.com|e11e250738c44bfd70b808d6d1ff2d9b|72f988bf86f141af91ab2d7cd011db47|1&sdata=ikif3c6hfPHVN%2BxzUQmn6XCUTTVPlw6BO3pIFEypYYI%3D&reserved=0)
+
+- ID: 581137
+
+- Requirement: 5+ experience in project management; PMP certified; familiar with Agile/ Scrum; project experience in Cybersecurity or Infrastructure is a Plus; Proficient in English
+
+- Location: Shenzhen/ Guangzhou
+
+[**Technical consultant/ PFE- Secure Infrastructure**](https://careers.microsoft.com/i/us/en/job/567397/Technical-Consultant-PFE-Secure-Infrastructure)
+
+- ID: 567397
+
+**[Consultant- SI](https://careers.microsoft.com/i/us/en/job/539901/Consultant-Secure-Infrastructure-Domain)**
+
+- ID: 539901
+
+- Requirement: 3+ years of working experience in Cybersecurity or Infrastructure; MS Techonologies background is preferred; Communication skills need to be good, as will need to onsite in customer side.
+
+- Skill sets: any of these would be fine, like Azure Infrastructure, Windows Server, Windows Client, System Center, Hyper-V, VMM, Active Directory, Azure AD, Azure RMS, Devices & Application Management, CyberSecurity, Security & Identity, and etc.
+
+- Location: Primary Shanghai, can consider Beijing, Shenzhen
+
+- English: no particular requirement
+
+<!-- endtab -->
+
+<!-- tab Part 3 -->
+
+**ALL CSS roles have no limitations on year of work experience, and no travel needed.**
+
+
+
+**CSS-Support Escalation Engineer_Mooncake DB**
+
+- ID: 613990
+
+- Requirement: SQL Server/MySQL/Mango DB/ Big Data (Hadoop/Storm/HBase/Spark/Kafka)/BI
+
+- English: middle level
+
+- Location: Wuxi or Shanghai
+
+**CSS-Support Engineer_Azure VM**
+
+- ID: 597434
+
+- Requirements: VM/Linux/Storage/Windows troubleshooting
+
+- English: professional working
+
+- Location: Wuxi
+
+**CSS-Support Escalation Engineer_Azure AD**
+
+- ID: 602980
+
+- Requirements: better to have AD (on-premier/azure) or networking or Windows, but we focus more on candidates’ potential and motivation
+
+- English: professional working
+
+- Location: Wuxi
+
+**CSS-Support Escalation Engineer_Azure Kubernetes**
+
+- ID: 607808
+
+- Requirements: microservices; openshift, containers; container service; Kubernetes---at least know one
+
+- English: professional working
+
+- Location: Shanghai or Wuxi
+
+**CSS-Support Engineer_Azure Linux**
+
+- ID: 607810
+
+- Requirements: Linux OS
+
+- English: professional working
+
+- Location: Shanghai or Wuxi
+
+**CSS-Support Escalation Engineer_Azure Rapid Response**
+
+- ID: 614431
+
+- Requirements: Cloud and DEV/Linux/Networking
+
+- English: professional working
+
+- Location: Shanghai or Wuxi
+
+<!-- endtab -->
+
+{% endtabs %}
+
 ### 2019.04.22
 
 {% tabs Locations unique name %}
