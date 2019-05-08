@@ -44,9 +44,93 @@ date: 2019-04-20 01:01:00
 
 下面会**定期更新**目前开放的职位，不过还是请在看到钟意的职位后尽早与我联系哈，有的职位可能上周开放这周就招到人了 ; )
 
-### 2019.05.07
+### 2019.05.08
 
-研发类职位还在整理中，目前更新了售前、部署、优化、实施、交复、PM 类职位，也有不少是工程师岗位喔~
+#### 研发职位
+
+{% tabs Locations unique name %}
+
+<!-- tab 苏州 -->
+
+**Office365:** **全部要求英文口语可沟通**
+
+- Office 365-Performance team-后端开发工程师, C++/C#/Java，1年以上工作经验；
+- Office 365- Engineering system team-后端开发工程师, 1年以上工作经验；
+- Office 365-Flighting team-后端/全栈开发工程师, 1年以上工作经验；
+- Office 365-mornitoring team-后端/全栈开发工程师- 3 年以上工作经验；
+- Office 365-Connectivity tea- 软件开发工程师 (networking experience is plus)，1年以上工作经验；
+- Office 365-Store-软件开发工程师，3年以上工作经验；
+- Office 365 Mail protocols/Server-软件开发工程师，3年以上工作经验；
+- Office 365 AD team- user access authorization软件开发工程师(Security Protocols is big plus)，1年以上工作经验；
+- Office 365- outlook-Anti Spam team- 全栈/后端软件开发工程师，1年以上工作经验；
+- Office 365- outlook-Transport team- 全栈/后端软件开发工程师，1年以上工作经验；
+
+**MMX team:**
+
+- Windows edge team-安卓开发工程师-苏州，1年以上工作经验，多岗位；
+
+**Sharepoint team:** **全部要求英文口语沟通**
+
+- Web开发/ 后端开发， 目前开出来的职位需要至少4年以上工作经验， 后期陆续会有opening。
+- Senior / Principal Engineering manager， 要求8年以上工作经验；
+- Senior PM， 要求6年以上工作经验，有技术背景，开发经验背景是加分项; 
+
+**微软小冰：**
+
+- 后端开发工程师，1年以上相关工作经验；
+
+- Data scientist，算法开发，需要有NLP, 计算机视觉方面经验；
+
+**硬件团队职位：**
+
+- 测试平台-软件开发工程师，2-10年开发经验，云平台开发优先，要么有硬件test 相关背景，要么擅长C# 开发，两者满足一条即可，可英文沟通；
+
+ <!-- endtab -->
+
+<!-- tab 北京 -->
+
+**微软亚洲研究院**
+
+- Researcher（PhD-System/Data Analysis/AI Infra/Machine learning/Blockchain）
+
+- RSDE（Research Software Engineer）-Master（ML/Networking/Cloud）北京或上海
+
+**云计算与人工智能事业部**
+
+- Azure 大数据平台-前端开发工程师/全栈开发工程师 (多岗位)，1-8年工作经验，大数据平台开发经验优先；
+- Azure Networking-软件开发工程师，3-10年工作经验，网络开发经验，后端开发背景；
+- Azure Global Asia Engineer-后端开发工程师（1年以上工作经验）；
+
+**互联网工程院**
+
+- 微软小冰 - 后端开发工程师，1年以上相关工作经验；
+
+- 微软小冰 - Data scientist，算法开发，需要有NLP, 计算机视觉方面经验；
+
+- 微软小冰 - PM/ PMII，1年-6年相关工作经验；不需要技术背景，需要有大量商业交付项目经验
+
+- AI Solutions engineer，3-5年/5年及以上相关研究工作经验；
+
+- MMX team -安卓 / IOS 开发工程师，1年以上工作经验，多岗位。
+
+<!-- endtab -->
+
+<!-- tab 上海 -->
+
+**云计算与人工智能事业部**
+
+- Azure HPC-高性能计算-资深开发工程师（8年及以上大规模分布式系统及高性能计算经验）
+- Azure Date Catalog- JAVA后端开发，5年以上工作经验，big data 相关经验是加分项；
+- Azure MySQL Database service- 后端开发，4年以上工作经验，database 相关经验是加分项；
+- Azure Operation-design & develop Azure tools and service- 4年以上工作经验，service相关经验是加分项。
+
+<!-- endtab -->
+
+{% endtabs %}
+
+
+
+#### 售前、部署、优化、实施、交复、PM 类职位，也有不少是工程师岗位喔~
 
 {% tabs Locations unique name %}
 
@@ -197,83 +281,6 @@ date: 2019-04-20 01:01:00
 - Location: Shanghai or Wuxi
 
 <!-- endtab -->
-
-{% endtabs %}
-
-### 2019.04.22
-
-{% tabs Locations unique name %}
-
-<!-- tab 北京 -->
-
-#### **微软亚洲研究院**
-
-1. Researcher（PhD-System/Data Analysis/AI Infra/Machine learning/Blockchain）
-2. RSDE（Research Software Engineer）-Master（ML/Networking/Cloud）北京或上海
-
-#### **云计算与人工智能事业部**
-
-1. Azure 大数据平台-前端开发工程师/全栈开发工程师，1-8年工作经验，大数据平台开发经验；
-
-2. Azure Networking-软件开发工程师，3-10年工作经验，网络开发经验，后端开发背景；
-
-3. 计算机视觉- 计算机视觉算法工程师，3-5年/5年及以上相关研究工作经验；
-
-4. Azure Global Asia Engineer-后端开发工程师（1年以上工作经验）；
-
-#### **互联网工程院**
-
-1. 微软小冰-Speech recognition-研发工程师，3-10年相关工作经验；
-2. 微软小娜-Data engineer，1年以上工作经验；
-3. AI Solutions engineer，3-5年/5年及以上相关研究工作经验；
-4. Windows edge team-安卓开发工程师-北京，1年以上工作经验，多岗位；
-
-<!-- endtab -->
-
-<!-- tab 苏州 -->
-
-#### **Office 365-多岗位热招**
-
-1. Office 365-Performance team-全栈开发工程师, C++/C#/Java，2-9年工作经验，可英文沟通；
-2. Office 365-Flighting team-后端/全栈开发工程师,1-8年工作经验，可英文沟通；
-3. Office 365-Core fabric-mornitoring team-后端/全栈开发工程师-4-10年工作经验，可英文沟通；
-4. Office 365-IP-Mornitoring Connectivity-软件开发工程师，3-8年工作经验，可英文沟通；
-5. Office 365-Networking-软件开发工程师，4-10年架构相关经验，可英文沟通；
-6. Office 365 Mail protocols/Server-软件开发工程师，3-10年工作经验，可英文沟通；
-7. Office 365 AD team-软件开发工程师，1-10年工作经验，可英文沟通；
-8. Office 365-Information Protection team-软件开发工程师，1-10年工作经验，可英文沟通；
-9. Windows edge team-安卓开发工程师-苏州，1年以上工作经验，多岗位；
-
-#### **硬件团队职位**
-
-1. 测试平台-软件开发工程师，2-10年云平台软件开发工作经验，可英文沟通；
-2. Senior Reliability Engineer，可靠性工程师，10年及以上相关工作经验，可英文沟通；
-3. Design Verification Engineer II，8年 及以上相关工作经验，可英文沟通；
-4. Senior Factory Management Engineer，15年及以上相关工作经验，可英文沟通。
-
-<!-- endtab -->
-
- <!-- tab 上海 -->
-
-#### **云计算与人工智能事业部**
-
-1. Azure HPC-高性能计算-资深开发工程师（8年及以上大规模分布式系统及高性能计算经验）
-
-2. Azure-Dynamics 365 开发工程师，1年以上工作经验，可英文沟通（多岗位）
-
-3. Azure data factory 资深开发工程师（8年及以上相关工作经验）
-
- <!-- endtab -->
-
- <!-- tab 深圳 -->
-
-#### **微软硬件团队**
-
-1. Senior Packaging Engineer Manager：10年以上相关工作经验，可英文沟通；
-
-2. Social and Environmental Accountability Program Manager：10年以上相关工作经验，可英文沟通；
-
- <!-- endtab -->
 
 {% endtabs %}
 
