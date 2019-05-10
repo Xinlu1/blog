@@ -310,15 +310,6 @@ Dynamics 365 团队招聘的方向包括 Global Experience (DGX)、Retail + Comm
 
  <!-- endtab -->
 
- <!-- tab UX Designer -->
-
-设计职位开放咯，base 地除了 JD 中的外，北京也是可以的。出差比较多，面试会有英文面。另外香港、美国以及澳洲也在招聘，不过要求会比较高喔。
-
-- [Consultant - UX Designer](https://careers.microsoft.com/us/en/job/603152/Consultant-UX-Designer)
-- [Architect - UX Design](https://careers.microsoft.com/us/en/job/603088/Architect-UX-Design)
-
- <!-- endtab -->
-
 {% endtabs %}
 
 
