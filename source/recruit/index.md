@@ -100,8 +100,6 @@ date: 2019-04-20 01:01:00
 **云计算与人工智能事业部**
 
 - Azure 大数据平台-前端开发工程师/全栈开发工程师 (多岗位)，1-8年工作经验，大数据平台开发经验优先；
-- Azure Networking-软件开发工程师，3-10年工作经验，网络开发经验，后端开发背景；
-- Azure Global Asia Engineer-后端开发工程师（1年以上工作经验）；
 
 **互联网工程院**
 
@@ -123,8 +121,6 @@ date: 2019-04-20 01:01:00
 
 - Azure HPC-高性能计算-资深开发工程师（8年及以上大规模分布式系统及高性能计算经验）
 - Azure Date Catalog- JAVA后端开发，5年以上工作经验，big data 相关经验是加分项；
-- Azure MySQL Database service- 后端开发，4年以上工作经验，database 相关经验是加分项；
-- Azure Operation-design & develop Azure tools and service- 4年以上工作经验，service相关经验是加分项。
 
 <!-- endtab -->
 
